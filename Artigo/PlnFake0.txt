@@ -1,0 +1,110 @@
+INTRODUÇÃO
+
+E é nesse ambiente que as notícias falsas aparecem. «News» Sources. Na seção de Metodologia, foi explicado como as variáveis dependentes e independentes foram escolhidas, além do banco de dados a ser utilizado. Resultados da Regressão, foram analisados os resultados objetivos, sendo quais variáveis obtiverem um melhor p-valor, quais sites apresentavam evidências de ser fake, e as limitações da pesquisa.
+
+Definições de fake news
+
+A definição mais utilizada é a concebida por Claire Wardle para o Council of Europe, que evita utilizar o termo “fake news”. Misinformation ocorre quando, apesar da notícia ser falsa, não foi criada com intuito de causar dano. São erros acidentais como dados e datas erradas, traduções mal produzidas, etc. Também pode surgir quando sátiras são levadas a sério.
+
+As notícias produzidas por fontes confiáveis de notícia passam por uma linha contínua, saindo da fonte, de onde se faz apuração do fato, passando pelo processo de escrita até chegar a fonte disseminadora e, com a publicação, virar notícia de fato. Assim, para melhor entender a origem das Fake News, foi criado um diagrama indicando as relações e interdependências entre notícias reais e falsas onde setas contínuas apresentam o caminho criativo das notícias, sejam essas fake ou reais, e as setas pontilhadas como o leitor pode interferir na disseminação dessas notícias.
+
+Diferenças no modo de propagação
+
+Diversas ferramentas foram elaboradas com intuito de classificar as notícias, fontes e fatos, chamando todos estes pelo mesmo termo. exposição resulta em níveis mais baixos de confiança na mídia e menor capacidade de reconhecimento de notícias verdadeiras. Sendo assim, deve-se fazer a separação dos meios que as informações falsam circulam, podendo ser fatos, notícias ou fontes criadas com esse propósito. Notícias falsas são artigos que dizem ser verdadeiros, entretanto contém distorções propositais dos fatos com intuito de provocar emoção, atrair mais leitores ou simplesmente enganar.
+
+Por último, fontes de informações falsas são criadores ou disseminadores das notícias ou fatos falsos. Sites como o Infowars ou o NewsPunch que tem como objetivo criar e divulgar notícias falsas para seus leitores.
+
+Editorial, informações gerais da notícia.
+
+Classificacão de fontes de fake news
+
+Dentre a bibliografia estudada, no estudo da professora Melissa Zimdars , onde são analisadas fontes de fake news, segmentadas em treze rótulos diferentes, e com breves explicações sobre como detectá-las. O guia foi produzido usando observações empíricas de sites que ela seguia e sugestões fornecidas pelos amigos além de e-mails de desconhecidos que se ofereceram para colaborar.
+
+Seleção do banco de dados
+
+Para entender a relação entre as fontes de Fake News e as variáveis preditoras é necessário que os sites analisados sejam selecionados de forma não enviesada. Os resultados, no entanto, são de páginas com todos os tipos de conteúdo e não apenas notícias. Como o SEMrush não possui a opção de separar por categorias, teve-se que olhar todos um a um e identificar todos os relevantes . Nessa etapa, a categorização foi feita por conhecimento prévio do conteúdo dos sites e inferências através de elementos óbvios no nome da página.
+
+Nessa etapa, todos os sites marcados como foram acessados para que se houvesse certeza de seu conteúdo. Em seguida, a segunda categorização eliminou o acessando estas páginas e analisando do que se tratava o conteúdo. Algumas outras páginas foram posteriormente excluídas por serem agregadoras de sites de notícias, apenas fazendo um compilado de outras páginas presentes na lista, sem fornecer conteúdo novo, e sites que redirecionavam para outros já presentes ou versões destes escritas erradas. Além disso, sites do governo como planalto.gov.br ou sp.gov.br também foram excluídos por suas notícias serem apenas informativos das ações do governo, não produzindo conteúdo.
+
+As categorias de Sátira, Clickbait, Ciência Junk e Notícias Estatais não compuseram a lista final por entender-se que não são notícias de cunho político. Enviesamento Extremo foi considerada como notícia não-fake, desde que o enviesamento não levasse a conclusões erradas. Assim, obteve-se um banco de dados final com 106 sites de notícias política.
+
+As variáveis preditoras foram escolhidas analisando o trabalho da professora Melissa
+
+Após a coleta destas possíveis variáveis, foram analisados quais se encaixam nas definições propostas em 2.3.1. Para esta análise, entrou-se em cada um dos sites individualmente e foram verificados os 15 critérios descritos abaixo.
+
+
+Este item é uma análise da etapa do
+
+Agente Criador ou Propagador das Fake News, como proposto no modelo da Figura 3.
+ii. Segurança da conexão: foi avaliado se a conexão era segura ou não e se a página possuía um certificado válido. Este item também se encaixa na análise dos Agentes, mas também na Distribuição, visto que é a segurança do website.
+b.
+
+Da página
+
+Expediente: procurou-se uma seção que contém informação sobre a página e, principalmente, sobre os responsáveis; normalmente, quando existia, estava contido na seção de expediente e menos frequente nas seções de Quem Somos ou About Us. Este item se relaciona diretamente com o Agente, colocar o nome dos responsáveis é um indício de confiabilidade.
+ii. Contato por e-mail: a existência de um portal para contato é importante porque demonstra a abertura dos responsáveis em ouvir a opinião dos seus leitores. Esta variável infere na confiança do agente Distribuidor.
+iii. Contato por telefone: parecido com o item anterior, porém mais pessoal, a existência de um telefone para contato também demonstra que os responsáveis estão atentos às opiniões do público. Importante ressaltar que foi necessário entender se o telefone disponível era para
+sugestões/reclamações ou apenas para assinaturas, caso esta fosse a razão da existência, não foi considerado.
+iv. Reportar erro: tão importante quanto portais para contato por e-mail ou um telefone para contato é a existência de um portal separado para reportar misinformation. Este item é baseado na responsabilidade de produção e Distribuição da informação.
+v. Diagramação: páginas com muita informação, mal diagramados ou poluídos podem ter sido construídos com a intenção de passar a falsa impressão de ser um grande portal de notícias para os leitores. A diagramação interfere com a Distribuição e também com a
+Intepretação, já que induz os leitores a confiarem na página ou se perderem nela.
+c.
+
+Das propagandas
+
+Existência: a não existência de propagandas em uma página mostra que não há confiança do mercado para divulgar seu produto ou serviço ali.
+Diretamente relacionada a Distribuição, dado que pressupõe a confiança da marca dos anunciantes.
+ii. Marcas/produtos conhecidos: analisou-se também se a maior parte das propagandas era de marcas conhecidas e não apenas regionais, pelo mesmo motivo do item anterior, quanto mais famosa a marca, menos esta gostaria de estar associada a uma página disseminadora de notícias falsas.
+iii. Scam: foi analisado se os produtos oferecidos nas propagandas são reais ou apenas golpes . O último nível dos itens anteriores mostra se alguma marca legítima anuncia nesta página. Válido dizer que estas páginas apresentam muito mais anúncios do que a média, já que o interesse é fazer dinheiro com os Ads.
+d.
+Unicidade das notícias : verificou-se a existência de notícias absurdas na página e foram pesquisadas no Google se outros sites, principalmente os reconhecidamente confiáveis, também estavam reportando.
+
+Das notícias
+
+por um período extenso de tempo, outros pesquisariam a veracidade e fariam suas próprias matérias.
+ii. Assinatura: verificou-se abrindo as notícias em destaque se haviam os nomes de seus autores ou se apenas havia uma assinatura genérica como “da redação”. Esta está relacionada ao Agente, Criação e
+Distribuição; da mesma forma que o Expediente diz respeito à confiança pelo site, a assinatura na notícia diz respeito a integridade desta, dando o parecer que ela é verdadeira e não foi criada.
+iii. Fontes: analisaram-se as notícias em destaque se estas continham suas fontes ou citações e referências. Grande parte das notícias que não continham assinatura fazia referencia a algum outro site , estas foram consideradas como sem assinatura, mas com fontes explícitas. Este item é uma analise da parte de Sources e Criação, do modelo da figura X, a existência de fontes dá mais credibilidade à notícia reportada. Vale-se dizer que para este item, a veracidade da fonte não foi verificada.
+iv. Uso de caixa-alta e linguagem de realce: um dos fatores mais comuns em sites que são explicitamente disseminadores de Fake News é o uso de caixa-alta e exclamações, para prender a atenção do público, principalmente mais leigo, ao tentar impor uma importância à notícia.
+Este item se relaciona com a Mensagem e a Interpretação do fato relatado. Dentre os 106 sites analisados, apenas um fazia uso deste tipo de artificio, mostrando que os criadores dos sites mais acessados já estão cientes que o publico enxerga esse fator como um indício negativo.
+v. Juízo de valor: uso de adjetivos, advérbios e polemicas nas manchetes servem para o mesmo intuito do item anterior, que é realçar a notícia a fim de chamar a atenção do leitor. Também relacionado a Mensagem e
+Interpretação além do Agente, mostrando em muitas das vezes o enviesamento político deste.
+
+Definição da variável de resposta
+
+A variável é se a página apresenta desinformation ou não. Foi criada mais uma coluna no mesmo Excel, codificando para sim e para não. Assim, verificou-se a disseminação de notícias falsas dentro os 106 sites analisados por investigação através dos FactCheckers convencionais ou procurando manchetes absurdas e pesquisando no Google para verificar se existiam relatos daquela notícia ser Fake.
+
+Assim, dentre os 106 sites de notícias políticas das 2200 páginas mais visitadas do
+
+Brasil, constatou-se que apenas sete disseminam ou já disseminaram desinformation. Por ser um número pequeno, foram adicionadas oito páginas fora das 2200, mas que estão constantemente presentes nos verificadores de fatos . Deste modo, com 15 páginas, apesar de ainda ser um número pequeno, os resultados da regressão serão mais relevantes.
+
+Parâmetros da regressão
+
+Por se tratar de um problema com resultados binários, decidiu-se pela utilização da regressão logística. O modelo utiliza de 16 variáveis contanto com a independente, fake ou não-fake .
+
+O modelo de regressão logística utiliza uma função logística 𝑑𝑜 𝑡𝑖𝑝𝑜 𝑓 =
+
+1+𝑒 −𝑘, para estimar uma variável dependente binária. No caso do problema das fontes de fake news, essa variável foi se o website era ou não fake .
+No RStudio foi utilizado da função 𝑔𝑙𝑚 .
+
+Ads Conhec.
+
+Pelos resultados obtidos, pode-se notar que as únicas variáveis preditoras significativas são presença de certificado de segurança e se as propagandas na página são enganosas ou golpe . Entretanto, quando se avalia para um 𝛼 maior, outras variáveis passam a ser significativas, como sufixo, presença de e-mail para contato, polemização das notícias e furos jornalísticos.
+Nota-se que variáveis antes consideradas importantes como utilização de caixa-alta e a diagramação da página não obtiveram valores significativos . O motivo deste resultado é a evolução das páginas, que, percebendo que os leitores estavam mais atentos a estes sinais, mudaram a forma de abordagem. Percebe-se uma taxa de rejeição de mais de 70% para sites com estética ruim .
+
+Ajuste do modelo
+
+Na pré-seleção, 15 páginas foram identificadas como fontes de notícias falsas. O modelo, com 0.30 de probabilidade, identificou que das 114 páginas analisadas, 107 apresentam evidências o suficiente para se enquadrar na categoria determinada, sendo 13 como fake e 94 como não-fake. Por outro lado, 2 páginas classificadas previamente como disseminadoras de fake news foram marcadas como não apresentando evidências pelo modelo, enquanto 5 não foram marcadas como fake mas apresentarem evidências.
+Dessas 5 páginas que não foram classificadas, porém apresentaram evidências no modelo, todas foram marcadas como sites que polemizam suas notícias, mostrando similaridade no comportamento destas.
+
+Limitações
+
+Dentre os 2200 websites mais visitados do Brasil em outubro/2018, apenas 106 reportavam notícias políticas. Durante as categorizações, percebeu-se que muitas das páginas com “notícia” no domínio ou .news no domínio não estavam mais no ar, portanto não puderam ser consideradas no estudo, forte indício que disseminavam notícias falsas e foram banidas.
+Assim, das 106 páginas, sete puderam ser atestadas como difusoras de notícias falsas, o que é um número pequeno para se usar no modelo. Desta forma, adicionou-se oito websites que não estavam na lista dos 2200 mais acessados do SEMrush, mas que eram também difusores de fake news, afim de melhorar resultados. No entanto, o número ainda é muito pequeno, o que pode comprometer a distribuição de probabilidades do resultado.
+
+CONCLUSÃO
+
+Com os resultados obtidos, percebe-se que são poucas as variáveis que podem predizer com um p-valor menor do 0.10 se uma página possui evidências de propagar notícias falsas.
+Quando se analisa para um alfa entre 0.10 e 0.20, percebe-se que são variáveis antes utilizadas para predizer se a fonte é difusora de fake news. Infere-se uma evolução no modo que Agentes estão formatando a Distribuição e construindo a Mensagem, dado que o modo antigo já foi percebido pelos leitores, evidenciado pelo alto grau de rejeição a esse tipo de website.
+Percebe-se também que existe ainda uma zona cinzenta entre a percepção do que é um site difusor de Fake News e um com forte enviesamento político. Devido ao juízo de valor presente nos dois e a alta intersecção entre estes dois tipos de sites durante as eleições, fica difícil separar o que é falso do que é apenas uma posição que o leitor concorda. Mostrou-se isso nos resultados, cinco sites não categorizados como fake durante a pesquisa prévia mostraram fortes evidências de serem, segundo o modelo logístico.
+Estudo diz que 90% dos eleitores de Bolsonaro acreditam em fake news.

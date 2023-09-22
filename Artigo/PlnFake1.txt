@@ -1,0 +1,100 @@
+Trabalho de conclusão de curso Universidade Federal do Rio de Janeiro, Instituto de Matemática, Bacharel em Ciência da Computação, 1. Fake news. Elaborado pelo Sistema de Geração Automática da UFRJ com os dados fornecidos pelo autor, sob a responsabilidade de Miguel Romeu Amorim Neto - CRB-7/6283.
+
+AGRADECIMENTOS
+
+Ao co-orientador Anderson, que me guiou pelo caminhos da análise de dados.
+
+RESUMO
+
+Notícias falsas existem há muito tempo. Porém, com o avanço da mídias sociais e do acesso à internet, elas se tornaram um problema maior. Devido à rápida disseminação em mídias sociais e aplicativos de mensagens instantâneas, notícias falsas podem alcançar mais pessoas em menos tempo e influenciar diretamente os processos democráticos, criar ou expandir crises sociais, alavancando problemas de segurança que às vezes levam a fins trágicos. Com o intuito de gerar um método rápido e automatizado de identificação de notícias falsas, este estudo realizou uma análise dessas notícias, escritas em português, a partir de um corpus e outras fontes de dados verificadas.
+
+Validamos estudos anteriores e adicionamos novas variáveis para ajudar na identificação de notícias falsas. mineração de dados.
+
+ABSTRACT
+
+Fake news has been around for a long time. Because of the rapid spread in social media and instant messaging applications, fake news can reach more people in less time and directly influencing democratic processes, create or expand social crisis, leveraging security issues that sometimes lead to tragic ends. In order to promote a fast and automated method of fake news identification, this study carried out an analysis of this news, written in Portuguese, from a corpus and other sources of verified data. This study validated previous studies and added new variables to help identify fake news.
+
+Historiadores afirmam que notícias falsas existem desde o século 6, com o intuito de arruinar a reputação de pessoas no poder como por exemplo entre os séculos 14 e 18, onde tais notícias se tornaram fontes de dinheiro a partir de chantagem, para que não houvesse difamação dos alvos a partir de mentiras ou fatos distorcidos . E as notícias falsas podem chegar de diferentes formas e intenções, como nos exemplos a seguir. Contudo, a disseminação das ​fake news​, termo difundido globalmente para as notícias falsas, encontra novos patamares na era do mundo conectado. Usuários de mídias, quase sempre na internet mas também nos canais de televisão, são bombardeados com notícias que nem sempre são verdadeiras, e que em casos extremos causam a morte de inocentes .
+
+Sendo assim, mecanismos automáticos para detecção de notícias falsas tendem a ser importantes devido a rapidez da verificação. Além disso, a validação automática de conteúdo quanto a sua veracidade permanece como uma tarefa difícil às máquinas por requerer níveis de abstração e criatividade inerentes a seres humanos portanto, além da inclusão desses métodos automatizados, é importante a participação das pessoas para que os algoritmos de aprendizado de máquina estejam sempre atualizados, visto que a forma de escrita das notícias mudam de acordo com o tempo, assim como as entidades retratadas. Realizar análise textual de notícias falsas escritas na língua portuguesa a partir de bases de notícias coletadas entre 2015 e 2019. ● Aplicar algoritmos de aprendizado de máquina para a identificação de notícias falsas, visando a criação de um método automatizado que auxilie a checagem de notícias quanto a sua veracidade, considerando o português como língua de escrita.
+
+2 TRABALHOS RELACIONADOS
+
+Tais estudos focam mais nos impactos que notícias falsas têm em determinados segmentos da sociedade, como é visto a seguir. Como o uso de ​fake news nas eleições americanas , onde foram catalogadas 156 notícias falsas compartilhadas durante o período de eleição. Apesar de as redes sociais serem a quinta fonte de pesquisa de notícias durante a eleição americana, foi a partir delas onde os sites de notícias falsas tiveram seu maior fluxo de visitação, em torno de 41,8%. No estudo de Allcott e Gentzkow, não foram analisadas, porém, a estrutura linguística das notícias ou outras métricas para que se criassem métodos de identificação automática de notícias falsas.
+
+Os estudos analisaram notícias falsas de sites como o “Pensa Brasil” e sua disseminação no Facebook. Novamente, os estudos basearam-se no impacto que a disseminação de notícias falsas têm na sociedade.
+
+A relação pós-verdade, ​fake news e ​fact checking foi tema de estudo de Santos e
+
+Destaca-se, então, a importância das agências de ​fact checking​, como a Lupa, para combater notícias falsas, assim como engajamento de jornalistas como parte interessada. Em pesquisa de Bondielli e Marcelloni, 2019, realizaram estudo sobre técnicas de detecção de rumores e notícias falsas. Nos estudos que consideram atributos baseados no conteúdo, como é o objetivo deste trabalho, são utilizados métodos de análise léxica , sintática e semântica .
+
+Figura 1: Diferentes tipos de extração de atributos usados na literatura para detecção de fake news
+
+3 FUNDAMENTAÇÃO TEÓRICA E DADOS
+
+Também serão apresentadas as bases e formatos dos dados trabalhados. O conceito de n-gramas é a sequência de n palavras no texto. Ou seja, com n igual a 1, temos a tokenização de cada palavra individual, chamada unigrama. A análise de sentimento classifica se a opinião expressada em determinado texto é positiva ou negativa.
+
+Fazendo uso de dicionários léxicos, onde cada palavra presente no dicionário tem uma polaridade , é possível aferir o sentimento do texto. A vetorização de um texto realizada neste trabalho utiliza o conceito de ​bag of words​, que consiste basicamente em contar o uso de cada unigrama em um texto, gerando um vetor para ser utilizado em classificadores. A partir da aplicação de métodos de processamento de linguagem natural, é possível utilizar algoritmos para aprendizado de máquina para classificação de notícias falsas. Tais algoritmos foram escolhidos a partir de trabalhos relacionados adicionado de um algoritmos de ​boosting​, o AdaBoost.
+
+Os resultados foram avaliados por meio da avaliação cruzada para identificar o melhor algoritmo na classificação. Como visto no quadro 1, foram utilizados algoritmos com diferentes performances, tempo de treino e acurácia.
+
+Tolerância a ruídos
+
+Nesta seção são apresentadas as bases de dados utilizadas no trabalho. ● 3602 notícias verdadeiras. O corpus foi criado a partir de notícias publicadas em sites de notícias entre o período de janeiro de 2016 e janeiro de 2018. O formato do arquivo é texto com organização posicional, com métricas da notícia em arquivo separado, como quantidade de palavras e classes gramaticais.
+
+Exemplo de metadados são a quantidade de substantivos e adjetivos e a pausalidade do texto. Além dos dados do corpus Fake.br, este estudo também fez uso de dados provenientes da Fakepedia. A Fakepedia também catalogou notícias publicadas em sites jornalísticos. A API da Fakepedia retorna as notícias categorizadas em falsas e verdadeiras no formato JSON.
+
+Através de chamada HTTP à URL http://www.fakepedia.org/api/fake/, por exemplo, é possível obter a lista de notícias falsas, retornando um JSON no formato abaixo. Totalizando 12062 notícias para o estudo. Dos dados extraídos da Fakepedia, foram utilizados o texto da notícia, título e link para podermos categorizá-las nos mesmos tipos de texto do corpus Fake.br. Na Figura 2, é possível verificar a proporção de notícias falsas e verdadeiras utilizadas no estudo.
+
+Após aplicação dos algoritmos de processamento de linguagem natural, a base será incrementada com a lista de campos como quantidade e percentual de cada classe gramatical e polaridade do texto.
+
+4 MATERIAIS E MÉTODOS
+
+Nas seções a seguir, discutiremos mais sobre os dados com suas características, a arquitetura planejada, e a implementação do estudo. Para se ter uma melhor acurácia com textos completos e com conteúdo suficiente, foram filtradas notícias com menos de 70 palavras. Ainda foram filtradas as notícias falsas com quantidade de palavras menor que 120 com o intuito de deixar a base mais proporcional. Aplicados os filtros, a quantidade de notícias ficou em 8776 notícias e temos uma melhor proporção entre notícias falsas e verdadeiras, como pode ser visto na Figura 3.
+
+O teste foi realizado para validar o balanceamento de acordo com a proporção de notícias falsas e verdadeiras do estudo. Considerando uma frequência esperada de 50% para cada classe, a quantidade de notícias de cada classe deve ser 4388. Para realizar a análise, utilizou-se de mecanismos para processamento de linguagem natural, como tokenização para identificação das classes gramaticais em uso, remoção de pontuação e aplicação de ​lowercase no texto para cálculo de palavras mais utilizadas no texto. Fez-se uso de uma plataforma de indexação de documentos e busca para ter uma base unificada e auxiliar nas consultas aos dados necessárias para análise.
+
+Utilizou-se a linguagem Python, assim como bibliotecas específicas para processamento de linguagem natural e aplicação de algoritmos para aprendizado de máquina . O Elasticsearch é um motor de busca, onde são indexados os dados coletados e depois enriquecidos com outras informações calculadas durante o processamento, gerando uma base única de consulta. Kibana é um plugin de visualização de dados que consulta, de forma nativa, o Elasticsearch, fornecendo recursos de visualização para análise a partir dos dados indexados. Como a arquitetura do projeto contempla a coleta de dados das duas fontes e inserção em base única, a adição de notícias ou outras fontes de dados é facilitada pela padronização da base e escalabilidade da ferramenta utilizada.
+
+Além da filtragem de textos com menos de 70 palavras, considerando textos maiores para termos mais dados na análise proposta pelo estudo, também é necessária outra forma de saneamento na base, que são as notícias repetidas, existentes tanto na Fakepedia quanto do corpus Fake.br. Como as bases foram geradas por estudos diferentes, podendo ser alimentadas das mesmas fontes de notícias, foi necessário a validação de notícias pertencentes às duas bases. Para isso, foi realizada a checagem de cada notícia de uma base, comparando-a com todas as notícias de mesma classificação da outra base. 5 pares de notícias similares, todas com classificação de notícias falsas.
+
+Após indexar os dados de cada notícia das diferentes fontes na base única
+
+A quantidade de palavras no texto também foi calculada. Além dos valores literais, também foi computado o percentual de cada classe gramatical em relação ao total de palavras presentes no texto. Para o cálculo de sentimento do texto, foi utilizado o léxico SentiLex - um léxico de sentimento especificamente concebido para a análise de sentimento e opinião sobre entidades humanas em textos redigidos em português -, com polaridade para cada verbete presente. Com a base incrementada com essas variáveis, foi possível calcular e visualizar informações como suas médias, mediana e distribuição na ferramenta de visualização de dados Kibana.
+
+Ainda a partir dos textos, foram geradas nuvens de palavras , também usando Python, em conjunto com a biblioteca wordclouds, para identificarmos os termos mais utilizados nas notícias e podermos comparar se os termos são os mesmos nas falsas e verdadeiras. Como a coleta de informações são do mesmo período de tempo para ambas as classes de notícias, não há problema em se fazer essa comparação. Para notícias escritas em épocas diferentes, temos, além dos termos usuais à época, assuntos que são mais debatidos em determinados momentos, como eleições. Os dados provenientes do corpus Fake.
+
+Utilizou-se as mesmas categorias nas notícias coletadas através da Fakepedia para manter a padronização. A categorização foi realizada de forma manual e a proporção de cada categoria no conjunto total de notícias pode ser vista na Figura 6. Na categoria de sociedade e cotidiano temos englobadas, também, as notícias relacionadas à àrea da saúde.
+Vetorização
+
+Utilizando somente as métricas como percentual de cada classe gramatical, sentimento e quantidade de exclamações nos textos, sem considerar as palavras , foram executados os algoritmos Naive Bayes , SVM e AdaBoost para comparar quando a classificação considera o texto também. ● 20% da base como dados de validação. Os resultados obtidos com a análise e classificação serão apresentados na seção posterior.
+
+5 RESULTADOS
+
+Considerando as médias de uso de classes gramaticais, não encontram-se grandes diferenças na escrita de notícias verdadeiras e falsas. Tais variáveis mostraram diferenças maiores entre notícias de diferentes de classes distintas, como pode ser visto na Tabela 3. Notícias verdadeiras, surpreendentemente, possuem sentimento mais negativo que as notícias falsas . Temos mais notícias falsas com letras maiúsculas e o uso de exclamações é absurdamente maior nesses textos, mostrando a maior distância de valores médios encontrada no estudo.
+
+Como a média mostrou ser muito próxima para as classes gramaticais, não trazendo informações que distinguissem as classes de notícias, verificou-se, então, a distribuição dessas métricas. Foram gerados gráficos do tipo boxplot com a distribuição de cada uma das classes gramaticais para notícias verdadeiras e falsas. Nas Figuras 7, 8, 9 e 10, vemos que os percentuais de adjetivos, substantivos, pronomes e advérbios das notícias falsas possuem uma dispersão maior em relação às notícias verdadeiras. Em todos, a dispersão de notícias falsas é maior, principalmente quando consideramos a distância entre o primeiro e terceiro quartil.
+
+Como pode ser visto nas Tabelas 4 e 5, a dispersão das métricas é maior quando considerados os textos de notícias falsas. Outro fato é que, apesar de aparecer pouco em notícias falsas também, quase não há interjeições nos textos verdadeiros. Com sua média em 0% e 0,1% para notícias verdadeiras e falsas, respectivamente. Realizou-se, também, a comparação das métricas considerando somente notícias da categoria política.
+
+Com médias parecidas e desvio padrão maior para notícias falsas.
+
+Desvio Padrão
+
+Após análise da estrutura dos textos com seus percentuais de classes gramaticais, foi realizada a análise das palavras mais frequentes nas notícias. Existem termos mais frequentes às notícias falsas, como “Lula”, “Dilma” e “Bolsonaro”. A distância entre os termos mais usados, representado pelo tamanho das palavras, é menor nas notícias verdadeiras, denotando um vocabulário mais rico e assuntos mais diversificados. A partir da categorização das notícias, foram geradas nuvens de palavras para notícias relacionadas à política e sociedade, que são as duas categorias com maior percentual de notícias.
+
+Como política é a categoria com maioria absoluta de notícias na base, os termos mais usados nesta categoria refletem os considerados na base completa. Não foram encontradas diferenças significativas entre as classes de notícias.
+
+Após análises nos textos, foi criado um classificador com aprendizado de máquina supervisionado para identificar se as notícias são falsas ou verdadeiras. Aplicando a classificação com as métricas calculadas, o Gaussian Naive Bayes mostrou acurácia de 84%, o SVM obteve 89% quando executado com seus parâmetros padrão e 94% quando utilizados os parâmetros C=10 e gamma=0. Os resultados da classificação que considera os textos vetorizados e as métricas calculadas podem ser comparados na Tabela 7.
+
+Este estudo
+
+Adicionamos outras variáveis e métricas não verificadas por Monteiro em seu artigo e estudos anteriores, como a distribuição dos valores de cada classe gramatical, assim como o desvio padrão para verificar que há diferença nos usos de classes gramaticais. Há, também, a atenção para o ponto de exclamação que, como verificado neste estudo, possui importância relevante na caracterização de notícias falsas.
+
+7 CONCLUSÃO
+
+Com este trabalho, foi feita uma análise de textos de notícias escritas em português brasileiro com objetivo de analisar a estrutura gramatical das notícias falsas, fazendo um comparativo com notícias verdadeiras. Nos experimentos realizados, foi verificado que a média percentual de uso de classes gramaticais é próxima entre notícias falsas e verdadeiras, porém, a distribuição das classes gramaticais em ​fake news possui desvio padrão maior do que as mesmas métricas das notícias verdadeiras. Isso denota uma tendência de que notícias falsas possuem estilos de escrita mais diversificados, enquanto que notícias verdadeiras possuem similaridades na sua escrita independente do autor. Isso é compreensível, uma vez que notícias falsas possuem diversas fontes, enquanto as notícias verdadeiras são provenientes de poucos sites quando comparados às outras.
+
+Percebeu-se um maior uso de pontuações de exclamação e de letras maiúsculas nas notícias falsas. Portanto, tais métricas devem ser consideradas na identificação de notícias falsas, já que a presença delas é bem maior. A análise de sentimento mostrou que ambas classes de notícias possuem polaridade negativa, com as verdadeiras um pouco mais. Também não há diferença nos termos mais utilizados nas notícias.
+
+É necessário realizar o estudo considerando as demais categorias de notícias, como ciência e tecnologia, religião, etc, para verificar se os padrões continuam os mesmos ou se as diferenças se tornam mais evidentes. E considerar informações referentes aos divulgadores de notícias em mídias sociais e suas redes, para realizar uma análise baseada no contexto, conforme pesquisa de Bondielli e Marcelloni. Como o compartilhamento de imagens com textos é uma das principais formas de difusão de notícias falsas, também é necessário a aplicação de métodos de extração para que tais textos possam ser analisados.

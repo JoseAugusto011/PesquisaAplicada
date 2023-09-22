@@ -1,0 +1,51 @@
+        <html xmlns="http://www.w3.org/1999/xhtml">
+        <head> 
+        <meta http-equiv=Content-Type content="text/html; charset=utf-8"> 
+        <meta name=ProgId content=Word.Document> 
+        <meta name=Generator content="Microsoft Word 9"> 
+        <meta name=Originator content="Microsoft Word 9"> 
+        <title></title> 
+        <style> 
+         /* Font Definitions */ 
+        @font-face 
+            {font-family:Verdana; 
+            panose-1:2 11 6 4 3 5 4 4 2 4; 
+            mso-font-charset:0; 
+            mso-generic-font-family:swiss; 
+            mso-font-pitch:variable; 
+            mso-font-signature:536871559 0 0 0 415 0;} 
+         /* Style Definitions */ 
+        p.MsoNormal, li.MsoNormal, div.MsoNormal 
+            {mso-style-parent:""; 
+            margin:0in; 
+            margin-bottom:.0001pt; 
+            mso-pagination:widow-orphan; 
+            font-size:7.5pt; 
+                mso-bidi-font-size:8.0pt; 
+            font-family:"Verdana"; 
+            mso-fareast-font-family:"Verdana";} 
+        p.small 
+            {mso-style-parent:""; 
+            margin:0in; 
+            margin-bottom:.0001pt; 
+            mso-pagination:widow-orphan; 
+            font-size:1.0pt; 
+                mso-bidi-font-size:1.0pt; 
+            font-family:"Verdana"; 
+            mso-fareast-font-family:"Verdana";} 
+        @page Section1 
+            {size:8.5in 11.0in; 
+            margin:1.0in 1.25in 1.0in 1.25in; 
+            mso-header-margin:.5in; 
+            mso-footer-margin:.5in; 
+            mso-paper-source:0;} 
+        div.Section1 
+            {page:Section1;} 
+        </style> 
+        
+        </head> 
+        <body style="font-family:dejavusans; font-size:16px;"> 
+            <p style="padding:15px; color:#000000;"> Dentre estes aspectos<span style="font-family:Arial; color:#000000;">,</span> é ressaltada a necessidade de estudos de otimização para a implantação de infra-estruturas de distribuição de gás natural<span style="font-family:Arial; color:#000000; font-weight:500;">.</span> O Capítulo 4 destina-se a apresentar todo o processo de modelagem matemática com aplicação específica para o problema de distribuição do gás natural<span style="font-family:Arial; color:#000000; font-weight:500;">.</span><br><br><strong style="font-size:20px;">GÁS NATURAL E EFICIÊNCIA ENERGÉTICA</strong><br><br>Até o final da década de oitenta<span style="font-family:Arial; color:#000000;">,</span> o gás natural  era visto<span style="font-family:Arial; color:#000000;">,</span> apesar de suas vantagens e versatilidade<span style="font-family:Arial; color:#000000;">,</span> como um produto de segunda categoria dentre os combustíveis fósseis<span style="font-family:Arial; color:#000000; font-weight:500;">.</span> Porém<span style="font-family:Arial; color:#000000;">,</span> recentemente<span style="font-family:Arial; color:#000000;">,</span> o gás natural tem quebrado paradigmas<span style="font-family:Arial; color:#000000;">,</span> transformando-se em um energético essencial e estratégico para os países que o utilizam racionalmente<span style="font-family:Arial; color:#000000; font-weight:500;">.</span><br><br><strong style="font-size:20px;">CARACTERIZAÇÃO</strong><br><br>O gás natural pode ser definido como uma mistura de hidrocarbonetos leves que<span style="font-family:Arial; color:#000000;">,</span> sendo constituída em sua maior parte de metano<span style="font-family:Arial; color:#000000;">,</span> permanece no estado gasoso à temperatura ambiente e pressão atmosférica<span style="font-family:Arial; color:#000000;">,</span> <span style="font-family:Arial; color:#000000; font-weight:500;">.</span> O gás natural é uma alternativa ao petróleo e<span style="font-family:Arial; color:#000000;">,</span> conseqüentemente<span style="font-family:Arial; color:#000000;">,</span> de grande importância estratégica<span style="font-family:Arial; color:#000000; font-weight:500;">.</span><br><br><strong style="font-size:20px;">GLP<span style="font-family:Arial; color:#000000;">,</span> originado do propano  e do butano  e a gasolina natural</strong><br><br> No estado gasoso<span style="font-family:Arial; color:#000000;">,</span> o transporte é feito tradicionalmente por meio de dutos<span style="font-family:Arial; color:#000000;">,</span> ou então<span style="font-family:Arial; color:#000000;">,</span> valendo-se de tecnologias mais recentes que utilizam cilindros de alta pressão como GNC  e o GNA <span style="font-family:Arial; color:#000000; font-weight:500;">.</span>  Já no estado líquido<span style="font-family:Arial; color:#000000;">,</span> na forma de GNL <span style="font-family:Arial; color:#000000;">,</span> pode ser transportado por meio de navios<span style="font-family:Arial; color:#000000;">,</span> barcaças<span style="font-family:Arial; color:#000000;">,</span> caminhões e trens criogênicos a uma temperatura de -161 °C<span style="font-family:Arial; color:#000000;">,</span> sendo seu volume reduzido em cerca de 600 vezes<span style="font-family:Arial; color:#000000;">,</span> facilitando o armazenamento  <span style="font-family:Arial; color:#000000; font-weight:500;">.</span>  Com a crescente demanda por gás natural no mundo<span style="font-family:Arial; color:#000000;">,</span> tem havido um progressivo aumento na atividade de produção em áreas mais remotas<span style="font-family:Arial; color:#000000;">,</span> provocando grande impulso nas cadeias de GNL<span style="font-family:Arial; color:#000000; font-weight:500;">.</span>  SANTOS  observa que esta alternativa representa uma das estratégias mais nobres de aproveitamento do gás natural que se dispõe<span style="font-family:Arial; color:#000000; font-weight:500;">.</span> <br><br><strong style="font-size:20px;">Embora bastante onerosa<span style="font-family:Arial; color:#000000;">,</span> pois os investimentos são da ordem de US$</strong><br><br> Porém<span style="font-family:Arial; color:#000000;">,</span> em regiões onde a disponibilidade de redes de gás é pequena<span style="font-family:Arial; color:#000000;">,</span> já está sendo possível antecipar a chegada do produto através da distribuição a granel na forma de GNL ou GNC <span style="font-family:Arial; color:#000000;">,</span> também conhecidas como gasodutos virtuais <span style="font-family:Arial; color:#000000;">,</span> e futuramente GNA<span style="font-family:Arial; color:#000000; font-weight:500;">.</span><br><br>Na sua utilização como matéria-prima<span style="font-family:Arial; color:#000000;">,</span> o gás natural constitui-se como um insumo fundamental na indústria gasquímica e de fertilizantes<span style="font-family:Arial; color:#000000;">,</span> principalmente no processo produtivo da amônia e do metanol<span style="font-family:Arial; color:#000000; font-weight:500;">.</span>  Outro grande consumo de gás natural ocorre na própria indústria gasífera e petroleira<span style="font-family:Arial; color:#000000; font-weight:500;">.</span>  Ainda na indústria petrolífera<span style="font-family:Arial; color:#000000;">,</span> o gás é utilizado para gerar a energia necessária aos equipamentos de separação de óleo e gás e suprir as diversas necessidades energéticas na área de produção<span style="font-family:Arial; color:#000000;">,</span> incluindo as bombas e os compressores utilizados para alimentar os gasodutos de transporte<span style="font-family:Arial; color:#000000; font-weight:500;">.</span>  Nas indústrias<span style="font-family:Arial; color:#000000;">,</span> o uso do gás natural pode ocorrer em vários ramos de atividade<span style="font-family:Arial; color:#000000;">,</span> destacando-se os setores de alimentos e bebidas<span style="font-family:Arial; color:#000000;">,</span> têxtil<span style="font-family:Arial; color:#000000;">,</span> cimento<span style="font-family:Arial; color:#000000;">,</span> cerâmicas<span style="font-family:Arial; color:#000000;">,</span> vidro<span style="font-family:Arial; color:#000000;">,</span> papel e celulose<span style="font-family:Arial; color:#000000;">,</span> fundição e siderurgia<span style="font-family:Arial; color:#000000; font-weight:500;">.</span> <br><br> SANTOS  julga que o papel de maior importância a ser reservado ao gás natural é o de substituir a energia elétrica usada na eletrotermia<span style="font-family:Arial; color:#000000;">,</span> isto é<span style="font-family:Arial; color:#000000;">,</span> no aquecimento industrial de processos ou na geração de vapor através da eletricidade<span style="font-family:Arial; color:#000000; font-weight:500;">.</span> <br><br></p>            
+            </body></html>
+            
+            

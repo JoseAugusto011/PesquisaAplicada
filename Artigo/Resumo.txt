@@ -1,0 +1,1012 @@
+Resumo da Dissertação submetida ao PETRAN/UFC como parte dos requisitos para a obtenção do título de Mestre em Ciências (M.Sc.) em Engenharia de Transportes
+
+DISTRIBUIÇÃO DE GÁS NATURAL NO BRASIL: UM ENFOQUE CRÍTICO E DE MINIMIZAÇAO DE CUSTOS
+
+Eduardo Rocha Praça Dezembro/2003
+Orientador:	Ernesto Ferreira Nobre Júnior Có-orientador: José Lassance de Castro Silva
+
+A maioria dos países do globo tem incrementado o uso do gás natural, motivados pela necessidade de uma fonte energética mais limpa e polivalente. Porém, para se obter os reais benefícios do gás natural é preciso priorizar o seu uso através de alternativas que possibilitem alta eficiência energética. Dentre estas alternativas, são destacadas a substituição do uso da eletricidade para aquecimento ou resfriamento (eletrotermia), a substituição do GLP nas cozinhas e o suprimento de sistemas de cogeração. A efetivação destas estratégias produziria impactos positivos principalmente nos setores residencial e comercial, pois as residências e estabelecimentos comerciais não têm acesso ao gás natural e nem sequer dispõem de informações acerca das novas tecnologias disponíveis para operação em setores de pequena escala de consumo. Portanto, é fundamental que as distribuidoras de gás natural utilizem as infra-estruturas de distribuição disponíveis para facilitar a acessibilidade ao combustível. Como a decisão acerca da implantação de infra-estruturas de distribuição de gás natural é de caráter estratégico, o objetivo primordial deste trabalho é elaborar um modelo para minimizar os custos de implantação de infra-estruturas para distribuição de gás natural. Desta forma, foi desenvolvido um modelo matemático utilizando programação linear binária para apontar quais as infra-estruturas de distribuição de gás natural devem ser implantadas, de modo a minimizar o custo total. Na resolução do modelo foi utilizado o software LINGO 7.0. O modelo proposto foi validado através de testes em 3 cenários elaborados, demonstrando-se eficiente e flexível, permitindo a obtenção da solução ótima mesmo quando sujeito a variações dos parâmetros de entrada. Estas variações, representadas pelos cenários elaborados, são situações reais que podem acontecer durante a operação do sistema de distribuição de gás natural.
+ 
+CAPÍTULO 1
+
+INTRODUÇÃO
+“ O que sabemos é uma gota, o que ignoramos é um oceano”
+( Isaac Newton)
+
+Este capítulo sintetiza a abrangência deste trabalho, apresentando a importância do tema proposto, ao mesmo tempo em que introduz o leitor na problemática do setor energético brasileiro, enfocando especificamente a ausência de critérios técnicos por parte dos tomadores de decisão para a implantação de infra-estruturas fundamentais para a melhoria da eficiência energética do país. Assim, são apresentados a justificativa da temática abordada, a definição do problema de pesquisa, os objetivos geral e de caráter específicos, o método de pesquisa empregado e, finalmente, uma descrição sucinta dos demais capítulos.
+1.1 JUSTIFICATIVA DA TEMÁTICA ABORDADA
+
+Observa-se a importância crescente do gás natural na maioria das matrizes energéticas dos países, sejam eles desenvolvidos ou em desenvolvimento. As principais motivações que justificam esta tendência podem ser sintetizadas pelo maior volume e dispersão das reservas existentes no mundo, quando comparadas ao petróleo, bem como a crescente pressão de grupos ambientais favoráveis à utilização de uma fonte energética mais limpa e polivalente que pudesse substituir a eletricidade na s residências e estabelecimentos comerciais, o óleo combustível no setor industrial, a gasolina e o diesel no setor de transportes e o carvão para geração termelétrica, com elevada eficiência e menores impactos.
+
+No caso do Brasil, com a privatização do setor elétrico iniciada em meados da década passada e a conseqüente crise de energia elétrica deflagrada, tomou impulso um grande esforço do governo brasileiro para incrementar a expansão da potência instalada através de usinas termelétricas alimentadas por gás natural. A se manter a tendência atual, a participação termelétrica na capacidade instalada de energia elétrica que era de 10,7% ao final de 2001, deverá crescer para 15,5% ao final de 2010 e para 30% em 2022 (MME, 2002).
+ 
+Assim, projeta-se para o gás natural um importante papel no atendimento da crescente demanda de energia primária, justificando a política adotada pelo Governo Federal que tem o firme propósito de elevar a participação do combustível na oferta interna de energia primária de 7,5% (BEN, 2003), conforme mostrado no gráfico da Figura 1.1, para cerca de 15% até o final desta década (CTGÁS, 2003a).
+
+
+No entanto, caso esta estratégia seja efetivada, o atendimento da demanda potencial de gás natural nos setores residencial, comercial, industrial e de transportes estaria seriamente ameaçado por restrições de oferta, visto que as reservas nacionais são escassas e os custos de importação são elevados. Por outro lado, a recente descoberta de grande quantidade de gás natural na Bacia de Santos abre novas perspectivas para o setor energético nacional.
+Com relação à termeletricidade, BERMANN (2002) alerta que diversas projeções indicam que os impactos decorrentes da geração termelétrica por gás natural elevarão consideravelmente as emissões indesejáveis à atmosfera, favorecendo fortemente à concretização de um cenário catastrófico no Brasil sob o enfoque da sustentabilidade.
+ 
+Acredita-se ainda que a opção por essas instalações traga enormes prejuízos financeiros ao país, sobretudo pelo custo maior da energia gerada e pela necessidade da importação em grande escala de um insumo cujo custo é atrelado ao preço instável do petróleo. SANTOS (2002) defende que a decisão de concentrar todos os esforços no segmento de termeletricidade a gás postergará indefinidamente o avanço do consumo de combustível no país, pois, desta forma, o combustível será reduzido a uma mera “commodity” primária, com baixo valor agregado e que conflitará com a energia renovável das águas.
+Por outro lado, as perspectivas para a utilização plena e racional do gás natural no mundo são bastante promissoras, pois é possível obter alta eficiência energética utilizando sistemas de cogeração, produzindo conjuntamente calor (ou frio) e energia. Além disso, diversas outras aplicações no setor veicular, industrial e residencial podem ser incrementadas, configurando-se nos chamados “usos nobres” do gás natural (SANTOS, 2002).
+
+Mesmo assim, SANTOS (2002) defende que o grande potencial para penetração do gás natural no Brasil será a substituição do uso da eletricidade para aquecimento ou resfriamento (eletrotermia) pela utilização direta do combustível. No uso térmico da eletricidade, a energia química é transformada em energia elétrica e levada por linhas de transmissão até o consumidor que a usará em equipamentos como ar condicionado e chuveiros elétricos com perdas em todas as fases do processo.
+SANTOS (2002) ainda ressalta que o uso direto do gás natural nos equipamentos domésticos saltará etapas, evitando perdas de rendimento energético. Além disso, este processo ajudaria a aliviar o sistema elétrico, principalmente nos momentos de pico, evitando, ou pelo menos adiando, grandes investimentos em expansões da geração elétrica.
+FURNALETTO (2002) reitera que além do uso nas cozinhas, substituindo o GLP, o gás também possui outras aplicações domésticas, tais como em geladeiras, secadoras de roupas e churrasqueiras. No entanto, é no aquecimento de água e de ambientes que se encontram as maiores economias. O referido autor esclarece que no uso comercial e residencial, é possível conseguir reduções de até 40 % nos custos com energia elétrica.
+ 
+Porém, para o gás natural penetrar nestes segmentos mais promissores e contribuir de modo efetivo para o aumento da eficiência energética é necessário eliminar a grande impedância que é a restrita acessibilidade ao produto. Como os custos decorrentes da interligação a um ramal são elevados e fo rtemente influenciados pela distância, observa-se que somente para consumidores localizados próximos aos gasodutos torna-se viável o uso do combustível, evidenciando a existência de uma grande demanda reprimida que seria satisfeita por uma estrutura de distribuição mais abrangente.
+Tal afirmação é reforçada pelo Diretor de Gás e Energia da PETROBRÁS, Ildo Sauer, que ao ser indagado se a PETROBRÁS já dispõe de meios de oferecer um gás natural mais barato, respondeu: “o problema é o custo da logística de distribuição, que exige financiamento de longo prazo. Não que o custo do gás seja elevado, mas porque o custo da distribuição é alto. Principalmente para pequenos e médios consumos, uma faixa que queremos desenvolver (BRASIL ENERGIA, 2003a)”.
+
+Assim, é fundamental que os esforços tecnológicos procurem reduzir os custos e viabilizar economicamente a distribuição descentralizada do gás, ampliando sensivelmente a possibilidade de comercialização do produto para clientes situados fora das zonas de influência dos gasodutos.
+
+Esta perspectiva é observada pelos países da Europa Ocidental que possuem redes densas de distribuição de gás natural. Como exemplo, destaca-se a Holanda, onde cerca de 97% dos domicílios são supridos pela rede de distribuição (IEA, 1998). Contrariamente, o Brasil tem dimensões continentais e recursos financeiros escassos, o que inviabiliza financeiramente, pelo menos a curto e médio prazo, a interligação de todas as localidades através de rede dutoviária.
+
+Assim, percebe-se que para suprir determinada região onde haja demanda potencial pelo combustível, com elevado nível de serviço e com custos reduzidos, de forma a aumentar seu valor agregado, é fundamental que sejam adotadas estratégias para a distribuição secundária do produto, eliminando a construção dos onerosos gasodutos.
+ 
+Neste sentido, SANTOS (2002) afirma: “ ... na realidade dos países emergentes, dada a não existência prévia de mercados, é necessário condicionar a tecnologia de maneira que o gás possa chegar aos consumidores antes das redes de distribuição, antecipando as demandas que ancorarão os projetos e diminuirão os seus riscos comerciais”.
+Com relação a tal afirmação, os avanços tecnológicos utilizando técnicas de liquefação (GNL), compressão (GNC) e adsorção (GNA) já permitem imaginar a viabilização dos “gasodutos virtuais”. Estas tecnologias previstas no Plano de Massificação do Uso do Gás Natural, lançado recentemente pela PETROBRÁS, são compostas por unidades de liquefação, compressão, regaseificação, além de veículos adaptados ao transporte do gás natural comprimido ou liquefeito para regiões distantes da malha de dutos, apresentando elevado valor agregado (GÁS BRASIL, 2003).
+SANTOS (2002) corrobora argumentando que “ a entrega a granel deve ampliar o alcance do gás natural muito além dos poucos gasodutos e redes de distribuição existente no país. Ao transportar energia sobre rodas, trilhos ou hidrovias, o Brasil fará muito melhor uso dos ativos e da infra-estrutura já disponível”.
+
+Portanto, considera-se que a acessibilidade ao gás natural por parte dos clientes localizados fora da área de influência dos gasodutos poderá ser garantida a partir da implantação de instalações, em locais estratégicos, capazes de receber o combustível tanto por dutos como em forma de GNL ou GNC, transferindo-o para vasilhames apropriados ou tubulações específicas para sua posterior distribuição.
+
+Estas instalações que são os pontos finais dos gasodutos virtuais são denominadas de Centros de Distribuição Secundária de Gás Natural (CDSGN) e têm a função essencial de gerar uma demanda inicial ou complementar o fornecimento dutoviário de gás natural. Desta forma, possibilita-se efetivamente o atendimento de todas as regiões de demanda, independendemente da proximidade das dutovias.
+
+SANTOS (2002) defende ainda que não se deve concentrar todas as atenções nas redes de gás natural, afinal, os mercados consumidores não existem de forma concentrada. É muito mais racional a alternativa de cobrir regiões maiores, afastadas dos gasodutos e redes de distribuição. Desta forma, são gerados dois benefícios: o
+ 
+combate mais equilibrado à eletrotermia e a geração de receitas adicionais da venda do gás que permite o financiamento de novos investimentos em rede.
+
+Considerando que tanto os CDSGN quanto as redes de distribuição de gás natural podem ser instalados dentro da malha urbana, ou seja, em um ambiente complexo e dinâmico, é razoável observar que diferentes alternativas locacionais implicarão certamente em diferentes custos associados à implantação e operacionalização destas instalações, que por sua vez, influenciarão na competitividade do combustível. Desta forma, torna-se relevante e fundamental a existência de estudos de localização consistentes, possibilitando o atendimento efetivo da clientela visada.
+
+BALLOU (1993), afirma que os benefícios que podem surgir das melhores escolhas locacionais para a implantação de equipamentos urbanos são bastante significativos. Neste mesmo sentido, LACERDA (2002) reforça que a importância dos estudos de localização de centros de distribuição decorre dos altos investimentos envolvidos e dos profundos impactos que as decisões de localização têm sobre os custos logísticos.
+Contrariamente, verifica-se que, na maioria das vezes, os critérios de localização de instalações adotados tanto pela iniciativa privada quanto pelo Poder Público são empíricos, desconsiderando estudos técnicos robustos e, normalmente, resultando em decisões equivocadas que implicam em custos de oportunidade com efeito permanente.
+
+NOVAES (2001) defende que, dentre os locais potencialmente viáveis, a escolha da localização de infra-estruturas para distribuição de gás natural deve recair sobre a alternativa que propicie um melhor balanceamento entre impactos gerados ao entorno, custo total e nível de serviço. Qualquer outra escolha implicará em impedâncias adicionais aos clientes, reduzindo a competitividade do produto.
+
+
+1.2.	DEFINIÇÃO DO PROBLEMA DE PESQUISA
+
+Diante da tendência crescente do aumento da demanda do gás natural, percebe- se a necessidade de ações firmes por parte do Poder Público no sentido de incentivar uma mudança cultural junto à população de modo a quebrar os paradigmas existentes contra o energético. Neste sentido, SANTOS (2002) observa que “a cultura gasífera
+ 
+brasileira é limitada e inexistem políticas criativas no sentido de reduzir esse lapso cultural”.
+
+Para tanto, é imperioso que as distribuidoras utilizem metodologias e tecnologias de apoio à tomada de decisão que contribuam para facilitar a acessibilidade ao combustível, de modo a incentivar o processo de distribuição abrangente do gás natural, permitindo a sua expansão racional.
+
+BOWERSOX E CLOSS (2001) ressaltam que dentre todas as decisões tomadas pelos executivos americanos da logística, aquelas que envolvem localização dos depósitos e centros de distribuição são repensadas com maior atenção, visto que provocam impactos consideráveis sobre as demais operações logísticas.
+
+BOWERSOX E CLOSS (2001) ainda alertam que, por mais simples que pareçam, os problemas de localização de facilidades caracterizam-se por sua complexidade e pela necessidade de manipular uma grande quantidade de dados. Para tratar eficazmente estes problemas, devem ser empregadas técnicas sofisticadas de modelagem e análise.
+Ao se rebater estes fundamentos logísticos para o caso específico do gás natural, uma das primeiras questões que se configura para as distribuidoras é a necessidade de definir como atender efetivamente aos clientes considerados, utilizando o mínimo de recursos financeiros.
+
+Por sua vez, o Projeto GASLOG - Estudo Logístico da Distribuição do Gás Natural nas Regiões Norte e Nordeste do Brasil, financiado pelo CTPETRO, tem como um de seus objetivos específicos identificar a localização espacial ótima, em termos de custos de distribuição mínimos, de fontes primárias e secundárias de gás natural, no âmbito dos estados das regiões Norte e Nordeste a partir da rede dutoviária já existente (NUPELTD, 2001).
+Diante das peculiaridades e especificidades do produto e dos consumidores, surge como problema de pesquisa a necessidade de definir a estratégia de suprir a demanda por gás natural, utilizando conjuntamente a malha dutoviária e CDSGN, da forma mais econômica.
+ 
+Considerando que a implantação da maioria dos equipamentos urbanos no Brasil não se vale de estudos locacionais de cunho técnico-científico consistentes, priorizando muitas vezes aspectos políticos e que implicam em um elevado custo de oportunidade, tem-se a seguinte questão de pesquisa:
+
+Como formular um modelo de minimização dos custos de implantação das infra- estruturas existentes (CDSGN e dutovias) para distribuição de gás natural, de modo a disponibilizar o produto competitivamente para uma clientela potencial conhecida?
+
+
+
+1.3.	OBJETIVOS
+
+Como a decisão acerca da implantação de infra-estruturas de distribuição de gás natural é de natureza estratégica, pois envolve recursos significativos, e seus efeitos econômicos são de longo prazo, é objetivo primordial deste trabalho elaborar um modelo para minimizar os custos de implantação de infra -estruturas para distribuição de gás natural, considerando os custos envolvidos de forma sistêmica.
+1.3.1.	Objetivos específicos
+
+Como objetivos específicos podem ser listados:
+
+a)	Analisar criticamente a utilização do gás natural no Brasil, enfocando aspectos de desenvolvimento sustentável;
+
+b)	Definir as variáveis fundamentais que influenciam na implantação de infra- estuturas de distribuição de gás natural;
+
+c)	Validar o modelo proposto através da aplicação em cenários de estudo.
+
+1.4.	MÉTODO DE PESQUISA
+
+A metodologia empregada na elaboração deste trabalho pode ser dividida em três etapas principais:
+1.4.1.	Pesquisa Bibliográfica do Estado da Arte do Gás Natural
+
+Inicialmente, realizou-se um levantamento e análise das publicações referentes ao objeto de estudo da pesquisa, tanto nos aspectos de fundamentos quanto do estado da
+ 
+arte. Este levantamento bibliográfico consistiu de busca de informações relevantes sobre a utilização do gás natural, valendo-se de bibliotecas públicas e virtuais, bem como contatos com profissionais e pesquisadores da área.
+Após o conhecimento das peculiaridades da problemática da distribuição do gás natural, é possível definir, dentro de uma visão sistêmica, quais as variáveis mais importantes que estão relacionadas diretamente ao processo de implantação de infra- estuturas para sua distribuição.
+1.4.2.	Pesquisa do Estado da Arte de Problemas de Localização
+
+A etapa seguinte objetivou definir qual o modelo de otimização a ser adotado. Esta escolha depende fundamentalmente do porte do problema, dos equipamentos disponíveis para o cálculo computacional, bem como da restrição do tempo de resolução.
+
+Sendo assim, foi necessário realizar um levantamento prévio do estado da arte em termos de estudos de localização de facilidades. Além disso, considerou-se fundamental que, nesta pesquisa, as técnicas utilizadas para a resolução de problemas de localização fossem abordadas com maior ênfase.
+
+Ao final desta etapa, foi possível aliar as peculiaridades do problema da distribuição do gás natural com as técnicas de otimização estudadas, possibilitando a elaboração de um modelo matemático de otimização envolvendo as variáveis-chaves definidas anteriormente.
+
+1.4.3.	Elaboração do Modelo
+
+Cumpridas as etapas anteriores foi possível formular e elaborar o modelo matemático a ser utilizado, considerando sempre as variáveis escolhidas e as limitações de tempo e de equipamento existentes. É importanteobservar que os resultados obtidos tiveram de ser estudados e analisados para verficar a confiabilidade do modelo.
+
+Com isto, espera-se que o trabalho possa contribuir para o processo de distribuição do gás natural, aumentando a sua acessibilidade através da concepção de um modelo computacional que se tornará uma ferramenta simples e confiável, facilmente aplicável a qualquer região, para apoiar a decisão estratégica de definir quais
+ 
+as infra-estruturas de suprimento de gás natural que deverão ser efetivamente implantadas para atender a demanda e gerar menores custos.
+
+1.5.	DETALHAMENTO DO TRABALHO
+
+Esta dissertação encontra-se estruturada em cinco capítulos, incluindo este que é introdutório.
+No Capítulo 2, é apresentada uma caracterização do gás natural, ressaltando sua definição e como está formatada sua cadeia produtiva. Além disso, discutem-se as principais vantagens e aplicações do combustível nos diversos setores. Em seguida, são enfocados alguns aspectos gerais decorrentes de seu uso e que podem contribuir para um melhor entendimento do problema da distribuição do gás natural.
+O Capítulo 3 traz, inicialmente, alguns aspectos logísticos relacionados à distribuição de produtos e que podem ser rebatidos para o caso específico do gás natural, possibilitando uma estrutura de distribuição mais abrangente. Dentre estes aspectos, é ressaltada a necessidade de estudos de otimização para a implantação de infra-estruturas de distribuição de gás natural.
+No decorrer do capítulo discute-se a importância prática de estudos de localização, sendo apresentada a evolução histórica dos principais métodos para a resolução deste tipo de problema. Após esta etapa, os problemas de localização são enfocados na Pesquisa Operacional, destacando-se o procedimento lógico para sua resolução.
+O Capítulo 4 destina-se a apresentar todo o processo de modelagem matemática com aplicação específica para o problema de distribuição do gás natural. Assim, o problema em questão é formulado, modelado, resolvido e avaliado para um exemplo na cidade de Fortaleza, contendo três cenários de análise.
+
+Por fim, no Capítulo 5 são apresentadas as considerações finais, conclusões e recomendações para estudos futuros.
+
+CAPÍTULO 2
+
+GÁS NATURAL E EFICIÊNCIA ENERGÉTICA
+
+“ Nunca andes pelo caminho traçado, pois ele conduz somente onde os outros já foram”
+(Graham Bell)
+
+Até o final da década de oitenta, o gás natural (GN) era visto, apesar de suas vantagens e versatilidade, como um produto de segunda categoria dentre os combustíveis fósseis. Este energético sempre impôs dificuldades e custos adicionais para o seu transporte, armazenamento e distribuição, tornando-se pouco atrativo para os eventuais investidores.
+
+Porém, recentemente, o gás natural tem quebrado paradigmas, transformando-se em um energético essencial e estratégico para os países que o utilizam racionalmente. Atualmente, este combustível, junto com a eletricidade, é o mais versátil recurso energético disponível para uso direto. Além disso, transforma-se rapidamente em um produto de grande valor agregado, pois se trata de um recurso que fornece vantagens energéticas e ambientais evidentes, como será visto a seguir.
+2.1	CARACTERIZAÇÃO
+
+O gás natural pode ser definido como uma mistura de hidrocarbonetos leves que, sendo constituída em sua maior parte de metano, permanece no estado gasoso à temperatura ambiente e pressão atmosférica, (CONPET, 2000). Na natureza, ele é encontrado em rochas porosas no subsolo, podendo estar associado ou não ao petróleo. Normalmente, apresenta baixos teores de contaminantes, como nitrogênio, dióxido de carbono e compostos de enxofre. Sendo mais leve que o ar, o combustível dissipa-se facilmente na atmosfera em casos de vazamento.
+
+O gás natural é uma alternativa ao petróleo e, conseqüentemente, de grande importância estratégica. Suas reservas provadas são significativas, o que permite o consumo mundial por pelo menos 65 anos (PBGÁS, 2002), além de estarem dispersas em mais de 90 países. Ressalta-se ainda que o gás natural é o combustível fóssil mais limpo e mais seguro, com um custo de produção baixo.
+ 
+Em linhas gerais, a cadeia produtiva do gás natural pode ser dividida em cinco atividades interligadas: exploração, produção, processamento, transporte e distribuição.
+
+a)	Exploração: A exploração é a etapa inicial do processo e consiste no reconhecimento e estudo das formações propícias ao acúmulo de petróleo e/ou gás natural. Através da perfuração de poços exploradores é possível comprovar a existência e a qualidade comercial dos hidrocarbonetos. Existindo a viabilidade econômica, os campos são desenvolvidos pela perfuração de poços e da instalação de infra-estruturas que permitam a extração e o escoamento dos produtos.
+
+b)	Produção: Na fase de produção, que pode ser em terra (onshore) ou no mar (offshore), o gás natural deve passar por separadores para retirar a água e os hidrocarbonetos no estado líquido. Caso o gás esteja contaminado com compostos a base de enxofre, deve ser enviado para uma unidade específica a fim de ser depurado. Até esta fase, as indústrias de petróleo e gás natural operam conjuntamente da mesma forma.
+Nas unidades de produção, uma parte do gás é utilizada como “gás lift” para reduzir a densidade do petróleo facilitando sua extração. Uma outra parte é reinjetada nos poços com duas finalidades: a recuperação secundária, aumentando a pressão interna do reservatório, ou armazenamento em poços de gás não associado. O restante é escoado para as unidades de processamento podendo ser consumido internamente na geração de eletricidade e vapor. Caso não haja infra-estrutura suficiente que permita o seu aproveitamento, o produto é simplesmente queimado.
+c)	Processamento: O processamento do combustível ocorre em Unidades de Processamento de Gás Natural (UPGN), nas quais o produto é desidratado e fracionado (Figura 2.1), gerando três sub-produtos: o gás natural processado, formado a partir do metano (C1) e etano (C2); o GLP, originado do propano (C3) e do butano (C4) e a gasolina natural (C5).
+d)	Transporte: O transporte do gás natural é uma das atividades críticas do processo, podendo ser realizado basicamente de duas maneiras: no estado gasoso e no estado líquido. No estado gasoso, o transporte é feito tradicionalmente por meio de dutos, ou então, valendo-se de tecnologias mais recentes que utilizam cilindros de alta pressão como GNC (Gás Natural Comprimido) e o GNA (Gás Natural Adsorvido).
+Já no estado líquido, na forma de GNL (Gás Natural Liquefeito), pode ser transportado por meio de navios, barcaças, caminhões e trens criogênicos a uma temperatura de -161 °C, sendo seu volume reduzido em cerca de 600 vezes, facilitando o armazenamento (CBIE, 2003) . Nesse caso, para ser utilizado, o gás deve ser revaporizado em equipamentos apropriados de plantas de regaseificação.
+Com a crescente demanda por gás natural no mundo, tem havido um progressivo aumento na atividade de produção em áreas mais remotas, provocando grande impulso nas cadeias de GNL. No Brasil, os Estados de Pernambuco e Ceará estudam a possibilidade de instalação de um terminal de recepção de GNL, capazes de receber o produto vindo da
+ 
+Venezuela, Nigéria, Trinidad e Tobago ou Argélia. A Figura 2.2 ilustra com mais detalhes a cadeia produtiva do GNL.
+Fonte: LACERDA, 2002.
+
+GREENE (1999) estima que metade das reservas provadas de gás natural encontram-se isoladas em lugares remotos onde não há viabilidade econômica para a implantação de gasodutos ou mesmos projetos de GNL. Este fato tem contribuído para a ressurgência do domínio da tecnologia GTL ( Gas to Liquid) (CBIE, 2003).
+SANTOS (2002) observa que esta alternativa representa uma das estratégias mais nobres de aproveitamento do gás natural que se dispõe. Embora bastante onerosa, pois os investimentos são da ordem de US$ 25.000,00 barril/dia (CBIE, 2003), esta tecnologia transforma quimicamente o gás natural em produtos como diesel e nafta, possibilitando o transporte por meios tradicionais.
+e)	Distribuição: A distribuição é também uma das atividades críticas do processo e constitui-se na etapa final da cadeia, quando o gás chega ao consumidor residencial, comercial, industrial ou automotivo. Em geral, esta atividade é realizada através de gasodutos. Porém, em regiões onde a disponibilidade de redes de gás é pequena, já está sendo possível
+ 
+antecipar a chegada do produto através da distribuição a granel na forma de GNL ou GNC (Figura 2.3), também conhecidas como gasodutos virtuais (GÁS BRASIL, 2003), e futuramente GNA.
+Nesta fase, o gás já deve atender a padrões rígidos de especificação e estar praticamente isento de contaminantes que podem causar problemas aos equipamentos que serão alimentados pelo combustível. Quando necessário, deverá também estar odorizado. Tal prática permite que o combustível seja detectado mais facilmente em caso de vazamentos.
+2.1	VANTAGENS E APLICAÇÕES DO GÁS NATURAL
+
+O gás natural apresenta diversas vantagens em relação aos demais combustíveis, principalmente no que se refere ao meio ambiente. Ele é um produto com presença reduzida de contaminantes. Seu processo de queima ge ra baixo teor de óxido de enxofre, fato que não ocorre com os demais combustíveis, o que o torna isento da produção de particulados, tais como cinza e fuligem.
+
+Além disso, como ele é um gás leve, dispersa-se na atmosfera mais rapidamente em casos de vazamentos sem a necessidade de indução mecânica. BERMANN (2002), ressalta que em substituição aos demais combustíveis fósseis, o gás natural provoca uma grande redução nas emissões de gás carbônico (aproximadamente, 32% menos que o óleo combustível e 41% menos que os combustíveis sólidos como o carvão).
+ 
+BERMANN (2002) mostra, de acordo com a Tabela 2.1 que, no atual estágio tecnológico, o gás natural é dentre todos os combustíveis fósseis aquele cuja queima emite a menor quantidade de gás carbônico (CO2), metano (CH4) e óxido nitroso. Outro aspecto positivo do gás natural é que sua queima apresenta baixos índices de emissão de óxido nítrico (NOx) e monóxido de carbono (CO).
+Porém, ao ser comparado com fontes renováveis como a energia nuclear e a energia hidrelétrica, o gás natural apresenta resultado inferior em termos de emissões gasosas que conduzem ao efeito estufa. No entanto, ele apresenta vantagens significativas quando comparado à energia nuclear na geração de resíduos radioativos de alta periculosidade. Além disso, o gás natural não provoca grandes impactos relacionados à inundação de áreas florestais, ao reassentamento de populações ou obstrução de áreas produtivas, como ocorre com as hidrelétricas.
+
+Com relação à facilidade de operação, o gás natural compara-se à energia elétrica. O gás natural pode aproximar-se do usuário final de energia elétrica, evitando etapas intermediárias de transformação energética, pois apresenta queimas praticamente isentas de contaminantes. Essa transposição de estágios normalmente representa grandes ganhos em termos de eficiência e racionalidade do uso do gás natural.
+
+Já quando comparado com a gasolina ou o querosene, o gás natural é menos inflamável, apresentando riscos de explosão bem menores em caso de choque no processo de transporte e manipulação, contribuindo sobremaneira para a formação de uma imagem de energia confiável e segura.
+ 
+Com relação a aspectos de confiabilidade e segurança, o gás natural leva grande vantagem em relação ao gás liquefeito de petróleo, já que o GLP é constituído de propano e butano, sendo mais pesado que o ar. Desta forma, em situações de vazamento, o GLP tende a se acumular nos arredores dos locais de escape, podendo gerar explosões na presença de faíscas e centelhas elétricas. Por outro lado, o gás natural sendo composto de metano e etano, é mais leve que o ar e tende a dispersar-se rapidamente.
+
+Do ponto de vista econômico, uma característica importante do gás natural é que sua queima não provoca a deposição de impurezas nas superfícies de troca térmica, evitando a corrosão e prolongando a vida útil dos equipamentos. Além disso, o sistema de canalização utilizado para suprimento primário do gás poupa o espaço destinado à estocagem de combustíveis líquidos ou sólidos no local de consumo.
+
+Para muitos países, o gás natural representa uma alternativa mais simples e imediata para a redução de sua dependência ao petróleo. No Brasil, esta possibilidade é promissora, já que a totalidade do gás brasileiro, juntamente com parcelas do gás venezuelano, boliviano e argentino existentes podem contribuir para reduzir significativamente as pressões de consumo de petróleo da economia brasileira.
+
+BENJAMIN (2000) afirma que a Bolívia e a Argentina não têm outros clientes para o gás que dispõem, devido à localização distante em relação aos grandes centros consumidores. Assim, o Brasil deveria direcionar esforços no sentido de formar uma parceria energética, desejável para nós e inevitável para eles, de modo a criar uma zona regional de cooperação e desenvolvimento centrada na própria moeda brasileira.
+
+Desta forma, surgiria a possibilidade de trocar o gás natural boliviano e argentino por créditos a serem utilizados na compra de outros produtos dentro de nossa própria economia. Além disto, BENJAMIN (2000) sugere que poderia ser criada uma moeda contábil dentro do Mercosul.
+
+Esta moeda seria manejada pelos bancos centrais dos países envolvidos, para uso em compras dentro do espaço regional, que logo poderia ser ampliado até a Venezuela e Trinidad & Tobago. Estes países constituem-se nas grandes potências energéticas do
+ 
+continente com 70% das reservas de gás natural da América do Sul (IEA, 2003).
+
+De maneira geral, uma das grandes vantagens associadas ao gás natural é a sua imensa versatilidade. A sua amplitude de usos o faz um competidor potencial de quase todos os demais combustíveis alternativos. Porém, ao mesmo tempo, não existe uma aplicação para o gás natural na qual ele seja indispensável e para o qual não haja concorrentes. Assim, o energético em questão está ameaçado de enfrentar em todos os segmentos de mercado as forças concorrências de outros produtos alternativos.
+ 
+Resumidamente, considera-se que o gás natural pode ser usado como matéria- prima, na recuperação do petróleo, e em aplicações energéticas. Na Figura 2.4, são apresentadas as várias possibilidades de uso do gás natural.
+
+Na sua utilização como matéria-prima, o gás natural constitui-se como um insumo fundamental na indústria gasquímica e de fertilizantes, principalmente no processo produtivo da amônia e do metanol. De acordo com SANTOS (2002), o uso do produto coma matéria-prima representa aproximadamente 6% da demanda mundial de gás natural.
+ 
+Outro grande consumo de gás natural ocorre na própria indústria gasífera e petroleira. Na extração do petróleo, parte do gás associado é reinjetado no próprio campo ou em outro campo para manter a pressão do reservatório e aumentar a recuperação do petróleo. Outra parcela do gás associado ao petróleo é injetada nos poços de produção, conferindo maior fluidez ao óleo, além de otimizar sua extração.
+Ainda na indústria petrolífera, o gás é utilizado para gerar a energia necessária aos equipamentos de separação de óleo e gás e suprir as diversas necessidades energéticas na área de produção, incluindo as bombas e os compressores utilizados para alimentar os gasodutos de transporte.
+
+Embora a importância da utilização do gás natural tanto como matéria-prima, quanto na recuperação do petróleo seja considerável, a grande potencialidade do produto está na sua utilização como comb ustível para a geração de energia nos diferentes setores de consumo do tipo: industrial, veicular, comercial/residencial, geração de eletricidade e cogeração. Em seguida, é apresentada uma ampla discussão sobre o uso do gás natural nestes setores.
+2.2.1.	O Gás Natural no Setor Industrial
+
+Nas indústrias, o uso do gás natural pode ocorrer em vários ramos de atividade, destacando-se os setores de alimentos e bebidas, têxtil, cimento, cerâmicas, vidro, papel e celulose, fundição e siderurgia. Nestas plantas, o gás é utilizado principalmente na geração de vapor para posterior processamento, aliado a sistemas de geração elétrica e cogeração.
+
+SANTOS (2002) julga que o papel de maior importância a ser reservado ao gás natural é o de substituir a energia elétrica usada na eletrotermia, isto é, no aquecimento industrial de processos ou na geração de vapor através da eletricidade. No caso específico do Brasil, esta prática representa um ônus severo para o setor elétrico pois a indústria é responsável por 45% do consumo de energia elétrica do país (BEN, 2002).
+
+Os principais setores industriais que representam mercados potenciais para o gás natural e que permitem a obtenção de grandes vantagens tanto em termos de qualidade do produto final quanto em economia, conservação e uso racional da energia são apresentados a seguir:
+ 
+a)	Indústria metalúrgica: Neste segmento industrial, o gás pode ser usado em fornos de tratamento térmico, estufas de secagem, no aquecimento de cadinhos de fundição, no corte de chapas e em estufas litográficas. De acordo com SANTOS (2002), podem ser obtidas economias significativas, como por exemplo no forno de forja, o qual apresenta uma economia de 16% quando o gás natural passa a substituir o óleo diesel.
+Além disso, as siderúrgicas também utilizam o combustível para melhorar a qualidade de seus produtos. Durante a produção de tiras de aço ou aços planos, as extremidades costumam resfriar-se antes das regiões centrais, comprometendo a qualidade final. Uma solução para este problema é o uso do gás na tural para igualar as temperaturas do processo.
+b)	Indústria de vidro: Nos países desenvolvidos, o gás natural tornou-se o combustível predominante na indústria do vidro principalmente pela capacidade de proporcionar um controle preciso da temperatura nas fases de fabricação e pós- fabricação que é fundamental para os processos produtivos de vidros não planos e vidros prensados de uso automotivo, residencial e arquitetônico, tradicionalmente obtido somente por fornos elétricos de radiação.
+Em geral, os equipamentos a gás têm um custo de investimento mais elevado que o similar elétrico, porém, os custos operacionais são menores. No caso do Brasil, em virtude das distorções das tarifas de eletricidade, substancialmente menores para os consumidores industriais, torna-se difícil para o industrial perceber as reais vantagens do gás natural, contribuindo para a continuidade da eletrotermia. Mesmo assim, estudos realizados pela Comgás - apud SANTOS (2002) - resultaram em uma economia de 25% ao se substituir o óleo combustível por gás natural em alimentadores.
+c)	Indústria de alimentos e bebidas: Neste setor, os processos que mais utilizam energia são os de lavagem, esterilização, pasteurização, cozimento, aquecimento, secagem e evaporação. Além do mais, as tendências internacionais apontam para uma maior demanda de alimentos
+ 
+industrializados e pré-preparados. Para permitir que estes produtos sejam conservados com uma aparência de frescor, novas tecnologias de tratamento e empacotamento estão em desenvolvimento.
+O uso de gás natural permite a substituição da queima indireta do óleo combustível, prejudicial aos produtos, pela combustão direta, na qual os gases da combustão entram em contato direto com o produto fabricado, além de permitir um melhor controle, equalização da temperatura no interior dos fornos e uma maior eficiência.
+SANTOS (2002) cita exemplo da aplicação de gás natural na torrefação de café no Estado de São Paulo. Após a conversão do processo passando do óleo diesel para o gás natural foi obtida uma economia de 42,2%.
+d)	Indústria de papel e celulose: A utilização do gás natural na indústria do papel e da celulose vem ocorrendo rapidamente devido à implantação de processos muito eficientes que permitem o aumento da produtividade com aproveitamento pleno das instalações industriais existentes e sem a exigência de grandes investimentos.
+No caso da fabricação de papéis de parede, os fornos a gás permitem pré- aquecer o papel antes de sua entrada nos secadores convencionais. Acelera-se, assim, o processo de secagem, obtendo-se um aumento de produtividade e um ganho em termos de eficiência energética para toda a planta.
+e)	Indústria cerâmica: Este é um dos segmentos que mais se presta ao uso do gás natural, devido ao aspecto qualidade do produto, notadamente no ramo das cerâmicas brancas o qual necessita de secagem e cozimento a fogo direto, bem como controle automatizado de temperatura.
+Além disto, o gás natural permite a possibilidade do uso de queimadores de alta velocidade de combustão, favorecendo as trocas por convecção, reduzindo assim o consumo de energia em até 40% (SANTOS,2002).
+SANTOS (2002) resume, de um modo geral, as principais vantagens associadas ao uso do gás natural como combustível na indústria:
+ 
+a)	O gás natural apresenta-se no mesmo estado do ar, dispensando processos de nebulização ou atomização, simplificando a construção de queimadores e diminuindo o consumo de energia do processo;
+b)	Por ser um combustível gasoso, normalmente aumenta a eficiência do processo;
+c)	Apresenta uma maior faixa de regulagem dos sistemas, melhorando o desempenho;
+d)	Além da maior facilidade operacional e simplicidade das instalações, possibilita menor custo com paradas para manutenção e limpeza, além de não conter enxofre e vanádio, reduzindo assim o ataque químico da câmara de combustão;
+e)	Evita o custo de armazenagem de combustível no interior da instalação industrial;
+f)	Reduz significativamente as emissões gasosas.
+
+Infelizmente, parece que a percepção destas qualidades do gás natural nos países menos desenvolvidos é difícil. No Brasil, os investimentos iniciais para expansão dos sistemas de transportes e distribuição de gás natural são elevados, tornando o preço do combustível pouco atrativo quando comparado com os demais energéticos concorrentes, cujas infra-estruturas logísticas já estão consolidadas.
+
+Além disto, o ambiente macroeconômico com elevada taxa de juros, aliado a pouca maturidade da indústria gasífera, se constituem em grandes obstáculos que inibem a disponibilização de recursos financeiros para financiar a troca de equipamentos por parte dos usuários.
+
+Por outro lado, surge como grande aspecto favorável para a penetração do gás natural no setor industrial a sua característica marcante de gerar a menor taxa de emissão de CO2 dentre os combustíveis fó sseis, contribuindo severamente para a redução do efeito estufa.
+
+Até meados da década passada, inexistiam legislações ambientais mais rigorosas que obrigassem o industrial a considerar os custos ambientais do seu consumo energético. Logo, verificava-se uma grande resistência à incorporação do gás natural
+ 
+como novo energético para fins industriais, refletindo total desconhecimento da questão energética e reduzida visão do conceito de competitividade industrial.
+
+No entanto, a capacidade do gás natural de reduzir emissões indesejáveis é tão grande que segundo o Instituto de Energia de São Paulo, a cidade de Cubatão, no litoral paulista, só está conseguindo se tornar habitável em função de que 90% das numerosas indústrias ali instaladas fizeram a conversão para o gás natural, abandonando o uso de óleos pesados de refinaria (REVISTA ENGENHARIA, 2000).
+
+Esta oportunidade vem se tornando cada vez mais real, pois, com a intensificação das pressões ambientais, foi elaborado o Protocolo de Kyoto, em 1997, no qual os países signatários comprometeram-se a reduzir suas emissões em pelo menos 5,2% dos índices de 1990, no período de 2008 a 2012 (MCT, 2000).
+
+Porém, ocorre que os países desenvolvidos têm sérias dificuldades em reduzir suas emissões de CO2 devido ao elevado custo envolvido. De acordo com o Banco Mundial, os custos de redução das emissões internamente nos países desenvolvidos foram avaliados em US$ 580,00 por tonelada de carbono no Japão, enquanto que nos EUA atingiriam US$ 180,00 e na Comunidade Européia este custo seria de US$ 270,00 por tonelada de carbono (MCT, 2000).
+
+Devido a esses altos custos e as dificuldades de se reduzir tão bruscamente as emissões de CO2 nos grandes centros produtivos foi criada uma fórmula alternativa: o Mecanismo de Desenvolvimento Limpo (MDL). Portanto, os países desenvolvidos podem optar por financiar ações desta ordem nos países em desenvolvimento, adquirindo, em troca, créditos de carbono, evitando que sua competitividade seja afetada pelos custos da adequação.
+Diante desta oportunidade, foram criadas empresas que se concentram em identificar investimentos em tecnologias limpas e que reduzam as emissões de gases de efeito estufa. Estes investimentos podem ser qualificados para obtenção de Certificados de Redução de Emissões (CRE) no contexto do MDL do Protocolo de Kyoto.
+
+Em ECOINVEST (2002) é citado o exemplo de uma empresa consultora em projetos ambientais que descobriu um fabricante de cimento no Nordeste que estava
+ 
+interessado em trocar o combustível utilizado em seus fornos, passando de óleo combustível para gás natural. A produção anual de 560.000 toneladas de cimento gerava a emissão de 65.700 toneladas de carbono. Com a troca, esperava-se uma redução nas emissões de 21.900 toneladas de carbono, ou seja, 33 %.
+
+O montante anual para por em prática esta proposta foi orçado em US$ 150 mil, gerado totalmente pela diferença de custos de aquisição entre o óleo combustível e o gás natural, já que os custos com equipamentos de conversão foram considerados desprezíveis. Para tornar o projeto comercialmente mais atraente o valor do CRE deveria ser de US$ 6,85 por tonelada de carbono, podendo ser obtido pelo país que desejasse financiar o empreendimento.
+2.2.2 O Gás Natural no Setor Veicular
+
+O Gás Natural Veicular (GNV) é o gás natural comprimido a uma pressão de aproximadamente 220 atm e armazenado em cilindros que são embarcados no automóvel (CONPET, 2000). Ultimamente, o GNV tem avançado com relativa rapidez no segmento de transportes, especialmente em zonas metropolitanas, congestionadas e cuja qualidade do ar se apresenta em estado precário.
+
+Do ponto de vista ambiental, a grande vantagem do GNV é a quase ausência das emissões de fuligem e de compostos de enxofre, sendo reduzidas em cerca de 90% quando comparadas aos motores a diesel, álcool ou gasolina, conforme SANTOS (2002). No que tange a outros gases tóxicos emitidos pelos automóveis, o gás natural apresenta índices de poluição atmosférica inferiores, conforme mostra a Tabela 2.2.
+Porém, de todos os compostos emitidos ao meio ambiente, o CO2 é o mais catastrófico sob o ponto de vista do efeito estufa. Neste tipo de emissão, o gás natural também apresenta bons resultados. Segundo GALP ENERGIA (2002), estudos da Associação Européia de Gás Natural Veicular (ENGVA) mostram que é possível obter uma redução de até 28% nas emissões de CO2, passando de 200 g de CO2/km da gasolina/diesel para 145 g de CO2/km com o uso do gás natural. Vale ressaltar que algumas marcas atingem o índice de 125 g de CO2/km, já atendendo aos requisitos acertados no Protocolo de Kyoto a serem implantados na Europa até 2008, fixando o máximo de 140 g de CO2/km.
+O gás natural no setor de transportes apresenta-se como a estratégia mais viável para o atendimento no curto e médio prazo de regulamentações ambientais cada vez mais rigorosas, principalmente nas grandes zonas metropolitanas. A utilização em larga escala do GNV nas grandes cidades brasileiras é uma opção extremamente realista e talvez a única rapidamente disponível para a redução dos impactos ambientais negativos do setor de transportes.
+Em termos de custo, BERMANN (2002) indica que os derivados de petróleo respondem por quase metade do consumo energético final do Brasil (48,3 %) e o setor de transportes é responsável por quase metade do consumo de derivados de petróleo (49,2 %). A possibilidade de se utilizar gás natural em veículos é bastante alentadora, principalmente nos grandes centros urbanos, pois se espera reduzir os custos de combustível em 50%, repercutindo sobremaneira no preço dos produtos.
+
+Na perspectiva do consumidor, SANTOS (2002) defende que a utilização de gás natural permite uma significativa redução de custos, pois apresenta queima completa, proporcionando uma economia nos gastos de lubrificação e manutenção dos veículos. De acordo com a CEGÁS (2003), os custos com o veículo podem ser reduzidos em até 60%, além de aumentar o período de troca de óleo em cerca de 10 a 20 mil quilômetros.
+
+Com relação ao custo do combustível, em geral o gás natural obtém vantagens em relação aos demais combustíveis. Nesse caso, os ganhos dependerão das diferenças relativas dos preços dos combustíveis em cada mercado. Comparando para o mercado de Fortaleza o gás natural com a gasolina, foram considerados os preços praticados em outubro de 2003, ou seja, R$ 1,99 para o litro da gasolina e R$ 1,14 para o m3 de GNV.
+ 
+Assume-se ainda, veículos padrões com consumos de 10 km/l para a gasolina e 12 km/m3 para o GNV.
+Considerando, ainda, que o custo da conversão típica realizada em março de 2003, em Fortaleza/CE era de, aproximadamente, R$ 2.000,00, é possível montar a Tabela 2.3 para se ter uma idéia do tempo de retorno do investimento.
+
+
+Verifica-se que sem considerar os impactos da taxa de juros e da inflação, o tempo de retorno pode variar de aproximadamente 39 meses para veículos percorrendo uma média de 500 km/mês até 3,2 meses para veículos com média de 6.000 km/mês.
+Porém, quando se considera o custo de capital utilizado na conversão do veículo, admitindo uma taxa de juros de 2% ao mês, o tempo de retorno do investimento pode se estender significativamente. O impacto ocorre principalmente para os casos em que os veículos percorrerão distâncias mensais médias menores.
+Assim, para estes proprietários, é preferível investir o dinheiro da conversão e utilizar as rendas obtidas para financiar o custo adicional do combustível. Este fato indica a necessidade de reduzir substancialmente tanto os custos de conversão como o preço do GNV para o consumidor final.
+SANTOS (2002) sugere que uma possível solução para amenizar este problema poderia ser a fabricação de veículo bi-combustível já adaptado de fábrica para operar com gasolina/álcool ou gás natural. Porém, esta idéia tem o inconveniente de aumentar
+ 
+o peso do automóvel para o transporte do tanque e do cilindro para ambos os combustíveis.
+Portanto, há um aumento do consumo de energia para a movimentação do peso morto do veículo, não condizendo com o conceito de uso mais racional da energia.Deste modo, a ampliação do uso do gás natural no setor de transportes requererá uma profunda transformação das infra-estruturas de distribuição de combustível e da indústria automobilística para que se possa difundir o veículo dedicado ao gás.
+Uma outra vantagem do gás natural veicular é a segurança proporcionada no abastecimento que é feito sem que o produto tenha contato com o ar, evitando os riscos de combustão, além do que os cilindros são dimensionados para suportar elevadas pressões, bem como colisões, incêndios e perfurações.
+Em 2002, estudos do Natural Gas Vehicle Coalition (NGVC/USA) com diversos tipos de combustíveis concluíram que os veículos movidos a GNV apresentaram uma relação de número de acidentes por milha rodada cerca de 31% inferior aos veículos a gasolina. Para tanto, é fundamental que as instalações dos kits sigam rigorosamente às normas internacionais de instalação, permitindo um maior controle dos órgãos fiscalizadores.
+
+Por outro lado, também é necessário se discutir aspectos que limitam a expansão do GNV no setor de transportes. Um deles é a inexistência de uma ampla rede de acesso ao combustível. Na atualidade, de acordo com SANTOS (2002), o volume de vendas de GNV representa 8,5% do volume total de venda de gás natural no país, permitindo esperar para os próximos anos suplantar o álcool como segundo combustível automotivo do país.
+Apesar de experimentar vertiginosa expansão, o sistema de abastecimento é insuficiente para suportar um programa de maior dimensão. Além da dificuldade de penetrar nas frotas que percorrem pequenas distâncias médias mensais, o reduzido número de postos de atendimento também é um obstáculo a ser suplantado. A CEGÁS estima que o custo para adaptação de um posto, dependendo de sua localização em relação à rede alimentadora e sua arquitetura interna varie de R$ 400 mil a R$ 1 milhão.
+ 
+Embora a margem de lucratividade para os donos de postos seja considerada elevada, com taxas de retorno da ordem de 25%, segundo SANTOS (2002), a pequena população de veículos a gás força as infra-estruturas a adquirirem dimensões menores, com custos específicos maiores, refletindo em preços mais elevados.
+
+Somente através de ganhos de escala, com volumes de venda maiores, que permitam uma maior diluição dos custos fixos, será possível que o GNV realmente penetre incisivamente no meio automotivo. SANTOS (2002) observa que no mundo inteiro circulam cerca de 500 milhões de veículos e somente 0,24% desta frota são movidos a gás natural, mostrando um promissor mercado futuro de expansão.
+
+2.2.3.	O Gás Natural no Setor Comercial/Residencial
+
+Além da utilização industrial e veicular, o gás natural também encontra potenciais aplicações nos mercados comercial e residencial. Considerando que a eletricidade reina absoluta nos lares e estabelecimentos comerciais brasileiros, SANTOS (2002) projeta que o quadro de manutenção de um amplo predomínio da energia elétrica gerará custos extremamente elevados, tornando-se insustentável no longo prazo. Prova disto é que o BNDES estima para o quadriênio 2003/2006 investimentos da ordem de R$ 70 bilhões para os principais projetos do setor elétrico, conforme MACHADO (2003).
+Assim, alternativas cada vez mais caras deverão ser propostas para reforçar a geração elétrica a fim de alimentar um consumo explosivo de eletricidade com a finalidade básica de produzir calor ou frio. Para se ter uma idéia do que isto pode representar, o Balanço Energético Nacional (BEN) de 2002 indica que o consumo de eletricidade dos setores residencial, comercial e público representa 47,4% do consumo elétrico total do país.
+
+Diante desta situação, SANTOS (2002) defende que a política mais sustentável para nosso país é promover a substituição da energia elétrica pelo gás natural nos diferentes processos térmicos presentes em instalações residenciais e comerciais. Assim, o gás natural surge como um candidato excelente para combater a eletrotermia, sendo capaz de aumentar substancialmente a racionalidade do sistema energético brasileiro através de sua utilização extensiva.
+ 
+No entanto, observa-se que as distribuidoras de gás natural no Brasil objetivam desenvolver rapidamente o mercado, focando seus esforços no restrito grupo de grandes empresas que atualmente são movidas a óleo combustível, diesel ou carvão, nos postos de GNV e nas termelétricas.
+
+A enorme quantidade de residências e pequenos estabelecimentos comerciais estão à margem deste processo, pois não tem acesso ao gás e nem sequer dispõem de informações acerca das novas tecnologias disponíveis nos países desenvolvidos, específicas para operação em setores de pequena escala de consumo.
+
+Isto revela um paradoxo interessante, evidenciando uma menor consideração do potencial dos mercados residencial e comercial de gás natural, visto que as distribuidoras direcionam seus esforços principalmente nas grandes indústrias e termelétricas, embora muitas das novas tecnologias para uso descentralizado do gás são apropriadas para residências, comércios e indústrias de pequeno porte.
+Diversos fatos podem comprovar a menor importância dada aos mercados residencial e comercial. É comum ouvir declarações de diretores de distribuidoras que ao serem indagados acerca dos planos de expansão, respondem com afirmações do tipo: “O nosso negócio é vender gás. Quanto mais, melhor”. Afirmações deste tipo mostram a visão imediatista e pontual de algumas distribuidoras, esquecendo questões sistêmicas que envolvem a abertura de novos mercados, custos de oportunidade elevados e melhoria da eficiência energética.
+
+SANTOS (2002) ressalta que nos países desenvolvidos da Europa e da América do Norte, onde já existe uma tradição no uso do gás natural, as companhias de gás privilegiam os consumidores de menor porte. Este tipo de cliente possibilita margens de lucro superiores, minimizando seus riscos comerciais e sustentando uma ampla transformação cultural que incentiva a utilização crescente do combustível.
+No Brasil, o desenvolvimento desses segmentos é desprestigiado pelas companhias nacionais de distribuição de gás e pelos fabricantes de dispositivos, pois os custos de conexão dos consumidores são proibitivos para os níveis de consumo de gás esperados e o mercado para o desenvolvimento de equipamentos fica extremamente limitado, operando sem escala econômica.
+ 
+Apesar de todas as conquistas tecnológicas nos países emergentes, a indústria do gás natural continua restrita por sua extrema rigidez, principalmente nos sistemas de transporte e distribuição. Dada a inexistência prévia de mercados, é necessário condicionar a tecnologia de modo que o gás possa chegar aos consumidores de uma maneira alternativa, isto é, eliminando redes de distribuição densas e inviáveis de serem implantadas.
+
+Portanto, é fundamental que os esforços tecnológicos procurem reduzir os custos e viabilizar economicamente a distribuição descentralizada do gás, ampliando sensivelmente a possibilidade de comercialização do produto para clientes situados fora das zonas de influência dos gasodutos.
+
+Para o setor de comércio e serviços esta possibilidade é bastante benéfica. De acordo com ROSA (2001), a energia gerada em seu próprio local de uso por meio do gás natural é a melhor opção para manter em funcionamento shopping centers, hospitais, hotéis, bem como prédios comerciais e públicos, utilizando de forma racional a energia elétrica.
+O impacto social dessa geração é muito positivo, pois empreendimentos como shoppings e hipermercados são normalmente os maiores consumidores em áreas residenciais. No horário mais crítico, estes estabelecimentos poderiam se desligar da rede, aliviando o sistema e permitindo que a energia remanescente pudesse atender as residências ao seu redor, normalmente em um raio de 5 a 10 quilômetros.
+Como nossas linhas de transmissão e parte das linhas de distribuição estão congestionadas, tal modalidade de geração elétrica eliminaria novos investimentos em transmissão e distribuição, além de resultar numa economia estimada de até 40% nos custos com eletricidade (CEGÁS, 2003). Ao adicionar os gastos com o gás natural, a economia final estimada cai para 25%, porém, são evitados certos impactos ambientais como aqueles provocados por geradores a diesel.
+
+Já no caso das residências, o fornecimento de gás natural domiciliar é um dos mercados de maior expansão e que deve aumentar depois do fim do subsídio ao Gás Liquefeito de Petróleo (GLP). Com praticidade e segurança, o gás natural pode ser usado em residências para climatizar ambientes, aquecer água e cozinhar, entre outras
+ 
+aplicações. Caso a residência não tenha instalações que permitam o uso do gás natural, pode-se optar por conversões e adaptações nas instalações internas da casa ou do prédio. Em seguida, são listadas as diversas aplicações possíveis do gás natural em residências, conforme COPERGÁS (2003).
+
+a)		Na cozinha : É possível utilizar o gás natural em fogões, fornos e geladeiras. Os fogões são equipados com sistemas de acendimento e segurança, facilitando o uso. Já os fornos possuem sistema de vapor de água no interior que permite aquecer refeições mantendo o sabor original sem ressecá- las.
+b)	No banheiro : Com o gás natural, é possível ter água quente na pia, na banheira e no chuveiro. A vantagem nesse tipo de aquecedores é que eles produzem água quente instantânea e sem limites. Além disso, só funcionam quando há necessidade de água quente, garantindo maior economia da energia. Aquecedores de acumulação armazenam água para momentos de necessidade em vários locais ao mesmo tempo.
+c)	Na área de serviço: Lavadoras de roupa, secadoras e tanques podem utilizar a água aquecida por um aquecedor ou caldeira de gás, o que economiza tempo e dinheiro.
+d)	Na área de lazer: As churrasqueiras a gás natural oferecem a máxima limpeza, já que não produzem resíduos. A piscina e a sauna também podem ser aquecidas com o gás natural canalizado.
+e)	Na climatização de ambientes: O uso do gás natural nas centrais de ar- condicionado e de aquecimento, tem apresentado grande vantagem econômica em relação aos equipamentos elétricos.
+Diante destas aplicações, percebe-se que, caso houvesse uma estratégia de distribuição mais abrangente, o gás natural poderia penetrar progressivamente, de modo a ocupar o posto do GLP. Segundo o BEN (2002), o consumo nacional de GLP, em 2001, foi de 12,67 milhões de m3, sendo 81 % deste total direcionado para as cozinhas residenciais de todo o país. Os setores industrial e comercial consumiram, respectivamente, 10 % e 3 % do total.
+ 
+É importante salientar que, devido ao elevado consumo verificado no país, o parque de refino nacional só consegue suprir 70% da demanda de GLP (BEN 2002), obrigando a importação do restante. Em 2002, o dispêndio nacional com a importação de GLP foi de US$ 370 milhões (ANP, 2003), evidenciando uma situação de evasão de divisas causada principalmente pelo fato de que este combustível é praticamente o único energético disponível para as tarefas de cocção de alimentos
+
+No entanto, embora existam grandes potencialidades para o gás natural penetrar incisivamente nos setores residencial e comercial, ocupando principalmente o espaço da eletricidade e do GLP, a efetivação do pleno uso descentralizado do gás natural não é fácil. Apesar dos setores residencial e comercial representarem apenas 3,5% do consumo para fins energéticos do combustível, segundo BEN (2002), existem ainda grandes dificuldades técnicas, regulatórias e financeiras para serem superadas.
+
+O sistema bancário não está preparado para injetar recursos competitivamente no mercado de modo a apoiar satisfatoriamente os pequenos consumidores na transformação de sua fonte de suprimento energético. Normalmente, somente grandes projetos podem fornecer o nível de garantia requerido pelo sistema financeiro. Além do mais, como os problemas de liquidez do país se aprofundam e a situação econômica permanece instável, a taxa de juros para pequenos consumidores sobe estratosfericamente devido ao aumento da percepção de risco por parte dos bancos.
+
+Daí surge a necessidade de ações governamentais firmes, capazes de reduzir estes temores para fortalecer o uso descentralizado do gás no Brasil. Caso contrário, para a maioria dos pequenos consumidores, o acesso ao gás natural terá de ser apenas indireto, através da eletricidade produzida pelas térmicas, tornando a eficiência no seu uso substancialmente inferior.
+
+SANTOS (2002) alerta que a experiência em outros países menos desenvolvidos demonstra o insucesso no processo de descentralização do uso do gás. Apesar dos inegáveis benefícios, sua expansão em diferentes formas de utilização é restrita na maioria dos países em desenvolvimento.
+
+Por outro lado, o desenvolvimento tradicional de uma rede de distribuição de gás, através de massivos investimentos em infra-estrutura, necessita de investimentos de
+ 
+longo prazo, com retorno bem mais lento, configurando-se como uma alternativa menos atraente para os agentes financeiros.
+
+2.2.4.	O Gás Natural na Geração de Eletricidade
+
+A partir da década de 80, houve uma ampla transformação no paradigma tecnológico da geração elétrica mundial, notadamente nos países que não dispunham de grande potencial hidrelétrico. A geração elétrica destas nações dependia fundamentalmente de centrais nucleares ou termelétricas, complementadas ainda por unidades de geração a gás natural para atender as demandas de pico.
+No entanto, as unidades de geração a gás natural começaram a ter um papel cada vez mais importante. Grandes centrais elétricas alimentadas por gás natural começaram a ser construídas para operação na base, visando principalmente adaptar o setor elétrico a regulamentações ambientais cada vez mais rigorosas e que impõem sérias restrições ao uso do óleo combustível, do diesel e do carvão.
+No caso do Brasil, o desenvolvimento do setor elétrico foi influenciado decisivamente pelas dimensões continentais do país e pelo enorme potencial hidrelétrico de suas bacias hidrográficas, compostas por centenas de rios caudalosos e perenes. Graças aos recursos naturais existentes, grande parte de nossa capacidade de geração depende fundamentalmente de água das chuvas e da força da gravidade que produzem uma energia barata, renovável e não poluente.
+
+Porém, na atualidade, percebe-se um grande incremento do uso da geração termelétrica alimentada por gás natural no Brasil. Esta estratégia, efetivada a partir da década passada, é fruto de uma série de decisões questionáveis, que podem comprometer a forma do uso do gás natural em nosso país. No próximo ítem, será apresentada uma discussão sobre estas decisões, visando alertar para as graves conseqüências geradas pela priorização da termeletricidade em nosso país.
+2.2.4.1	A opção pela termeletricidade
+
+Desde a implantação efetiva da base energética nacional, a partir da década de 70, a termeletricidade foi inserida na matriz energética nacional de forma secundária. Devido aos recursos naturais abundantes e aos custos relativos inferiores, a opção
+ 
+hidrelétrica sempre foi preponderante. Além de necessitar de equipamentos mais sofisticados e de aquisição mais onerosa, as termelétricas utilizavam basicamente como combustível o carvão, o gás natural e o óleo diesel.
+Os dois primeiros tipos de combustível eram pouco explo rados no território nacional, além de apresentarem pequena quantidade de jazidas conhecidas. Já o óleo diesel, era influenciado pelo preço instável do petróleo no mercado internacional, representando elevados riscos financeiros aos países dependentes.
+
+É por isso que no decorrer do desenvolvimento do parque hidrelétrico nacional as termelétricas tiveram o papel de complementação, permitindo operação das hidrelétricas de forma mais arrojada, sendo acionadas somente em períodos secos para possibilitar a recarga das reservas hídricas.
+
+Porém, esta situação passou a mudar a partir de meados da década de 90 com a adoção do processo de privatização do setor elétrico. Diante da necessidade de incrementar a expansão da oferta de energia, além de enfrentar a morosidade dos investidores estrangeiros cada vez mais receosos em adquirir as geradoras elétricas, o governo decidiu que teria de transformar a energia brasileira em um negócio mais atrativo.
+
+Segundo LESSA (2001), o Governo brasileiro do final da década passada argumentava que a situação de ineficiência econômica, vulnerabilidade financeira e endividamento elevado das empresas públicas necessitava de um novo modelo operacional, justificando a política de privatizações. Além disso, o Governo brasileiro alegava ter estudos que apontavam que somente com a venda das companhias energéticas falidas, seria possível melhorar a eficiência produtiva do setor e restaurar a capacidade de investimentos das demais operadoras.
+
+Concomitantemente, o mercado de gás natural estava se difundindo no mundo e a principal dificuldade em utilizá- lo na América do Sul era a falta de um mercado sólido, capaz de justificar a exploração das enormes reservas existentes. Desta forma, o governo brasileiro passou a analisar as termelétricas como âncoras potenciais para estabelecer uma demanda por gás natural no país sem necessitar de pesados investimentos em infra-estrutura.
+ 
+Esta perspectiva foi amplamente apoiada pelo capital privado. Para os investidores, as hidrelétricas exigiam a mobilização de recursos vultosos, e nelas o retorno do capital era muito mais lento. Eles preferiam as térmicas, cujo retorno era mais rápido, embora de maior custo, pois o combustível era comprado e as despesas, repassadas ao consumidor.
+Neste mesmo período, outro fato fundamental merece destaque. A situação do setor elétrico brasileiro estava bastante preocupante devido à possibilidade de racionamento de energia elétrica. De acordo com BENJAMIN (2000), em agosto de 1999, o risco de racionamento atingiu 30%. Já em dezembro, as reservas hídricas do sistema chegaram a 18%, o ponto mais baixo da história. O risco de black-out foi a 50%, fazendo com que o nível dos reservatórios passasse a ser acompanhado diariamente.
+
+Diante deste panorama, a termeletricidade passou a ser vista como a saída para a crise de energia elétrica que se aproximava cada vez mais. O governo acreditava que devido ao interesse dos grupos estrangeiros, as termelétricas seriam rapidamente construídas, gerando a energia necessária para suprir o déficit existente e, o mais importante, sem exigir recursos adicionais do orçamento já que seria utilizado o capital privado. Desta maneira, investimentos públicos em novas hidrelétricas passaram para um segundo plano de prioridades.
+
+Ainda em setembro de 1999, foi anunciado um programa para a construção imediata de 15 termelétricas em locais estrategicamente determinados do território nacional, projetando um incremento de 12 GW ao sistema elétrico até o ano de 2003. Porém, os investidores estavam fortalecidos pelo quadro de emergência que o setor elétrico vivia e fizeram algumas exigências para iniciar os serviços. Queriam a garantia de que participariam das decisões sobre os mecanismos regulatórios, além de que seus custos seriam totalmente cobertos por uma política tarifária lucrativa.
+
+Até janeiro do ano 2000, nenhum dos 15 projetos estava obedecendo o cronograma proposto. Informado de que o risco de black-out no decorrer do ano era elevado e sem dispor de tempo nem de recursos para construir as hidrelétricas necessárias, o governo apostou todas as fichas nas termelétricas. No mês de fevereiro de 2000, o Governo brasileiro lançou o Programa Prioritário de Termeletricidade (PPT)
+ 
+que era um ambicioso projeto para a construção de 49 termelétricas capaz de gerar 17 GW até 2004 (ANEEL, 2000).
+
+BENJAMIN (2000) ressalta que conforme estimativas do Ministério de Minas e Energia, era esperado que com este programa fossem gerados 25 mil empregos diretos na fase de implantação das usinas, 50 mil empregos indiretos nas regiões de instalação das termelétricas e 2 mil empregos definitivos na operação das mesmas. Além disto, pelo menos 20% da fabricação dos equipamentos ficariam a cargo da indústria brasileira. Outra beneficiada seria a engenharia nacional, tendo um impacto positivo através da ampliação do mercado de trabalho nas área de desenvolvimento de projetos, consultoria, construção e montagem.
+Outra medida foi a formatação do Programa Estratégico de Aumento de Oferta que previa a instalação de 58 termelétricas emergenciais, muitas destas alimentadas por gás natural, para entrarem em operação apenas em situação de eventual queda da recarga hídrica. O objetivo era manter o adequado nível dos reservatórios e garantir o fornecimento de energia elétrica.
+BENJAMIN (2000) conclui que como conseqüência do processo de privatização do setor elétrico brasileiro foi implementada uma opção técnica radical: a mudança da matriz energética brasileira no sentido de aumentar consideravelmente o papel da termeletricidade.
+
+Para que tal estratégia pudesse ser efetivada, o Governo brasileiro apostou na ocorrência de três premissas fundamentais. Primeiramente, o real e o dólar manteriam a paridade durante muito tempo, sem sobressaltos, pois a estabilidade cambial seria garantida pelo Banco Central. Em segundo lugar, o petróleo, e com ele, o gás boliviano, combustível das usinas térmicas, permaneceria com o preço equilibrado. E a terceira, o Governo acreditava que os investidores estrangeiros rapidamente aplicariam seus dólares no projeto das térmicas.
+
+BENJAMIN (2000) afirma que nenhuma destas expectativas se confirmou. A partir de 1999, o valor do real desabou. Enquanto isso, o preço do petróleo subia progressivamente, repercutindo no preço do gás boliviano. Como conseqüência, o custo
+ 
+de geração nas usinas térmicas previstas subiu para aproximadamente US$ 40 por MWh, mais que o dobro do valor verificado na produção hidrelétrica.
+
+Neste panorama, os investidores multiplicaram as exigências, requerendo que a grande maioria dos novos projetos fossem financiados pelo Banco Nacional de Desenvolvimento Econômico e Social (BNDES) e que o preço do gás fosse estabelecido em contrato de longo prazo, com o Brasil assumindo os riscos cambiais futuros.
+
+Muitos outros problemas se acumularam, pois havia uma série de complicações no novo modelo. BENJAMIN (2000) cita que um desses problemas é o fato do Brasil ter, em boa parte do ano, sobra de energia elétrica barata. Como o Operador Nacional do Sistema (ONS) define, em cada momento, qual planta de geração elétrica será utilizada, as usinas térmicas, cuja energia elétrica produzida é mais cara, fatalmente permaneceriam desligadas nos anos de boas chuvas.
+
+Diante de dificuldades e incertezas deste tipo, grupos independentes de produtores de energia estavam relutantes em investir no Brasil. Até janeiro de 2001, somente 10 dos 49 projetos estavam iniciados e a situação energética se agravava. A saída encontrada foi apelar para a participação da PETRÓLEO BRASILEIRO S.A. (PETROBRÁS) na construção das termelétricas, assumindo para si o risco cambial.
+
+Percebe-se então a extrema contradição no modelo adotado. Se na cerimônia de lançamento do PPT, o então Ministro de Minas e Energia, Rodolpho Tourinho, destacou em seu discurso: “... concebido sob uma ótica privatista, o programa das termelétricas não precisou recorrer a qualquer tipo de incentivos ou subsídios...” (BRASIL, 2000), na hora da crise, o problema recaía novamente aos cuidados do Estado, socorrido pelo BNDES e pela PETROBRÁS.
+Diante desta situação, ROSA (2002) afirma que “as termelétricas são o reconhecimento do erro cometido na privatização das energéticas”, ressaltando ainda que como o mercado não funcionou, a intervenção do Estado era indispensável para garantir o fornecimento de energia.
+
+Como conseqüência de tantas dificuldades, atualmente, apenas 6.780 KW de um total de 17.000 KW estariam aptos a entrar no sistema elétrico nacional até o final de 2004, data em que o PPT original deveria estar em plena operação (BRASIL
+ 
+ENERGIA, 2003b). Mesmo assim, projeta-se um grande impulso na participação termelétrica durante esta década, visto que o Ministério de Minas e Energia estima um aumento de cerca de 50% com relação ao índice atual.
+2.2.4.2	Gás natural e termeletricidade no Brasil
+
+Analisando o problema da escassez de petróleo e das vantagens sobre os outros combustíveis fósseis, pode-se apoiar plenamente a decisão dos países de se implementar o uso do gás natural. Porém, em relação a produção de energia elétrica, deve-se considerar, em primeiro lugar, as alternativas tecnológicas já existentes para o aumento da capacidade de geração e, em segundo, as especificidades existentes do Brasil.
+
+É importante destacar que tanto nos Estados Unidos quanto na maioria dos países europeus as alternativas tecnológicas para expansão do parque produtor de eletricidade são restritas. O potencial hídrico existente nestas nações foi praticamente todo aproveitado, sendo o restante preservado para fins de manutenção da biodiversidade e regularidade dos sistemas fluviais. Além disto, a energia nuclear, que seria a outra opção existente, encontra severa resistência por parte da população.
+A situação acima descrita não ocorre no Brasil. BENJAMIN (2000) destaca, em primeiro lugar, que o Brasil aproveitou somente 26% do seu potencial hídrico, o qual se constitui em fonte renovável e segura de energia elétrica. Muito embora este potencial localize-se basicamente na Região Norte do país, a tecnologia de transmissão de energia elétrica a longa distância permite seu aproveitamento. Além disto, o desenvolvimento tecnológico de construção e as modernas técnicas de gerenciamento ambiental permitem o uso deste potencial com os menores impactos ambientais possíveis.
+
+Em segundo lugar, o gás natural representou apenas 4,7% do consumo total de fontes primárias no ano de 2001, segundo BEN (2002) , refletindo, portanto, um grande potencial de crescimento em setores onde sua utilização apresenta-se mais vantajosas, como é o caso da substituição da eletrotermia, além dos demais usos nobres.
+
+Embora as reservas provadas de gás natural no Brasil sejam escassas (não considerando a descoberta recente na Bacia de Santos), Bolívia e Argentina possuem enormes jazidas inexploradas. BENJAMIN (2000) defende que não seria difícil estabelecer parcerias energéticas com nossos vizinhos, já que o gás deles não é
+ 
+comercializado para outros países, possibilitando a criação de uma zona regional de cooperação e desenvolvimento centrada na própria moeda brasileira, com possibilidade futura de expandir até a Venezuela, a grande potência energética do continente.
+Segundo BERMANN (2002), existem atualmente no Brasil 62 projetos de usinas térmicas a gás natural espalhadas por todo o território, previstas para entrar em operação até 2005, capazes de produzir 31.616 MW. Grande parte destas térmicas estão previstas no PPT, porém, as outras restantes são produtos de investimentos particulares de indústrias de grande porte que desejam alcançar a independência da eletricidade, através de uma fonte mais barata e confiável.
+
+A opção de se utilizar gás natural para a geração de energia elétrica envolve seríssimas questões ambientais. Porém, a premissa de que o gás natural é um combustível limpo e não poluente deve ser melhor esclarecida. Na verdade, o gás natural é o combustível fóssil e não renovável cuja utilização gera a menor taxa de emissões.
+
+No caso dos países industrializados, a geração de energia elétrica ocorria principalmente por termelétricas alimentadas por carvão ou óleo diesel. Ao inserir o gás natural no lugar destas fontes, reduz-se a quantidade de emissões, tornando a matriz energética mais limpa. Já no Brasil, cuja produção elétrica é essencialmente hidrelétrica, o efeito é inverso. Ao utilizar o gás natural para substituir a água de nossos rios, fonte renovável e gratuita, a quantidade de gases tóxicos emanados ao ambiente aumenta sensivelmente.
+
+Diante dos dados apresentados é possível resumir os impactos da termeletricidade:
+a)	Emissões de CO2: Aceitando-se que até 2005 todas as térmicas estarão implantadas, serão gerados 31.616 MW de potência elétrica. Admitindo ainda que as mesmas operarão com um fator de capacidade de 80 %, isto é, 7.000 horas por ano, a produção de energia elétrica será de 221,3 GWh. Considerando parâmetro internacional de emissões carbônicas que estabelece a quantidade de 453 g de CO2 por KWh produzido, é possível prever que no final deste período estarão sendo lançados na atmosfera
+ 
+100,3 milhões de toneladas de CO2, repercutindo seriamente no efeito estufa.
+Para se ter uma idéia de grandeza deste valor, BERMANN (2002) adverte que em 1999, segundo cálculos efetuados a partir do BEN (2002), a quantidade somada das emissões de combustíveis fósseis, lenha e carvão mineral, no Brasil, foi de 313, 5 milhões de toneladas de CO2. Ou seja, já em 2005, somente as térmicas a gás natural lançarão cerca de um terço da quantidade de CO2 emitida pelas fontes não renováveis em 1999.
+Este cálculo contraria o discurso do próprio Ministro de Minas e Energia quando do lançamento do PPT, ao declarar textualmente : “ O Programa das Termelétricas contará, fundamentalmente, com usinas movidas a gás natural. O gás natural é um combustível limpo. Muitos o qualificam como o combustível do futuro...” (BRASIL, 2000). Esta afirmação, reforça a idéia de que não deve haver generalização. Dependendo da forma de utilização, o combustível utilizado pode contribuir ou prejudicar a sustentabilidade.
+b)	Emissões de outros poluentes: Além do gás carbônico, BERMANN (2002) afirma que seriam dispersos 50.900 toneladas diárias de NOx (óxido de nítrico). SUASSUNA (2002), ressalta que este poluente está na base de diversas patologias humanas, tais como: processos alérgicos e inflamatórios, impotência, diabetes, supressão da imunidade, hipertensão, câncer e problemas cardíacos. Os hidrocarbonetos (HC) resultantes da queima incompleta e evaporação dos combustíveis causam irritação nos olhos, nariz, pele e trato respiratório. Dependendo da concentração, podem se transformar em substâncias carcinogênicas e mutagênicas.
+Os hidrocarbonetos e óxidos de nitrogênio reagem na atmosfera, sob ação da luz solar, formando um conjunto de gases agressivos, denominados oxidantes químicos. O mais importante deles é o ozônio, que exerce ação nociva sobre vegetais e animais, mesmo em concentrações baixas. No homem, provoca danos à estrutura pulmonar, agravando doenças respiratórias e diminuindo a resistência à infecções. Para piorar a
+ 
+situação, o ozônio, na baixa altitude, é um poluente que apresenta índices de saturação elevado nas áreas urbanas. Como os projetos de termelétricas se localizam majoritariamente nestas áreas para diminuir custos de transmissão, seus efeitos são aumentados.
+Ainda com relação às emissões decorrentes da utilização do gás natural como combustível em termelétricas, deve-se considerar a presença de enxofre na sua composição. Muito embora sua presença seja significativamente inferior aos demais combustíveis fósseis, não se pode desprezar os efeitos locais de acidificação que serão acarretados.
+c)	Consumo de água: SUASSUNA (2002) adverte para o consumo de água excessivo por parte das térmicas, mesmo considerando que muitas já funcionam em ciclo combinado (geração simultânea de energia e calor), desperdiçando menores volumes de água. Para a operação normal da termelétrica de Carioba II, em Cubatão, com potência de 945 MW, serão utilizados 1.288 m3/h de água, dos quais 1.069 m3/h irão evaporar no processo gerador de energia, ou seja, 83 % da água será dissipada sob a forma de vapor, representando quantidade suficiente para abastecer uma cidade de 200 mil habitantes.
+Outra térmica que também utilizará enorme quantidade de água é a de Suape, em Pernambuco. Localizada a 50 Km do Recife, terá uma potência de 523 MW, consumindo água a uma taxa de 10 m3/s. Comparativamente, a Companhia Pernambucana de Saneamento (COMPESA) abastece a capital pernambucana cuja população estimada é de 3 milhões de habitantes com um volume equivalente a 12 m3/s. Assim, uma única térmica consome quase a mesma quantidade de água que uma das maiores metrópoles do país. A gravidade só será atenuada porque há previsão de se utilizar água do mar neste processo.
+d)	Custos: As termelétricas surgiram como uma medida de urgência para combater a crise no setor elétrico. Passado o racionamento, pode-se verificar que, na prática, o único benefício gerado para a população foi o fato de não haver colapso. No mais, a situação projetada é preocupante. Como a tarifa é muito mais cara, este aumento tarifário de energia
+ 
+repercute no preço dos produtos nacionais, reduzindo sua competitividade.
+De acordo com BENJAMIN (2000), para viabilizar o projeto das termelétricas, o BNDES criou, com recursos do FAT (Fundo de Amparo ao Trabalhador), uma linha de crédito para apoiar projetos considerados prioritários, financiando até 70 % do empreendimento. ROSA (2002) calcula este valor em cerca de US$ 4 bilhões. Além disso, foram postas em prática medidas para isentar os impostos sobre os equipamentos importados.
+ROSA (2002) já criticava a estratégia adotada de incentivo à termeletricidade, mesmo diante do quadro de emergência do setor elétrico antes do racionamento: “...basicamente, o governo se comprometeu a financiar os investimentos, comprar energia excedente e aumentar a tarifa. Pelo preço estabelecido para o gás, a energia gerada pela termelétrica custará R$ 75,00 por MWh, acima do valor de referência da Aneel, que é de R$ 57,00 e muito mais caro que o cobrado por Furnas, que é de R$ 34,00, incluindo a transmissão”.
+O atual diretor de Gás e Energia da PETROBRÁS, Ildo Sauer, corrobora ao afirmar: “Hoje eu vejo que tinha razão quando dizia, na época em que era professor, que os investimentos em térmicas eram equivocados. Nosso esforço agora é de administrar prejuízos” (CTGÁS, 2003b). Segundo José Gribelli, diretor Financeiro da PETROBRÁS, o prejuízo com as termelétricas, em 2003, foi de US$ 420 milhões (CTGÁS, 2003b).
+Afora os custos financeiros existentes, o custo de oportunidade desta política é elevado. Prova disto é que em maio de 2003, com os reservatórios das hidrelétricas cheios, apenas 1.500 MW de energia foram produzidos nas térmicas brasileiras, embora a capacidade total de geração elétrica destas plantas seja de 15.600 MW (ELETROBRÁS, 2003). Como conseqüência, a energia gerada pelas térmicas neste período correspondeu a apenas 3,58% do consumo nacional de eletricidade.
+ 
+Além do mais, foi gasta uma enorme quantia de recursos públicos para viabilizar investimentos privados. Assim, ações fundamentais para o desenvolvimento econômico e social da população foram adiadas e divisas foram evadidas, pois grande parte dos equipamentos e mão-de- obra utilizados são importados.
+Mesmo diante destas externalidades, o Ministério de Minas e Energia já demonstrou a intenção de prosseguir com a implantação de termelétricas, mesmo porque há possibilidades de um racionamento previsto para 2007. Porém, sabe-se que o enfoque adotado será substancialmente diferente. A idéia central da operação das térmicas na base da geração elétrica está abolida, dando lugar a um papel de complementação e confiabilidade ao setor hidrelétrico.
+
+2.2.5 O Gás Natural na Cogeração
+
+SANTOS (2002) define: “A cogeração é a produção combinada de energia elétrica, através da produção de energia mecânica, e de energia térmica (produção de calor ou frio), a partir de uma única fonte de combustível. Para tanto, podem ser utilizados todos os tipos de resíduos industriais, bem como outros combustíveis que, normalmente, já são utilizados pelos processos industriais das empresas, tais como: gás natural, óleo combustível, óleo diesel ou biomassa”.
+A cogeração pode ser obtida através de ciclos de vapor simples, em ciclos com turbinas a gás ou em ciclos com motores térmicos. No primeiro caso, empresas que possuem caldeiras para a geração de vapor podem mantê- las em funcionamento quando o vapor não estiver sendo utilizado, e direcioná-lo para turbinas apropriadas que gerarão eletricidade. Dependendo das condições específicas, essa eletricidade poderá ser utilizada pela própria empresa (autoprodução) ou vendida para a companhia elétrica.
+
+Já as unidades com turbinas a gás, operando em ciclo combinado, também podem ser utilizadas em sistemas de cogeração. Neste caso, a energia térmica cogerada será obtida através de recuperadores de calor, geradores de vapor ou caldeiras, permitindo a obtenção de eficiências globais de cerca de 80 a 85%.
+
+Em sistemas de cogeração utilizando motores térmicos acoplados a um gerador, a energia térmica cogerada será recuperada a partir da refrigeração do lubrificante do
+ 
+motor ou dos gases do escapamento. Essas plantas, normalmente, permitem a produção de água quente, bem como vapor de baixa pressão.
+
+Ao contrário do que se possa imaginar, a cogeração não é uma tecnologia recente. Porém, os ganhos em termos de eficiência são significativos. Ao se produzir vapor (ou água quente) e energia elétrica a partir do mesmo combus tível, é possível operar a planta com cerca de 80 a 85% de eficiência. Centrais elétricas convencionais operam com apenas 30 a 40% de eficiência, enquanto sistemas com ciclo combinado operam com 50 a 55% (SANTOS, 2002).
+Então porque a cogeração não é utilizada amplamente? SANTOS (2002) destaca que, no passado, obstáculos como o baixo custo do combustível, as regulamentações ambientais menos severas, as regras de operação do sistema elétrico que privilegiavam os monopólios e a geração centralizada formavam um panorama pouco atrativo.
+
+Porém, na atualidade, o quadro é exatamente oposto. Desta forma, esforços tecnológicos objetivam incrementar o uso da cogeração. Turbinas a gás de pequeno porte podem ser utilizadas por alguns consumidores industriais, comerciais e até em grandes residências. Motores a gás com capacidades inferiores a 5 MW podem gerar eletricidade, sendo que o calor poderá ser utilizado no aquecimento de piscinas, lavanderias, aquecimento central ou até sistemas de ar condicionado.
+Indústrias de papel e celulose, química, cerâmica, usinas de açúcar e álcool e siderúrgicas são os segmentos potenciais para a cogeração de grande porte. Porém, com as novas tecnologias, shopping centers, condomínios, complexos hoteleiros, aeroportos e empresas que utilizam ar condicionado podem utilizar a cogeração em menor escala.
+
+A ampliação do mercado da cogeração é interessante para o país, pois, assim como os outros usos finais do gás natural já discutidos, é possível ancorar o desenvolvimento da indústria do gás, garantindo as demandas necessárias. Desta forma, serão geradas receitas para a construção das infra-estruturas e para aquisição e desenvolvimento de novas tecnologias, retroalimentando o sistema energético em busca de eficiência e racionalidade.
+Esta perspectiva já está sendo considerada viável por diversos setores do Ministério de Minas e Energia e da PETROBRÁS. Através do Plano de Massificação
+ 
+do Uso do Gás Natural, a PETROBRÁS pretende investir cerca de US$ 8 bilhões para instalar 8 mil MW (CTGÁS, 2003b) em projetos de cogeração.
+
+De acordo com projeções de Ildo Sauer, Diretor de Gás e Energia da PETROBRÁS, caso a economia do país alcance uma taxa de crescimento anual de 3,5% será necessário ampliar anualmente a capacidade instalada em 3,5 mil MW (CTGÁS, 2003b). Portanto, a simples efetivação deste plano proporcionará pelo menos dois anos de garantia de fornecimento de energia elétrica para suportar o crescimento econômico do país.
+2.3	ASPECTOS GERAIS RELATIVOS AO USO DO GÁS NATURAL
+
+Após identificar esta extensa série de usos potenciais do gás natural, é preciso entender que somente esta análise isolada de usos e aplicações do combustível em questão não é suficiente. Apesar das vantagens apresentadas, não existe sequer um único segmento de consumo energético que seja cativo ao gás, no qual a sua presença seja realmente insubstituível.
+
+É fácil verificar na Tabela 2.4 que a introdução do gás natural nos diversos segmentos estudados ocupa o posto de algum outro combustível. Portanto, o desenvolvimento do gás natural não é um processo neutro. Na verdade, é preciso visão sistêmica para compreender que esta situação representa uma competição entre diferentes alternativas energéticas, com impactos diferenciados nas várias empresas de energia que operam em mercados distintos.
+
+Juntamente à questão da competitividade, surge também uma questão fundamental que é a regularização do uso do gás. Percebe-se uma certa indefinição, pois a produção e o transporte estão sob responsabilidade federal (através da ANP) que objetiva criar um mercado mais competitivo. Por outro lado, a distribuição e a comercialização são reguladas pelos governos estaduais que tentam estabelecer estruturas monopolistas e sem competição, de modo a reduzir os riscos assumidos pelos investidores e financiar a expansão do sistema.
+
+SANTOS (2002) apresenta um exemplo que ilustra muito bem estes problemas. O uso do gás boliviano foi inicialmente idealizado para substituir o óleo combustível na indústria. Pela falta de mercados alternativos para este último, a PETROBRÁS passou a oferecer descontos com o intuito de manter os consumidores, dificultando a venda de gás natural para a indústria. Como resultado, o óleo combustível continua sendo consumido descentralizadamente e com elevado impactos ambientais nas indústrias, enquanto as distribuidoras de gás ancoram-se nas termelétricas como único mercado alternativo que dispõem.
+
+Muitos outros aspectos contraditórios desta natureza podem ser apresentados. Porém, a ausência de infra-estrutura logística de transporte e distribuição é o principal obstáculo para o crescimento do consumo de gás natural. A rede total de transporte de gás natural no Brasil extende-se por somente 7.700 km. Com relação à rede de distribuição, existem cerca de 7.658 km de ramais, sendo que 74% deste total está fortemente concentrado nos estados do Rio de Janeiro e São Paulo (CBIE, 2003).
+
+Como o custo financeiro para implantar a infra-estrutura necessária é elevado, talvez se possa explicar a estratégia atualmente adotada no país de que o gás natural inicialmente sirva de combustível para as termelétricas, para em seguida ser consumido pelas indústrias, sendo depois inserido nos demais setores.
+ 
+A premissa básica desta estratégia é que a expansão da infra-estrutura de transporte e distribuição de gás natural só será efetivada se os projetos forem ancorados pela construção de termelétricas, gerando assim uma demanda fixa por gás, capaz de gerar rendimentos suficientes para financiar os pesados investimento iniciais em gasodutos, bem como na exploração e produção das reservas.
+SANTOS (2002) contesta esta estratégia ao mostrar a relação econômica entre duas alternativas de distribuição de gás natural. O Brasil gastou cerca de US$ 2 bilhões na construção do Gasbol, cuja capacidade total é de 30 milhões de m3/ dia. O autor calcula que seriam necessários US$ 4 bilhões para construir uma rede para distribuir esta quantidade de gás. Alternativamente, pequenas unidades de GNL abastecidas por caminhões-tanque implicariam em uma significativa economia de 60% nos custos de distribuição.
+
+Estas cifras mostram um dos benefícios competitivos do uso descentralizado do gás. Além disso, percebe-se que é impossível para o Estado prover recursos nos níveis solicitados. Neste momento de transição, em que o processo de implantação das térmicas ainda está iniciando, é necessário questionar se um energético nobre como o gás natural deva ser comprometido totalmente para fins de geração elétrica como os projetos ora em apreciação parecem indicar.
+Tal questionamento é importante porque é perceptível a existência de um clima de incerteza pairando sobre o setor gasífero. A situação atual denota a ocorrência de um ciclo vicioso: as infra-estruturas não se desenvolvem enquanto não existir demanda que as justifique. Por sua vez, a demanda caminha a passos lentos pelo receio de não haver garantia de disponibilidade do gás natural e pela falta de informações acerca de suas vantagens competitivas.
+
+Diante deste panorama é fundamental definir: como a sociedade brasileira pode obter os reais benefícios do gás natural? Em primeira análise, o Poder Público deve romper a inércia atual e assumir um papel ativo no sentido de promover a mudança cultural para antecipar as demandas de gás. Isto inclui a disponibilização de recursos para financiar a conversão e a aquisição de equipamentos alimentados por gás natural.
+ 
+Concomitantemente, a comunidade técnico-científica, apoiada pela iniciativa pública e privada, deverá desenvolver tecnologias que permitam garantir oferta aos consumidores previamente convertidos e acessibilidade aos potenciais usuários. A partir daí, à medida que as escalas de consumo cresçam, o mercado encontrará seu próprio rumo, através da livre concorrência para definir os sistemas de suprimento definitivos.
+Entretanto, SANTOS (2002) observa que, no Brasil, esta abordagem não foi completa. O gasoduto Brasil- Bolívia foi idealizado para ser a espinha dorsal da distribuição troncal na mais próspera região do país. Desta forma, a barreira de carência de infra-estrutura foi vencida, o suprimento de gás se fez presente, porém os mercados previamente imaginados para este gás não se desenvolveram. Assim, a termeletricidade surgiu como alternativa de uso desse gás, e, ao ser consolidada como política nacional, o Brasil está fazendo péssimo uso do gasoduto, recriando o problema de carência de infra-estruturas.
+Porém, há grandes oportunidades vislumbradas a partir do uso difuso do gás natural. SANTOS (2002) propõe uma estratégia denominada “Avanço Total do Gás Natural” que defende o desenvolvimento dos usos difusos do gás natural ao invés de concentrar os esforços em grandes empreendimentos.
+
+Neste sentido, ressalta-se o fato de que, em recente estudo empreendido pelo Instituto Nacional de Tecnologia, a partir da análise da estrutura da indústria gasífera no Brasil e das estratégias corporativas das empresas atuantes, foi identificado que uma das oito necessidades tecnológicas para o desenvolvimento do setor é dispor de formas alternativas de transporte e distribuição de gás natural (CBIE, 2003).
+
+Tal perspectiva possibilita a efetivação de aspectos positivos para o desenvolvimento nacional, tais como a criação de novos empregos ao longo de toda a cadeia produtiva, englobando atividades na fabricação, instalação, conversão e manutenção de equipamentos, a geração de novos negócios, a melhoria da competitividade industrial, a capacitação de mão-de-obra e a promoção de uma maior eficiência energética.
+
+CAPÍTULO 3
+
+O PROBLEMA DA LOCALIZAÇÃO DE FACILIDADES
+
+“Algo só é impossível até que alguém duvide e acabe provando o contrário .”
+(Albert Einstein)
+
+
+3.1.	ASPECTOS LOGÍSTICOS DA DISTRIBUIÇÃO DE GÁS NATURAL
+
+No capítulo anterior, foi destacado que os setores residencial e comercial deveriam ser os principais focos da estratégia nacional de massificação do uso do gás natural. Porém, os consumidores de gás natural destes setores estão bastante dispersos no ambiente urbano e a infra-estrutura para supri- los por meio de dutos é bastante onerosa.
+
+Deste modo, é fundamental que as distribuidoras de gás natural observem toda a diversidade de aspectos logísticos relacionados à distribuição física de produtos. NOVAES (2000) ressalta que para uma empresa, independentemente do seu ramo de atuação, determinar como distribuir os seus produtos, se faz necessário a formatação de um planejamento estratégico a fim de montar um sistema logístico integrando centros distribuidores, rotas de transporte, níveis de estoque e procedimentos para processar pedidos que contribuam para o sucesso do negócio. Partindo-se deste princípio, várias decisões devem ser tomadas no sentido de definir:
+
+a)	Onde as fábricas devem ser localizadas;
+b)	Quais fornecedores deverão ser utilizados;
+c)	Quantos centros de distribuição a empresa deve operar;
+d)	Onde eles devem estar localizados;
+e)	Que clientes ou zonas de mercado devem ser supridos de cada centro de distribuição;
+f)	Que linhas de produto devem ser produzidas ou estocadas em cada fábrica ou centro de distribuição;
+g)	Que modalidades de transporte devem ser usadas para suprimento e para distribuição;
+As definições destas questões são de responsabilidade da gestão empresarial e constituem-se nas políticas e linhas de ações adotadas para efetivar a atividade
+ 
+industrial, devendo ser analisadas conjuntamente e de forma sistêmica, pois como tais questões possuem forte interdependência, não podem ser vistas de forma seqüencial ou segmentada.
+Por sua vez, BALLOU (1993) afirma que o cliente é o foco central dos esforços empresariais. Sendo assim, o conhecimento prévio de suas características, o monitoramento de suas necessidades e a determinação das diferenças dessas necessidades é fundamental para a concepção da estratégia para melhor atendê- lo.
+
+De maneira geral, NOVAES (2000) estabelece que há dois tipos de mercados para os quais as empresas devem planejar a distribuição de produtos. Um deles é o de usuários finais, que usam o produto para satisfazer suas necessidades individuais ou criar novos produtos. O outro mercado é composto por consumidores intermediários que não consomem o produto, mas que o oferecem para revenda, em geral para outros intermediários ou consumidores finais.
+Porém, ao se rebater estes conceitos logísticos para o caso específico da distribuição de gás natural, o problema ganha mais um grau de complexidade, pois é importante considerar alguns aspectos específicos relativos aos clientes potenciais do combustível no que se refere à quantidade de consumidores, o volume demandado e a melhor forma de supri- los.
+Os consumidores residenciais e comerciais de gás natural, incluindo shopping centers e condomínios, são responsáveis pela aquisição do produto em pequenas quantidades, de modo a alimentar aparelhos domiciliares como fornos, fogões, chuveiros, refrigeradores e pequenas centrais de cogeração. Porém, a quantidade destes consumidores pode ser muito grande e bastante dispersa na área urbana, tornando o suprimento através de ramais dutoviários inviável.
+
+Por outro lado, indústrias, postos de GNV e termelétricas, embora relativamente em menor número, são responsáveis por consumos bastante elevados, de modo que o suprimento por dutovias é o mais indicado. Exemplo disto, é que no Estado do Ceará, em 2002, os setores industrial, veicular e de geração de energia representaram 98% do consumo de gás natural, conforme CEGÁS (2003). No entanto, normalmente estes
+ 
+estabelecimentos estão situados em regiões mais afastadas dos grandes adensamentos residenciais e comerciais, com exceção dos postos de GNV.
+
+Ainda com relação aos consumidores residenciais e comercias, é possível aplicar um dos fundamentos da logística de distribuição apresentados por BALLOU (1993). Este fundamento ressalta que distribuir produtos para clientes que demandam pequenos volumes e estão espalhados no espaço geográfico, normalmente, apresenta maior economicidade se um depósito é implantado para atendê- los.
+
+Esta idéia também é corroborada por BOWERSOX E CLOSS (2001). Os referidos autores argumentam que as vantagens econômicas relativas à armazenagem advêm da redução direta dos custos logísticos proporcionados. Assim, a adição de um depósito a um sistema logístico pode ser justificada se a redução do custo de transporte for superior aos custos fixos e variáveis do depósito.
+
+Diante destes argumentos, admite-se que a acessibilidade ao gás natural de clientes localizados fora da área de abrangência dos gasodutos poderia ser garantida a partir da implantação de Centros de Distribuição Secundária de Gás Natural (CDSGN), ou seja, a ponta dos gasodutos virtuais que complementariam o atendimento da demanda não suprida pela rede de distribuição dutoviária ou gerariam uma demanda inicial em localidades que não dispõem de redes de distribuição de gás natural.
+A grande vantagem desta estratégia é que o gás natural poderia ser transportado através de um modo troncal até um CDSGN estrategicamente localizado, possibilitando maiores ganhos econômicos de escala. Numa etapa seguinte, o gás natural seria ofertado ao mercado a partir destas instalações, percorrendo apenas curtas distâncias. Esta estratégia, pelo menos teoricamente, reduziria os custos de transporte e distribuição.
+Neste sentido, BALLOU (1993) adverte que o layout e o planejamento de um centro de distribuição é fundamental para estabelecer o uso mais eficiente do espaço, aliado a um baixo custo operacional. A idéia arcaica de que centros de distribuição são simplesmente recintos para manuseio de materiais deve ser abolida. Em função do produto manipulado, no caso, o gás natural, é absolutamente imperioso que seja desenvolvido um projeto arquitetônico com todas as características e particularidades específicas da distribuição deste produto.
+ 
+No entanto, é importante esclarecer que não se conhece a existência de nenhum CDSGN. A idéia aqui proposta é a implantação de uma instalação capaz de receber o combustível tanto por dutos como em forma de GNL ou GNC, transferindo-o para vasilhames apropriados ou tubulações específicas para sua distribuição. Assim, imagina-se que o CDSGN tenha características bastante similares aos depósitos de GLP amplamente difundidos no Brasil 
+
+Por sua vez, BOWERSOX E CLOSS (2001) alertam que uma questão básica do gerenciamento logístico é como estruturar sistemas de distribuição capazes de atender, de forma econômica, aos segmentos de mercado geograficamente distantes das fontes de produção, oferecendo níveis de serviço cada vez mais altos em termos de disponibilidade de estoque e tempo de atendimento.
+Neste contexto, a atenção se volta para as instalações de armazenagem e distribuição e como elas podem contribuir para atender de forma eficiente às metas estabelecidas. Portanto, a aplicação da estratégia de implantar Centros de Distribuição Secundária de Gás Natural pode trazer benefícios estratégicos, econômicos, sociais e ambientais nos âmbitos regional e local. Em seguida, são apresentados dois exemplos bastante elucidativos.
+ 
+A Figura 3.2 apresenta o esquema geral de suprimento de gás natural do Nordeste brasileiro. Percebe-se claramente que há um grande desequilíbrio geográfico no suprimento fornecido pela rede troncal de distribuição. Sua localização está toda junto ao litoral, de modo a priorizar as capitais estaduais.
+
+Desta forma, regiões interioranas importantes do Ceará, como o Cariri, que abriga uma população superior a 700 mil habitantes, quase 11% do total do Estado do Ceará e um PIB correspondente a 12% do total estadual (IBGE, 2003), estão completamente excluídas dos benefícios que o gás natural pode alavancar.
+
+Para suprir esta região com gás natural, através de dutos, seria necessário implantar um gasoduto com extensão aproximada de 600 Km. Considerando que o gasoduto Recife-Caruaru de 120 Km de extensão está orçado em R$ 39 milhões (GÁS ENERGIA, 2003), um gasoduto Fortaleza-Cariri demandaria investimentos superiores a R$ 200 milhões. Além disso, haveria a necessidade de construção de redes de distribuição locais.
+Esta estratégia é bastante arriscada, pois não existe uma demanda prévia de gás natural na  região  do  Cariri  e  os  investimentos  ocorrem  antes  de  qualquer  retorno
+ 
+financeiro. É mais viável financeiramente transportar o gás natural por meios alternativos (GNL, GNC) para um local estratetégico que possa efetuar a distribuição local (CDSGN), criando demandas e para uma infra-estrurura mais efetiva.
+Com relação ao ambiente urbano, a Figura 3.3 mostra que a malha de distribuição dentro da cidade de Fortaleza é extremamente limitada.
+
+Alguns bairros residenciais importantes como Messejana e Água Fria estão bem distantes desta rede. Pode-se ver, por exemplo, que o bairro do Centro, cuja atividade comercial é intensa, é apenas contornado. Além disso, alguns estabelecimentos de grande porte como a Universidade Federal do Ceará (UFC) e shopping centers (Iguatemi) não têm acesso ao gás natural.
+
+No âmbito local, a implantação de um CDSGN possibilitaria que diversos consumidores potenciais tivessem acesso ao gás natural. Deste modo, condomínios e demais estabelecimentos como shoppings, restaurantes, panificadoras e universidades
+ 
+localizados distantes da rede de distribuição poderiam optar por utilizar esta fonte energética. Esta possibilidade, embora aparentemente pouco rentável para as distribuidoras, pode gerar dividendos em proporções muito grandes, visto que estes consumidores só dispõem da eletricidade e do GLP como alternativas para seu suprimento energético.
+Outro aspecto importante da distribuição de gás natural é a característica dinâmica do problema. Muitas vezes, consumidores residenciais e comerciais que teoricamente deveriam ser atendidos mais economicamente a partir de CDSGN podem ter seu suprimento por dutovias viabilizado por estarem situados próximos ao ramal dutoviário expandido para alimentar um grande consumidor. Na prática, isto significa, por exemplo, no caso da CEGÁS decidir extender um ramal até a UFC, ela estará beneficiando a todos os consumidores potenciais localizados na vizinhança deste novo ramal.
+Desta forma, o sistema de distribuição precisa ter certo grau de flexibilidade para suprir as necessidades dos diversos tipos de clientes de forma econômica, pois dependendo do traçado da rede dutoviária, a forma de suprimento (vasilhames ou dutovias) de um dado cliente pode ser alterada. Pela complexidade do problema, percebe-se a necessidade de abordá- lo de forma sistêmica, considerando integradamente os clientes atuais e potenciais do CDSGN, a malha dutoviária existente e suas prováveis expansões.
+
+Diante do problema existente causado pela quantidade e diversidade de clientes para o gás natural e a necessidade de atendê-los com elevado nível de serviço e custos reduzidos, é fundamental um estudo de localização dos Centros de Distribuição Secundária de Gás Natural e dos ramais a serem expandidos como parte integrante do processo de melhoria da logística de distribuição do combustível.
+3.2	A IMPORTÂNCIA DOS ESTUDOS DE LOCALIZAÇÃO DE FACILIDADES
+
+Antes de se discutir mais detalhadamente os parâmetros para a realização de um estudo de localização dos Centros de Distribuição Secundária de Gás Natural e de expansão dos ramais dutoviários, é fundamental que se tenha uma ampla visão da importância e dos benefícios advindos dos estudos de localização, tanto para
+ 
+empreendimentos públicos como privados. Deste modo, este tópico destina-se a apresentar uma série de considerações gerais sobre os estudos locacionais.
+
+De acordo com CLEMENTE (1998), o estudo da localização é fundamental tanto para as empresas que procuram as maiores vantagens em termos da relação receitas/custo, quanto para o Estado, cujos objetivos de desenvolvimento regional e urbano, como também de diminuição dos desequilíbrios regionais estão em destaque.
+
+Desse ponto de vista, ARAKAKI & LORENA (2002) ressaltam que a localização de facilidades é um aspecto crítico do planejamento estratégico para um grande número de empresas públicas e privadas. Tanto empresários que querem construir um novo empreendimento ou industriais que desejam situar nova unidade fabril, quanto administradores que selecionam locais para ofertar serviços públicos são freqüentemente desafiados pela dificuldade de decidir por um local adequado.
+
+Assim, a localização pode ser estudada tanto em escala regional quanto em escala urbana. Em escala regional, ganham maior importância aspectos como custos de transportes, diferenciais de custos de suprimentos e mão-de-obra, bem como de acesso aos mercados. Normalmente, estas práticas restringem-se ao setor industrial. Já em escala urbana, destacam-se aspectos como regulamentação sobre o uso do solo, aluguel de terra, vias de acesso, tempo de deslocamento e observação de planos diretores.
+Com relação ao setor público, CLEMENTE (1998) defende que o Estado, ao assumir o papel de indutor da atividade econômica, pode influenciar amplamente a localização das atividades industriais, considerando sempre a utilização eficiente dos recursos disponíveis, o desenvolvimento sustentável e a melhoria da qualidade de vida da população. Para tanto, sua atuação precisa fundamentar-se em estudos de potencialidades regionais e urbanas, tendo como referência os critérios empresariais de escolha locacional.
+
+Os órgãos públicos podem dispor de estudos de localização para decidir tecnicamente onde alocar facilidades, tais como escolas, hospitais, pólos industriais, ou qualquer outro tipo de infra-estrutura necessária, evitando o desgaste político natural com as partes não beneficiadas, visto que estudos consistentes desta natureza são irrefutáveis.
+ 
+Por outro lado, a ausência de metodologia científica na escolha locacional dá margem à efetivação de decisões com alto custo de oportunidade, baseadas no empirismo ou implementadas a partir do interesse individual do gestor. Além disso, há a possibilidade da existência de acordos e negociatas, indesejáveis do ponto de vista político-administrativo, pois o processo decisório transcorre sem que haja a transparência necessária já que não se conhece a melhor opção técnica.
+
+ESPEJO (2001) ressalta que o grande interesse pelos estudos de localização é facilmente justificado, pois as decisões decorrentes envolvem normalmente recursos de capital significativos e com efeitos econômicos de longo prazo. Além deste fator, a implantação de facilidades freqüentemente causa, na região escolhida, desenvolvimento econômico, porém, poluição e impactos negativos.
+
+ARAKAKI & LORENA (2002) reforçam que a dificuldade principal na localização está concentrada no fato de que antes mesmo de uma facilidade ser implantada, boas localizações devem ser identificadas, especificações de capacidade devem ser determinadas, bem como grande quantidade de capital deve ser alocada.
+
+Do exposto, percebe-se que a decisão da localização espacial de um centro distribuidor (CD) constitui-se em elemento fundamental, a nível estratégico de planejamento, visto que diversos fatores devem ser considerados na escolha de sua localização. Neste intuito, BALLOU (1993) ressalta que os principais fatores que devem ser observados na definição da localização de um CD são:
+a)	Leis de zoneamento locais;
+b)	Aceitação da comunidade e do governo local;
+c)	Custo para adquirir e conformar o terreno;
+d)	Custos de construção;
+e)	Disponibilidade e acesso de serviços de transportes;
+f)	Potencial para expansão;
+g)	Disponibilidade, salários e ambiente da mão-de-obra;
+h)	Taxas relativas ao local (Impostos);
+i)	Segurança e vigilância;
+j)	Taxas de seguro;
+k)	Condições de tráfego na redondeza.
+ 
+Ao se rebater estes fatores para o problema em questão da distribuição de gás natural, a partir de centros distribuidores, percebe-se que na escolha locacional todos os aspectos citados anteriormente devem ser considerados. Afinal, o gás natural, por ser inflamável e de difícil manipulação, exige alguns padrões de segurança e de infra- estrutura que devem ser observados, restringindo a quantidade de opções locacionais de implantação.
+
+Em termos práticos, os custos e as distâncias de transporte são mensuráveis, sendo que o problema envolve uma busca pela melhor combinação de locais de implantação, dentre inúmeras alternativas geográficas. Além disto, é fácil perceber que o número de possíveis alternativas que devem ser analisadas e comparadas é muito alto. Mesmo para bairros metropolitanos ou cidades de médio porte acredita-se ser necessário ter que trabalhar com dezenas de locais potenciais para implantação de centros de distribuição, assim como centenas de clientes.
+
+Estes números dão uma idéia do volume de dados a serem manuseados, já que a análise requer informações detalhadas sobre a demanda, capacidade de oferta, custos de transporte, custos de implantação, localização dos clientes, e a localização da rede dutoviária.
+
+Diante deste panorama, é evidente que a tarefa de escolher os locais para se instalar um CDSGN, sem utilizar modelos matemáticos, fatalmente implicará em resultados com elevado custo de oportunidade, de modo que poderão ser escolhidas alternativas que não serão as melhores possíveis, prejudicando a competitividade do combustível.
+
+3.3	MÉTODOS DE RESOLUÇÃO DOS PROBLEMAS DE LOCALIZAÇÃO
+
+Uma vez compreendido que para solucionar satisfatoriamente o problema da distribuição de gás natural, a partir do CDSGN ou dos ramais dutoviários, é fundamental o uso de modelos matemáticos de localização, esta seção faz uma breve explanação acerca dos métodos existentes para solucionar tais problemas.
+
+Embora os modelos iniciais de localização apresentem uma série de simplificações e limitações, é importante conhecê- los pois a base conceitual utilizada é perfeitamente aplicável a problemas mais sofisticados da Pesquisa Operacional. A
+ 
+seguir, apresenta-se um breve resumo dos principais modelos locacionais utilizados ao longo do tempo citados por CLEMENTE (1998) e MAIA (2001).
+
+3.3.1. O modelo de Weber
+
+Em 1909, Alfred Weber desenvolveu o primeiro modelo de localização industrial analisando os processo de transformação que sofriam determinados produtos. A idéia central ressaltava que um produto era processado em um local que recebia matérias-primas de pontos geograficamente determinados e posteriormente era distribuído para múltiplos mercados, conforme mostra a Figura 3.4.
+Foi observado que, se os custos de transporte forem os mesmos para matérias- primas e produtos acabados, o processo industrial de conversão influencia fortemente a localização da instalação industrial. Desta forma, o centro distribuidor será posicionado próximo às fontes de suprimento caso a quantidade de matéria-prima transportada seja superior a quantidade de produto acabado. Em caso contrário, o centro distribuidor será implantado junto ao mercado consumidor.
+
+Para explicar a predominância dos custos de transporte, Weber recorre ao triângulo locacional (Figura 3.5). Este se constitui por dois pontos diferentes de fornecimento de matérias-primas para a indústria (M1 e M2) e outro ponto distinto onde se localiza o centro consumidor (C).
+
+O ponto de equilíbrio das três forças (P) é capaz de proporcionar o menor custo para a firma, ou seja, ponto onde os custos de transporte tanto das matérias-primas requeridas quanto do produto final sejam idênticos por unidade de distância percorrida. A localização ótima da indústria se dará exatamente no centro do triângulo locacional, onde os custos de transporte são mínimos.
+Apesar de Weber considerar fatores não econômicos na sua análise, tais como aspectos políticos, institucionais, de incentivos, dentre outros, a escolha da localização, em seu modelo, na prática, é influenciada apenas por considerações de custo e, entre os custos que determinam a localização, o de transporte é o principal.
+
+Weber considera ainda que os demais custos de produção e demanda, são idênticos em localidades alternativas e que considerações pessoais ou subjetivas não influem na localização das atividades. Desta forma, reforça-se a idéia de que as escolhas locacionais dependem apenas dos custos de transporte e, assim, a localização ótima, ou seja, aquela que resulta na máxima lucratividade, será aquela onde os custos de transporte são mínimos.
+ 
+3.3.2	O Modelo de Israd
+
+Corroborando com Weber, Walter Israd considera o custo de transporte como principal explicação para a escolha de localização. Assim, quando uma empresa escolhe a localização entre uma fonte de matéria-prima e o mercado, está decidindo sobre uma combinação particular de qua ntidades de insumo de transporte a serem gastas tanto com a matéria-prima, como com o produto.
+
+Assim, para determinar a localização que implique em menor custo de transporte, devem ser considerados os custos unitários particulares associados ao tipo de processamento do produto pela empresa. Esta abordagem é bastante simplista, resultando em conclusões bastante previsíveis, tais como:
+
+a)	Processo com perda de peso e transporte de matéria-prima relativamente dispendioso atraem a empresa para localizar-se próximo à fonte de matéria-prima;
+b)	Processo com ganho de peso e transporte do produto acabado relativamente dispendioso atraem a firma a localizar-se junto ao mercado.
+Considerando tm a tarifa de transporte de matéria-prima e tp a tarifa de transporte do produto, é possível estabelecer, de acordo com o processo produtivo, o ponto de equilíbrio locacional das instalações. O Quadro 3.1. apresenta resumidamente estas possibilidades:
+
+Com o passar do tempo, a complexidade das relações comerciais foi aumentando, exigindo que diversos outros fatores como recursos naturais, disponibilidade de mão-de-obra e impactos sócio-ambientais, até então desprezados,
+ 
+fossem incorporados na análise. Desta forma, a complexidade do problema cresceu, exigindo novas formas de abordagem.
+
+3.3.3	O Modelo de Lösch
+
+Contrariamente a Weber que considerava o equilíbrio individual, Lösch, em 1954, enfatiza o equilíbrio geral das localizações. Este modelo tenta estabelecer os parâmetros que definem a melhor localização para os empreendimentos, levando em consideração o planejamento público e privado.
+
+Lösch propôs traçar a demanda individual de um determinado produto e a partir dela vai determinar a área de mercado de uma empresa. Na sua abordagem, Lösch supõe, para maior simplicidade, que o espaço é constituído de uma área homogênea, não havendo diferenças de renda ou de preferências entre os consumidores.
+
+Desta forma, é possível traçar uma curva espacial de demanda que decresce com a distância devido aos acréscimos de custos de transportes. Assim, para pontos mais distantes da fábrica os preços serão mais elevados, dado que ficam acrescidos dos custos de transporte e como os preços estão mais elevados, a quantidade a ser vendida diminui.
+
+A Figura 3.6. ilustra um caso onde um consumidor localizado em R terá um preço de mercado de OR e a quantidade vendida de RS. Ele parte de um preço preestabelecido para o produto na porta da fábrica, OP, neste ponto, PQ representa a quantidade do produto vendida. O preço limite do produto é estabelecido em OF e o custo limite de transporte será PF que é o alcance máximo do bem.
+Deste modo, as vendas totais equivalem ao volume do cone produzido pela rotação do raio PF em torno do eixo das quantidades máximas demandadas PQ, originando o cone de demanda de Lösch, conforme Figura 3.7
+
+A ampliação do cone de demanda demonstra que, com a redução do preço, amplia-se a área de mercado. Na visão de Lösch o que vai determinar a escolha da localidade é a área de mercado. A determinação da área de mercado ótima se dá através de uma produção mínima e do reduzido custo de transporte.
+
+Para Lösch, a entrada de novas firmas no mercado implica que, estas irão estabelecer suas próprias áreas de mercado. Conseqüentemente, as áreas de mercado de determinadas firmas irão se sobrepor às áreas de outras firmas, fazendo com que diminuam as distâncias, e, por conseguinte, reduzindo os custos de transporte, o que refletirá em menores preços de mercado.
+
+Lösch ainda observa que o mercado é o principal fator determinante no processo de escolha locacional. O seu modelo considera que os custos de transportes são idênticos em várias direções e que as matérias-primas podem ser dispersas uniformemente. Ele conclui que a localização seria determinada pela competição por mercados.
+
+Em contrapartida, CLEMENTE (1998) observa que, na prática, a curva espacial de demanda e o monopólio espacial raramente correspondem a situações reais. O que mais se observa é a coexistência de vários produtores em um mesmo espaço geográfico
+ 
+de vendas, com seus produtos fortemente diferenciados pela marca, e a prática de preço único por toda a área de mercado, discriminando-se contra os consumidores mais próximos.
+3.3.4. Modelo potencial
+
+Este modelo baseia-se em uma analogia à Eletricidade. De acordo com esta comparação, o potencial elétrico de um ponto no espaço depende das cargas elétricas dispostas em sua volta, sendo seu valor proporcional à intensidade das cargas e inversamente proporcional à distância que o separa destas.
+
+Ao se levar esta idéia para os estudos de localização, fazendo as cargas elétricas corresponderem a lugares de demanda ou oferta de bens e serviços, é possível calcular o potencial de cada ponto em relação a todos os demais. No entanto, CLEMENTE (1998) destaca que neste caso, a distância geográfica apresenta-se como a forma menos adequada, pois não leva em conta fatores econômicos associados ao deslocamento. Em seu lugar, ele sugere usar o conceito de distância econômica, considerando o tempo, o desconforto da viagem e os custos do deslocamento.
+
+3.4	O PROBLEMA DE LOCALIZAÇÃO DE FACILIDADES NA PESQUISA OPERACIONAL (PO)
+
+ARAKAKI & LORENA (2002) ressaltam que os problemas de localização tratam da questão de localizar (implantar) um ou mais objetos, chamados de facilidades, que deverão interagir com outros objetos que possuirão localizações fixas. O conceito de distância entre a facilidade a ser localizada e os outros objetos contribuem para identificação de uma função objetivo para avaliar possíveis localizações.
+
+Com relação às ferramentas de resolução, deve ser observado ainda que os métodos de resolução para os problemas de localização em pesquisa operacional têm características complexas, necessitando da integração com bancos de dados robustos, de forma que se conheça a estrutura geométrica dos entes espaciais (casa, rua, rio, parcela de solo, viatura, etc.), assim como suas posições no espaço geográfico e seus atributos.
+
+Para sua resolução, é imperioso integrar os dados com Sistemas de Informações Geográficas (SIG), permitindo a combinação das funções de visualização e análise
+ 
+espacial, além de possibilitar a realização de simulações, de modo a considerar a questão histórico-temporal para dar suporte ao processo de tomada de decisão.
+
+Na Pesquisa Operacional, um problema é caracterizado por um procedimento que pode ser dividido nas seguintes etapas: problema físico, modelagem matemática para o problema físico, solução do modelo, avaliação da solução, aplicação da solução e alteração dos dados do problema físico, conforme Figura 3.8.
+Maiores detalhes de cada uma destas etapas podem ser encontrados na literatura sobre Pesquisa Operacional como BREGALDA (1988) e ANDRADE (1998).
+
+Tendo em vista a importância e relevância de estudos de localização de CDSGN, é fundamental a observação das características do problema da distribuição do gás natural para determinar um modelo matemático que represente o problema físico. De acordo com a metodologia apresentada, é necessário realizar uma série de passos interelacionados e seqüenciados logicamente.
+
+3.4.1.	Representação do Problema Físico
+
+O primeiro passo da metodologia é a representação do problema físico. O objetivo central da questão abordada consiste na necessidade de suprir uma quantidade definida de consumidores, com demanda conhecida de gás natural, a partir de CDSGN ou da rede de distribuição, a um custo mínimo.
+ 
+É importante reforçar que estes consumidores podem ser indústrias, postos de GNV, estabelecimentos comerciais, shoppings, condomínios ou residências e estão espalhados dentro do ambiente urbano. As indústrias e os postos de GNV normalmente apresentam uma escala de consumo bem superior aos demais, de modo que seu suprimento adquire mais economicidade caso seja feito através de ramais dutoviá rios. Porém, nada impede que sejam supridos através do CDSGN.
+
+Por sua vez, os estabelecimentos comerciais, shoppings, condomínios e residências normalmente não possuem escala de consumo que viabilize a implantação de um ramal dutoviário específico, tendo seu suprimento viabilizado apenas por um CDSGN. Exceções podem ser verificadas quando o consumidor está situado ao longo do caminhamento de um novo ramal dutoviário, pois não faz sentido o suprimento secundário (via CDSGN) se será implantado um ramal defronte ao consumidor.
+
+Fica claro que o modelo definitivo deve ter flexibilidade de contemplar estas duas alternativas, isto é, tanto o consumidor pode ser suprido através do CDSGN ou através de um novo ramal dutoviário. A única restrição que se impõe neste caso é que a sua demanda seja atendida plenamente.
+ 
+A Figura 3.9. apresenta a problemática da distribuição de gás natural. Na ilustração, o ambiente urbano é retratado através da representação das quadras existentes.
+Como o objetivo principal está relacionado com a minimização de custos, é fundamental estabelecer quais os custos envolvidos na distribuição de gás natural. Diante destes aspectos, percebe-se a necessidade de realizar diversos estudos preliminares que possam subsidiar a modelagem. Isto significa que deve-se conhecer os parâmetros de custos relacionados tanto aos locais candidatos a receber um CDSGN quanto para os clientes potenciais. Na concepção do modelo definitivo serão considerados quatro tipos diferentes de custos:
+
+a)	Custos de Implantação de um CDSGN (CI) : São originados basicamente pelo custo de aquisição ou arrendamento do terreno, o custo inerente à construção do CDSGN que é determinado fundamentalmente pelas características do local, tais como topografia, drenagem, demolições, infra-estrutura e pelos custos das instalações industriais/equipamentos. Este custo deve ser específico para cada local candidato
+
+b)	Custo Fixo de Operação (CO): São decorrentes do funcionamento do CDSGN. Estão contabilizados os custos com pessoal, veículos e equipamentos, material de expediente, taxas, impostos e seguros, despesas com energia e telefone e gastos com a manutenção do estoque. Este custo também é específico para cada local candidato.
+
+c)	Custo de Distribuição (CD) : É o custo para transportar o gás natural de CDSGN ou dutovias para determinados clientes. Este custo ocorrerá em maior quantidade. Para cada local candidato é necessário conhecer os custos de distribuição em relação a todos os clientes. Assim, se no problema existem “n” locais candidatos e “m” clientes serão necessários um total de “n x m” valores de custos. Recomenda-se que na prática estes custos sejam relacionados à distância entre o local candidato e o cliente, além de outros parâmetros de custos.
+ 
+d)	Custo de extensão de dutovias (CED) : Esta variável representa o custo para suprir cada cliente a partir da implantação de ramais dutoviários. Este custo é composto por uma parcela de instalação referente ao custo com implantação de equipamentos, manutenção e taxas administrativas (CEDI). Outra parcela é decorrente dos custos de distribuição que são relativos à extensão e ao caminhamento da dutovia (CEDD).
+
+Além dos custos envolvidos, é necessário conhecer os dados relativos à demanda e oferta. Isto significa que é necessário conhecer a demanda de cada cliente e a capacidade de oferta para por cada local candidato. É admitido que um cliente posssa ser suprido, ao mesmo tempo, por um ramal dutoviário e por um CDSGN. Com relação aos ramais dutoviários, considera-se que não há limitação de capacidade, ou seja, para fins do modelo, uma dutovia tem capacidade infinita.
+
+3.4.2 Modelagem Matemática
+
+Analisando o estado da arte para o problema é possível estabelecer um vínculo entre a que stão da distribuição de gás natural com o tradicional Problema de Localização Capacitado (PLC) tratado por CAMPÊLO (1993), GOLBARG E LUNA (2000), LORENA E NARCISO (2001), VALIATI E BORNSTEIN (2003), embora
+nenhuma das abordagens praticadas tratem da distribuição de gás natural. Diante deste fato, há plenas condições de modelar o problema conforme um PLC. Para possibilitar uma melhor compreensão, o PLC será explicado mais detalhadamente em seguida.
+
+O Problema de Localização Capacitado (PLC) consiste em dado um conjunto de facilidades I, em que cada facilidade tem uma capacidade ai e um conjunto de clientes J, em que cada um tem necessidade bj, encontrar um conjunto P I que atenda a todas as necessidades dos clientes de forma a minimizar o custo total.
+
+O custo total é composto pelo custo fixo fi, que é o custo de instalação da facilidade i, e o custo variável cij, que é o custo para transportar uma unidade do produto i ao cliente j. O problema de localização capacitado pode ser formulado como um modelo de programação linear binário, 
+Onde xij é a quantidade enviada do produto de i para j, e yi representa a instalação ou não da facilidade i, ou seja, se yi = 1 então a facilidade i será instalada, caso contrário yi = 0.
+A Equação 2 assegura que nenhum cliente seja atendido por uma facilidade fechada e que o total de demanda atendida pela facilidade não ultrapasse a sua capacidade. A Equação 3 assegura que a demanda de cada cliente seja satisfeita. A Equação 4 assegura que as quantidades transportadas não sejam negativas e a Equação 5 estabelece um sistema binário que assume valor zero quando a instalação não é alocada em i e valor um caso contrário.
+
+O PLC é um problema combinatório que pertence a classe de problemas NP- difícil. Ele tem sido amplamente considerado na literatura. Algoritmos exatos e heurísticos para diversos tipos de aplicação são citados em VALIATTI E BORNSTEIN (2003).
+ 
+
+CAPÍTULO 4
+
+APLICAÇÃO DO PROBLEMA DE LOCALIZAÇÃO CAPACITADO À DISTRIBUIÇÃO DE GÁS NATURAL
+“A mente que se abre a uma nova idéia jamais voltará a seu tamanho original”
+(Albert Einstein)
+
+Considerando a modelagem geral do Problema de Localização Capacitado, pretende-se aplicá- la ao problema específico da distribuição de gás natural. Após a análise dos aspectos mais significativos da distribuição do gás natural, é possível dividir o problema em três casos, com particularidades diferentes.
+
+O primeiro caso aplica-se a locais onde inexiste rede de distribuição dutoviária e deseja-se garantir a acessibilidade ao gás natural a partir dos gasodutos virtuais, cuja extremidade final é representada pelos Centros de Distribuição Secundária de Gás Natural. Estas instalações teriam a função de desenvolver uma demanda inicial, conforme explicado anteriormente.
+O segundo caso representa o estágio mais comum da distribuição de gás natural. Neste problema não são considerados os Centros de Distribuição Secundária de Gás Natural. Toda a distribuição é feita a partir da rede dutoviária, o que dificulta a participação de consumidores residenciais e comerciais que estão dispersos no ambiente urbano.
+Como último caso, destaca-se a implantação de Centros de Distribuição Secundária de Gás Natural em locais onde já existe rede dutoviária. Neste caso, o suprimento do combustível para os consumidores que não estão situados próximos aos ramais dutoviários também é viabilizado. Entende-se que esta situação é a mais desejável e racional, pois possibilita, quando otimizada, uma maior efetividade na distribuição de gás natural.
+
+No entanto, tanto o segundo quanto o terceiro caso apresentam uma característica fundamental que dificulta a sua modelagem matemática. Esta dificuldade resulta da complexidade em estabelecer um custo de expansão da rede dutoviária. Isto
+ 
+significa que, dado um determinado cliente que deseja consumir gás natural, é difícil estabelecer um custo para supri- lo.
+
+Este aspecto, que pode parecer simples, é causado pela elevada quantidade de alternativas existentes, pois nem sempre a opção mais direta e que implica na menor distância entre a rede de distribuição e o cliente constitui-se na melhor alternativa. Existem outras variáveis que definem a expansão das redes de distribuição de gás natural.
+
+Diversos aspectos como manutenção da pressão da rede, continuidade de fluxo, volume de tráfego nas vias públicas, barreiras naturais representadas por córregos e riachos, licenciamento ambiental ou interferências com outras infra-estruturas (rede de água, rede de esgoto ou ramais de fibra ótica) devem ser observados, implicando em novas restrições e alternativas para o sistema urbano de distribuição de gás natural.
+
+Além destes aspectos, o caminhamento de uma ramal dutoviário deve considerar a possibilidade de suprir vários clientes. Portanto, é necessário analisar se não é mais vantajoso construir um ramal mais extenso, mas que atenda a diversos consumidores, ou se é melhor implantar um ramal menor que seja específico para determinado consumidor.
+
+Fica evidente que a otimização das redes de distribuição necessita de um estudo prévio no sentido de determinar quais as opções de suprimento são realmente viáveis. Este estudo é complexo, pois envolve conjuntamente parâmetros técnicos da rede de distribuição de gás natural, além de aspectos urbanísticos, ambientais, físicos e operacionais das vias existentes.
+
+O problema de otimização do traçado das redes de distribuição de gás natural foi abordado por SOUZA (2003), ALVES FILHO E GOLDBARG (2003) e COSTA E
+GOUVEA (2003). No entanto, estas abordagens limitaram-se a tentar resolver o problema físico, considerando apenas aspectos de custos mínimos de implantação, desprezando os demais aspectos técnicos específicos da rede de distribuição dutoviária que são tão importantes quantos os parâmetros de custo. A Figura 4.1 apresenta um esquema representativo das diversas variáveis a serem analisadas para a expansão das redes dutoviárias.
+Estes aspectos técnicos devem ser fornecidos pelas companhias distribuidoras de gás natural. Porém, não é fácil encont rá- los, pois grande parte das distribuidoras não priorizam devidamente as informações completas de suas redes de distribuição e de seus clientes em bancos de dados. Além disso, para obtenção de algumas informações adicionais é necessário consultar Órgãos Públicos estaduais e municipais de meio- ambiente, tráfego e de infra-estruturas.
+Diante desta dificuldade, este trabalho desenvolverá a metodologia considerando que a expansão da rede de distribuição de gás natural dar-se-á apenas em pontos específicos de seu traçado. Na prática, isto significa que a rede de distribuição de gás natural existente é substituída por alguns pontos potenciais de oferta de gás natural que funcionarão como CDSGN.
+Esta simplificação permite que a possibilidade do suprimento de gás natural a partir da rede dutoviária existente. Desta forma, o modelo proposto ganha maior flexibilidade pois é possível solucionar problemas mais complexos e que contemplem o suprimento conjunto tanto por ramais dutoviários quanto por CDSGN. Em seguida, será apresentado um exemplo aplicado do modelo na cidade de Fortaleza para facilitar a compreensão de seu funcionamento.
+ 
+4.1	VALIDAÇÃO DO MODELO
+
+4.1.1	Problema Físico
+
+Para validar o modelo proposto, é apresentada a resolução do problema em um exemplo aplicado na cidade de Fortaleza. É importante registrar que embora possua rede de distribuição de gás natural, o município de Fortaleza foi escolhido para exemplificar o modelo pelo fato de apresentar base digital disponível, o que facilita a manipulação dos dados.
+
+Neste exemplo, são representados 7 locais possíveis para a implantação de Centros de Distribuição Secundária de Gás Natural (Aldeota 1, Aldeota 2, Edson Queiroz, Fátima, Cambeba, Messejana e Papicu) e um trecho da rede de distribuição de gás natural. Foi adotado que cada CDSGN, será implantado em um terreno de 1.000 metros quadrados e terá uma vida útil estimada de 15 anos, podendo distribuir, no máximo, 50.000.000 m3 de gás natural neste período. A Figura 4.2 mostra a configuração da infra-estrutura de oferta de gás natural adotada para Fortaleza.
+Com relação à expansão da rede de distribuição dutoviária de gás natural, admite-se, conforme simplificação mencionada na seção anterior, a sua substituição por pontos do seu traçado que funcionarão como CDSGN. A única diferença é que a estes pontos escolhidos são aplicados os parâmetros de custo referentes à dutovia. Assim, a dutovia foi substituída pelos pontos Parangaba, Centro e Meireles. A Figura 4.3 mostra a nova configuração da infra-estrutura de oferta de gás natural
+
+
+
+De uma maneira geral, o custo associado de cada local de oferta é composto por quatro parcelas, conforme o item 3.4.1.
+
+a)	Custo de aquisição do terreno para construir um CDSGN – É o custo de um terreno no bairro escolhido, com base nos preços praticados no mercado imobiliário local;
+
+b)	Custo de construção do CDSGN - Foi adotado um valor que varia de R$ 80.000,00 a R$ 100.000,00;
+ 
+c)	Custo de operação do CDSGN (CO) – Foi adotado um valor que varia de R$ 5.000,00 a R$10.000,00;
+
+d)	Custo fixo da rede de distribuição (CEDI) – É o custo adotado para custear equipamentos,manutenção e taxas pagas ao Poder Público para operar a rede de distribuição.
+
+A Tabela 4.1 apresenta a composição dos custos de instalação para cada local selecionado para ofertar gás natural. Em destaque, são apresentados os locais que substituem a rede de distribuição adotada.
+Com relação aos consumidores de gás natural, foram elencados alguns estabelecimentos públicos e comerciais da cidade que constituem-se em potenciais consumidores de gás natural. O critério de escolha destes consumidores foi fundamentado, principalmente, nos impactos positivos que o gás natural teria em substituição à eletrotermia e ao GLP. Com base no conhecimento dos estabelecimentos escolhidos, foi estimado o consumo eventual de gás natural de cada um deles durante um período de 15 anos (Tabela 4.2).
+Outro dado importante é relacionado aos custos de distribuição. Assume-se que esta variável é calculada a partir das distâncias entre os locais de implantação dos CDSGN e os clientes. Para a determinação destas distâncias, foi adotado o seguinte procedimento:
+
+a)	Alimentação da localização dos 25 clientes e dos 10 locais de possível localização de infra-estruturas de distribuição de gás natural (locais candidatos) em uma base digital através do software TRANSCAD versão 3.0;
+
+b)	Geração da matriz de distâncias euclidianas entre os clientes e os locais candidatos, explicitada no Anexo 1;
+
+c)	Associação de um custo de R$ 0,002/km para o gás natural fornecido pelos CDSGN. Este valor foi calculado a partir dos parâmetros de custo
+ 
+do GNC que é R$ 0,30/ m3 obtido em GÁS BRASIL (2003) transportado por uma distância de 150 Km;
+
+d)	Associação de um custo de R$ 0,03/ m3 para o gás natural fornecido pelas dutovias (CSPE, 2003);
+
+e)	Geração da matriz de custos entre os clientes e os locais candidatos, conforme Anexo 2.
+
+É importante salientar que todo este procedimento está fundamentado em três hipóteses simplificadoras que são:
+a)	A distância entre os CDSGN e os consumidores é representada pela distância euclidiana;
+b)	O custo de distribuição (CD) é função direta apenas da distância (dist) entre pontos de oferta e consumidores. Ou seja, admite-se que:
+
+CD = f (dist)
+
+Para este caso, tem-se que CD (R$) = 0,002 x dist (Km).
+
+No entanto, sabe-se que, na prática, é necessário incorporar na composição dos custos de distribuição algumas variáveis como o horário possível de entrega, periodicidade de entregas, legislação vigente, além de características físicas e operacionais dos veículos de entrega e dos vasilhames empregados. Todas estas variáveis podem ser tratadas conjuntamente em estudos de roteamento otimizado que determinam quais as melhores rotas para atender à demanda, contribuindo para uma maior redução dos custos de distribuição.
+
+c)	Os custos de distribuição permanecerão constantes ao longo da vida útil do CDSGN que é de 15 anos.
+ 
+4.1.2. Modelagem
+
+A modelagem deste problema, apresentada no Anexo 3, foi realizada ut ilizando os parâmetros e restrições tratados na seção anterior e aplicados ao modelo matemático geral do Problema de Localização Capacitado (PLC) explicado no item 3.4.2.
+
+A função objetivo é composta pelos custos de distribuição e pelos custos de instalação. Os custos de distribuição são obtidos a partir da matriz de custos de distribuição entre CDSGN e consumidores do Anexo 2. Já os custos de instalação resultam do somatório das parcelas do custo de implantação (CI), custo de operação (CO) e custo de extensão de dutovias (CED), definidos no item 3.4.1 e apresentados na Tabela 4.1.
+Deste modo, a função objetivo de custo total a ser minimizada é composta por 260 variáveis, com seus respectivos coeficientes. Este total corresponde a 10 variáveis de instalação (Y1, Y2, Y3, Y4, Y5, Y6, Y7, Y8, Y9 e Y10), correspondentes a cada local de implantação e 250 variáveis de distribuição associadas a cada par de origem/destino.
+Além da função objetivo, a formulação matemática do problema possui 10 restrições de oferta, sendo uma restrição para cada local candidato e 25 restrições de demanda (uma para cada cliente).
+4.1.3	Resolução
+
+Para resolver o problema foi utilizada uma versão demonstrativa do software LINGO 7.0, disponibilizada no site. No Anexo 4 é mostrado o resultado final para o modelo proposto, sendo que as principais informações aparecem destacadas. O valor da função objetivo é de R$ 1.285.000,00, representando o custo total para suprir os consumidores. O software realizou neste cálculo 1.304 iterações.
+
+No Anexo 4, são listadas todas as variáveis do problema, com seus respectivos valores e custos reduzidos. Os custos reduzidos são utilizados para análises mais aprofundadas do resultado. As variáveis binárias (Yi) definem a instalação ou não do CDSGN. Portanto, serão implantados os CDSGN nos locais que correspondem a
+ 
+variáveis binárias de valor 1. Neste caso, foram selecionadas as variáveis Y4, Y6 e Y7 que correspondem, respectivamente, aos locais Edson Queiroz, Fátima e Cambeba.
+
+Assim, o custo total de instalação é dado pelo somatório dos custos de implantação de Y4, Y7 e Y10 mostrados na Tabela 4.1, resultando num valor de R$ 519.000,00. Por conseqüência, o custo total de distribuição pode ser calculado pela diferença entre o custo total e o custo de implantação, resultando num valor de R$ 766.000,00.
+
+Ainda no Anexo 4 é possível visualizar os valores atribuídos às variáveis de distribuição que representam a quantidade de gás natural fornecida. Como exemplo, ressalta-se que o valor associado à variável X4J2, em destaque no Anexo 4, representa a quantidade de gás natural ofertada pelo local 4 (Edson Queiroz) para o cliente 2 (Shopping Iguatemi). Desta forma é possível saber quais clientes serão abastecidos por quais CDSGN. A Tabela 4.3 apresenta um exemplo dos resultados do problema inicial.
+Além de apresentar o valor de cada variável, o Anexo 4 também mostra a quantidade de gás natural não utilizada em cada restrição. Assim, é possível verificar que o CDSGN Cambeba (linha 8) possue uma folga de 13,8 milhões de gás natural.
+
+4.1.4	Análise de resultados
+
+A análise deste resultado denota que esta solução está mais influenciada pelos custos de distribuição do que pelos custos de implantação, pois os custos de distribuição representam quase 60% do custo total. Outro aspecto interessante é que o Center Um e a
+ 
+UECE têm parte a sua demanda atendida por dois CDSGN. O Center Um é suprido pelos CDSGN Edson Queiroz e Fátima, enquanto a UECE é suprida pelos CDSGN Fátima e Cambeba. Vale salientar que nenhum dos locais que representam a rede de distribuição existente foi selecionado (Y3, Y5 e Y9 = 0), de modo que todo o suprimento de gás natural dar-se-á totalmente por CDSGN.
+Com relação aos CDSGN, é observado que os CDSGN Edson Queiroz e Fátima utilizam toda sua capacidade que é de 50 milhões de m3 de gás natural. Os CDSGN Cambeba fornece apenas uma quantia de 36,2 milhões de m3. Estes valor é obtido a partir da diferença entrea a capacidade total do CDSGN e a folga correspondente apresentada no Anexo 4.
+Outro aspecto importante e que merece destaque é que, ao analisar o resultado, o leitor pode suspeitar de algumas inconsistências aparentes. Um exemplo disto é que o Fórum Clóvis Bevilacqua, embora possua um menor custo de distribuição em relação aos CDSGN Edson Queiroz (R$ 0,002), é suprido pelo CDSGN Cambeba, com um custo unitário de R$ 0,006. No entanto, este fato é resultado da abordagem completa do problema, envolvendo todas as restrições conjuntamente. A análise isolada, como esta que foi citada, implica em conclusões equivocadas.
+
+Para comprovar esta afirmação, a modelagem inicial foi modificada, conforme Anexo 5, de modo que foi imposta a restrição de que o Fórum Clóvis Bevilacqua seria suprido a partir do CDSGN Edson Queiroz. O resultado, apresentado no Anexo 6, indicou que esta solução pode ser aplicada sem que haja aumentos nos custos. O resultado encontrado foi exatamente o mesmo da solução do problema incial, ou seja, foi encontrado um valor de R$ 1.285.000,00. Esta simulação demonstra que na verdade existe mais de uma solução ótima para o problema.
+
+4.2.	CENÁRIOS
+
+Para que se possa ter uma maior confiabilidade no modelo, foram realizados alguns testes através da alteração das condições iniciais do problema dado. Na verdade, estas alterações representam cenários criados com base em situações que podem perfeitamente acontecer durante a vida útil dos CDSGN.
+ 
+Foram desenvolvidos três cenários. Os resultados foram obtidos a partir da utilização do software LINGO 7.0 analogamente ao procedimento efetuado para o problema inicial. Tanto as alterações na modelagem quanto as principais informações geradas pela resolução do modelo aparecem em destaque nos respectivos anexos.
+
+4.2.1	Cenário 1 – Implantação de um CDSGN em um dos Locais não Indicados na Solução Inicial
+
+Neste cenário, supõe-se que a Companhia Distribuidora tenha optado por implantar um CDSGN em Aldeota 2, sem considerar o estudo inicial. Para não ter que substituir o CDSGN já implantado, deseja-se saber qual a melhor configuração para o sistema de distribuição, considerando o funcionamento do CDSGN Aldeota 2.
+
+Esta nova configuração do problema, implica na adição de apenas mais uma restrição ao modelo inicial, conforme destacado no Anexo 7. Tal restrição obriga que o CDSGN Aldeota 2 seja escolhido para compor a solução deste cenário. A partir destas informações, o modelo escolherá as demais localidades de implantação dos CDSGN, minimizando o custo total.
+O resultado foi obtido após 858 iterações e está apresentado no Anexo 8. Foram alocados 4 CDSGN: Aldeota 2, Edson Queiroz, Fátima e Cambeba. Porém, o custo total passou para R$ 1.372.100,00, tendo um aumento de 6,8%. A Tabela 4.4 apresenta os resultados obtidos.
+Este aumento de custos é decorrente da implantação do CDSGN Aldeota 2 que reduz os custos de distribuição, embora aumente os custos de implantação quando comparado à solução inicial.
+Outro fato a ser destacado é que somente o CDSGN Fátima terá sua capacidade plenamente utilizada. O Anexo 8 mosta que os CDSGN Aldeota 2, Edson Queiroz e Cambeba apresentam, respectivamente, uma folga de 25,2 milhões de m3, 14 milhões de m3 e 24,6 milhões de m3.
+4.2.2	Cenário 2: Redução da Capacidade dos CDSGN
+
+Neste novo contexto, admite-se que, por restrições de segurança da vizinhança local, a capacidade de fornecimento dos CDSGN será limitada a 30 milhões de m3 de gás natural. Porém, admite-se que estas limitações não resultarão na diminuição dos custos de implantação. Os efeitos desta regulamentação implicam que deverão ser instalados mais CDSGN. Portanto, deseja-se saber quantos e quais locais deverão recebê- los.
+
+Este novo problema provoca a alteração da modelagem do problema inicial, através da atualização da nova capacidade de oferta, conforme destacado no Anexo 9. A solução final deste problema foi obtida após 1.573 iterações. O modelo indicou que devem ser implantados CDSGN em 5 locais, de acordo com o Anexo 10: Aldeota 1, Edson Queiroz, Fátima, Cambeba e Messejana. A Tabela 4.5 apresenta os resultados do Cenário 2.
+Desta forma, o custo total passou para R$1.632.200,00, representando um aumento de 27% em relação ao problema inicial. O principal causador deste aumento foi, sem dúvida, o custo de implantação que teve um aumento de 73,2%. Porém, os custos de distribuição não foram reduzidos na mesma proporção, visto que o índice encontrado de redução destes custos foi de 4,7%.
+4.2.3	Cenário 3: Externalização do Custos Referente ao Impacto no Sistema de Tráfego
+
+Neste cenário, considera-se que existirão penalidades legais para a implantação de instalações que aumentem o volume de tráfego nas áreas mais saturadas da cidade. Desta forma, admite-se que as infra-estruturas implantadas nos bairros da Aldeota, Meireles, Centro e Edson Queiroz terão que pagar uma taxa adicional de R$ 5.000,00 por ano para compensar o Poder Público das despesas que terá que gastar ao ampliar os serviços urbanos e as infra-estruturas complementares (CAMPOS FILHO, 1989).
+Isto implica que os custos de implantação de CDSGN nos bairros Aldeota, Meireles, Centro e Edson Queiroz serão adicionados de R$ 75.000,00, pois o tempo de vida útil considerado é de 15 anos. A nova modelagem contendo as alterações para este problema pode ser encontrada em destaque no Anexo 11.
+
+A solução deste problema resultou como custo total um valor de R$ 1.353.700,00, após 626 iterações, de acordo com o Anexo 12. O custo total associado a este cenário é 5,3% superior ao custo da solução ótima do problema original. Foram selecionados os CDSGN Fátima, Cambeba, e Papicu. Dentre todos os cenários estudados, este resultou nos menores custos de implantação. Por outro lado, os custos de distribuição atingiram valores muito altos. A Tabela 4.6 apresenta um resumo dos resultados obtidos no Cenário 3.
+
+Neste cenário, dois fatos merecem destaque. Primeiramente, tanto a Universidade de Fortaleza quanto a Universidade Estadual do Ceará são supridos a partir de dois CDSGN. Outro aspecto importante é que o Centro Dragão do Mar e a Torre Quixadá, embora apresentem, respectivamente, custos unitários de apenas R$ 0,005 e R$ 0,004 em relação ao CDSGN Fátima, foram alocados para serem supridos
+ 
+pelo CDSGN Papicu, apesar do custo unitário entre eles ser, respectivamente, de R$ 0,010 e R$ 0,007 (vide Anexo 2).
+
+Para ter certeza da confiabilidade do modelo, foi realizada uma nova modelagem, obrigando o Centro Dragão do Mar e a Torre Quixadá a serem supridos pelo CDSGN Fátima. Esta nova modelagem é realizada apenas inserindo mais duas restrições ao problema, conforme Anexo 13.
+
+O resultado, apresentado no Anexo 14, confirmou que o Centro Dragão do Mar e a Torre Quixadá devem ser supridos pelo CDSGN Papicu, pois a nova modelagem resultou em um custo total de R$ 1.356.700,00. Este valor é 1% maior que o custo total original do cenário 3. Em seguida, a Tabela 4.7 apresenta um resumo dos resultados encontrados na resolução de todos os cenários.
+Diante dos testes realizados, fica claro que o modelo proposto é capaz da auxiliar o processo de tomada de decisão na escolha dos locais de implantação do CDSGN. A resolução do problema original garante a obtenção da solução ótima, além de possibilitar a verificação de possíveis distorções que possam surgir diante da análise isolada das restrições do problema.
+
+Além disso, o modelo proposto demonstrou-se eficiente e flexível, permitindo a obtenção da solução ótima em aproximadamente 5 segundos de processamento, mesmo quando sujeito a variações dos parâmetros de entrada. Estas variações, representadas pelos cenários elaborados, são situações reais que podem acontecer durante a vida útil dos CDSGN.
+
+De acordo com a metodologia empregada na Pesquisa Operacional, o tratamento do problema não se encerra com a resolução. Na prática, os resultados obtidos devem ser analisados. Caso não existam inconsistências e nem sejam encontradas inviabilidades é possível aplicar os resultados. Caso contrário, o modelo deve ser discutido, revisto e, dependendo da situação, alterado.
+ 
+
+CAPÍTULO 5
+
+CONCLUSÕES
+
+"Quando nada parece dar certo, vou ver o cortador de pedras martelando sua rocha talvez 100 vezes, sem que uma única rachadura apareça. Mas na centésima primeira martelada a pedra se abre em duas,
+e eu sei que não foi aquela que conseguiu isso, mas todas as que vieram antes."
+(J. Riss)
+
+5.1.	CONCLUSÕES GERAIS
+
+A presente dissertação é resultado de um trabalho de pesquisa que teve por objetivo a elaboração de um modelo matemático para minimizar os custos de implantação de infra-estruturas para distribuição de gás natural. Esta problemática é decorrente da necessidade de aumentar a acessibilidade ao gás natural que, por sua vez, está inserida em um contexto mais amplo relacionado a melhoria da eficiência energética do país.
+Ao se discutir sobre que rumos o gás natural deve seguir para cumprir seu papel de agente do desenvolvimento sustentável, é essencial que sejam escolhidas, dentre as diversas alternativas existentes, aquelas que impliquem na máxima agregação de valor ao combustível. Na prática, isto significa o incentivo dos usos nobres do gás natural, principalmente a substituição da eletrotermia nos setores comercial e residencial.
+Fica claro que, para uma nação fazer bom uso do gás natural, é fundamental dispor de uma base tecnológica suficientemente robusta para incrementar o projeto, produção e venda de equipamentos que permitirão a queima racional do gás, isto é, com alto valor agregado. Para que isto aconteça, os consumidores finais deverão ter acesso a esses equipamentos.
+Isto justifica a necessidade de instrumentos de financiamento que permitam custear a transformação cultural e as modificações tecnológicas, quebrando os paradigmas criados por parte dos usuários finais e viabilizando a implantação de tecnologias alternativas de transporte e distribuição de gás natural.
+
+Porém, a expansão da infra-estrutura de distribuição é um dos desafios dos mercados emergentes de gás natural. Diante da necessidade de uma escala mínima de
+ 
+operações, uma estrutura de distribuição cara e de retorno demorado, os investimentos tendem a se concentrar junto a grandes consumidores.
+
+Após ter atendido as áreas de potencial mais previsível, os investimentos em expansão ganham um caráter mais arriscado e incerto. Logo, a concepção e a efetivação de meios alternativos de transporte e distribuição mais flexíveis e ajustados a diferentes escalas de consumo é vital para a manutenção do crescimento das taxas de demanda de gás natural.
+
+Neste sentido, o paradigma de que o gás natural só pode ser transportado e distribuído por dutovias precisa ser suplantado. Da mesma forma, a crença de que um país que não tem recursos para construir uma rede abrangente de distribuição e não tem cultura no uso do gás natural perderá as vantagens competitivas deste energético deve ser desmistificada. Existem grandes oportunidades que precisam ser exploradas utilizando a criatividade e a competência.
+Uma destas oportunidades é a massificação do gás natural para pequenos consumidores que podem usufruir os maiores benefícios do gás natural, pois apresentam uma enorme dependência da eletricidade e do GLP. Desta forma, a efetivação dos gasodutos virtuais e a conseqüente implantação de Centros de Distribuição Secundária de Gás Natural (CDSGN) é uma estratégia fundamental para garantir a acessibilidade ao combustível, possibilitando resultados gerais positivos em termos de melhoria da eficiência energética.
+
+Porém, tal estratégia por si só não garante a plena utilização do combustível nos setores residencial e comercial. Além do gás natural estar disponível para os clientes, é preciso ofertá- lo em condições de competitividade. Assim, as infra-estruturas de distribuição (CDSGN e dutovias) não devem ser implantadas sem a realização de estudos detalhados de localização que considerem, obviamente, a rede dutoviária existente.
+
+Em termos computacionais, a consideração das redes de distribuição não é uma tarefa das mais complexas, visto que existem modelos específicos para otimização de redes que podem perfeitamente ser aplicados na distribuição de gás natural. Por outro lado, a coleta de dados acerca das alternativas existentes para suprir determinado
+ 
+consumidor exige colaboração da companhia distribuidora, que deve dispor de um banco de dados robusto para viabilizar estes estudos.
+
+Diante desta dificuldade, o modelo proposto utiliza o artifício de substituir a rede de distribuição por pontos de oferta de gás natural. Em uma situação real para aplicação do modelo, seria necessário saber todos os pontos da rede de distribuição de gás natural que permitem a extensão de um ramal, bem como o caminhamento para cada cliente. Desta forma, a modelagem matemática torna-se uma simples aplicação do Problema de Localização Capacitado, amplamente difundido na Pesquisa Operacional.
+Após a modelagem do problema e análise dos resultados, fica claro que o modelo proposto é capaz de auxiliar o processo de tomada de decisão na escolha das alternativas de implantação de infra-estruturas para distribuição de gás natural. A resolução do problema original garantiu a obtenção da solução ótima, além de possibilitar a verificação de possíveis distorções que possam surgir diante da análise isolada das restrições do problema.
+
+Além disso, o modelo proposto demonstrou-se eficiente e flexível, permitindo a obtenção da solução ótima mesmo quando sujeito a variações dos seus parâmetros. Estas variações, representadas pelos cenários elaborados, são situações possíveis de acontecer durante a operação do sistema de distribuição de gás natural.
+
+5.2.	RELEVÂNCIA, ORIGINALIDADE E RESULTADOS DO MODELO
+
+De acordo com a metodologia proposta, o Capítulo 2 resume uma ampla pesquisa sobre a utilização do gás natural. De forma geral, ressalta-se que o energético apresenta baixo custo de produção, ao mesmo tempo em que é o combustível fóssil mais limpo e mais seguro, além de extremamente polivalente, podendo ser utilizado nos setores industrial, veicular, residencial/comercial, de geração de eletricidade e cogeração.
+Em contrapartida, o fato do gás natural ser encontrado no estado gasoso implica que as atividades de transporte e distribuição são as etapas críticas da cadeia produtiva. Tradicionalmente, estas atividades são realizadas através de dutos, mas, na atualidade, estão sendo viabilizadas alternativas de transporte e distribuição na forma de GNL ou GNC, também conhecidas como gasodutos virtuais.
+ 
+Um aspecto fundamental da implantação dos gasodutos virtuais é a possibilidade de gerar demanda para o gás natural a um baixo custo inicial em regiões não atendidas por gasodutos. Esta perspectiva é bastante interessante e se constitui numa estratégia racional para eliminar o ciclo vicioso que se formou nos países em desenvolvimento, contrapondo a ausência de infra-estruturas de distribuição de gás natural com a inexistência de demandas sólidas que justifiquem os investimentos nestas infra- estruturas.
+
+Com relação às infra-estruturas de distribuição de gás natural mais comuns, isto é, sem cons iderar a tecnologia GTL que é mais recente, percebe-se que deve haver uma estratégia harmônica e otimizada entre as redes de distribuição de gás natural e os gasodutos virtuais. Esta afirmação é justificada porque ambas as infra-estruturas possuem características próprias que, dependendo da situação, resultam na implantação de uma ou de outra.
+As redes de distribuição apresentam custos de implantação elevados e a flexibilidade de suprimento para uma grande quantidade de clientes é baixa. Além disso, do ponto de vista da distribuidora, o retorno financeiro do investimento só inicia a partir do final dos serviços de implantação que, normalmente, são demorados. Porém, a grande vantagem do suprimento a partir de redes de distribuição é o baixo custo operacional proporcionado pelos gasodutos que permitem ao consumidor um fornecimento instantâneo, seguro e confiável.
+
+Contrariamente, as técnicas de GNL e GNC apresentam menores custos de implantação e permitem o atendimento de uma vasta gama de clientes, além de gerar uma maior quantidade de empregos ao longo do processo. No entanto, devido ao estágio embrionário de sua efetivação, alguns aspectos como custos operacionais elevados, capacitação de recursos humanos, risco de acidentes, necessidades de estoques e confiabilidade no fornecimento devem ser analisados criteriosamente. A Tabela 5.1. apresenta um breve resumo comparativo de ambas as infra-estruturas de distribuição de gás natural:
+Sob a perspectiva ambiental, os gasodutos virtuais permitem a utilização do gás natural em regiões distantes dos grandes centros urbanos e que, muitas vezes, utilizam como combustíveis o carvão e a lenha. No Nordeste brasileiro é muito comum o uso destas fontes energéticas para alimentar olarias, cerâmicas e até residências, produzindo elevados impactos ambientais.
+
+De uma forma geral, os gasodutos virtuais permitem aumentar e desenvolver o mercado do gás natural para regiões não servidas por gasodutos. Os impactos positivos da efetivação desta estratégia propiciam a universalização do uso do gás natural, contribuindo para que o país possa realmente se beneficiar plenamente de todas as vantagens que o uso gás natural pode acarretar.
+
+Com relação a essas vantagens, destaca-se em primeiro plano a pequena quantidade de emissões gasosas decorrentes da sua queima. Os índices de emissões apresentados credenciam o gás natural como potencial candidato a substituir os demais combustíveis fósseis, juntamente com outros combustíveis renováveis, como o biodiesel.
+
+Diante da tendência crescente de restrições ambientais cada vez mais rigorosas, ganha força a perspectiva de externalização dos custos ambientais, de modo que os combustíveis mais polue ntes sejam penalizados com pesadas alíquotas sobre seus preços. Portanto, espera-se que haja um grande interesse pelo uso do gás natural, inclusive pela implantação de projetos que propiciem o seqüestro de carbono e a
+ 
+geração de divisas, conforme prescrito no Mecanismo de Desenvolvimento Limpo (MDL) estabelecido no Protocolo de Kyoto.
+
+Em termos estratégicos, a utilização do gás natural contribui para a redução da dependência ao petróleo. Este aspecto é bastante importante para o equilíbrio financeiro dos países, pois, com as constantes crises no Oriente Médio, os países têm buscado alternativas energéticas que não representem riscos de suprimento para o crescimento de suas economias já combalidas pela recessão global.
+
+No caso do Brasil, o suprimento de gás natural foi obtido principalmente através de importações da Bolívia. Quanto a isto, percebe-se que os termos deste acordo foram extremamente prejudiciais ao Brasil, pois o país vem pagando às distribuidoras bolivianas, que são controladas por grupos multinacionais, uma quantidade de gás natural superior ao que realmente é fornecido (take-or-pay).
+
+Em tempos de intensificação das discussões sobre o fortalecimento do Mercosul, o gás natural pode adquirir o papel de um dos vetores da integração do Cone Sul, colaborando com o objetivo estratégico de auto-suficiência energética da região, além de possibilitar a geração de divisas através da sua exportação.
+
+A análise das vantagens advindas do uso do gás natural evidencia a existência de uma gama de benefícios que se aplicam a diversos setores, como os setores residencial e comercial, algumas vezes desprestigiados pelas companhias distribuidoras. Tal constatação reforça a idéia básica de que é preciso garantir a acessibilidade total ao gás natural.
+
+Com relação ao setor industrial são identificados três aspectos que apóiam a difusão do gás natural na indústria nacional. Em primeiro lugar, são ressaltadas algumas vantagens, tais coma a melhoria da qualidade e da competitividade de determinados produtos, melhor controle de processos e maior vida útil dos equipamentos. Outro aspecto destacado é que a substituição de combustíveis poluentes por gás natural abre espaço para as empresas colaborarem com o desenvolvimento sustentável do planeta, beneficiando-se das possíveis divisas advindas do MDL.
+
+Por último, destaca-se que o gás natural é um excelente instrumento de combate à eletrotermia. Considerando que elevadas parcelas da geração elétrica nacional são
+ 
+direcionadas para aquecimento industrial e geração de vapor, a possibilidade do uso do gás natural para este fim permite imaginar um alívio na expansão de sistemas de geração e distribuição de energia elétrica que representam elevados custos financeiros e são considerados de baixa eficiência energética.
+
+Em relação ao setor veicular, o gás natural constitui-se em uma das poucas alternativas para melhorar a qualidade do ar nos grandes centros urbanos e contribuir para o atendimento dos requisitos do Protocolo de Kyoto. Além disso, as economias de combustível obtidas pelos veículos urbanos convertidos podem ser estendidas para o setor de transporte de cargas, repercutindo numa possível redução do preço dos fretes que utilizam o modal rodoviário.
+No caso de residências, estabelecimentos comerciais e órgãos públicos, identifica-se uma enorme dependência da eletricidade e do GLP. A plena utilização do gás natural por parte destes segmentos é o estágio desejado em termos de eficiência energética, pois possibilita a substituição de fornos, chuveiros elétricos, aparelhos de ar condicionado e demais equipamentos que operam utilizando a eletricidade para fins térmicos.
+
+Para alcançar este estágio de desenvolvimento no uso do gás natural é necessário uma ação integrada envolvendo os diversos setores da sociedade no sentido de mobilizar conjuntamente o Estado, como indutor do processo de penetração do combustível, os agentes financeiros para dar suporte às estratégias de distribuição e conversão de equipamentos e, principalmente, a população, como maior responsável pelo sucesso desta empreitada.
+
+Existem muitas dúvidas com relação ao uso difuso do gás natural, ocasionadas pela ausência de uma cultura no uso deste combustível pela população brasileira. No entanto, acredita-se que o sucesso do racionamento de energia elétrica de 2001 demonstrou que a sociedade brasileira pode compreender, participar e colher resultados impressionantes quando lideradas pela autoridade pública. Portanto, descentralizar o uso do gás natural deve ser uma prioridade nacional no setor energético.
+Com relação à geração elétrica, observa-se que a privatização das empresas estatais do setor elétrico brasileiro resultou na mudança da matriz energética nacional,
+ 
+aumentando o papel da termeletricidade. Esta decisão acarreta alguns impactos, tais como: consumo elevado de gás natural, aumento de emissões gasosas, consumo de água excessivo e custos vultosos.
+A implantação do gás natural em térmicas movidas a óleo ou carvão nos países desenvolvidos é benéfica para o meio ambiente. Porém, a nossa base elétrica é calcada na hidreletric idade. Nada justifica abandonar o potencial energético sustentável de nossos rios, em detrimento de uma proposta cara, energeticamente ineficiente e ecologicamente desastrosa.
+Os grandes beneficiários desta política são os investidores que trabalham em um ambiente sem riscos financeiros, já que o governo empresta o dinheiro, subsidia o gás e garante a venda da energia. Além dos investidores, as companhias estrangeiras controladoras do gás boliviano e argentino esperam obter enormes dividendos ao longo do tempo pela venda do gás.
+Sem incorrer em radicalismos, reconhece-se que o sistema energético brasileiro precisa de termelétricas, mas não com importância prioritária. É bom que elas existam para permitir uma operação mais eficiente e racional do sistema hidrelétrico, possibilitando um gerenciamento menos conservador das reservas hídricas. Para tanto, devem ser instaladas em locais estratégicos, através de mecanismos regulatórios que compensem a situação de permanecerem desligadas a maior parte do tempo, porém prontas para entrar em ação quando necessário.
+
+Finalmente, em se tratando de cogeração, é necessário inserir definitivamente esse tema na agenda de discussões em torno do novo modelo energético brasileiro, pois o Brasil apresenta, na atual conjuntura, condições adequadas a esta prática e a sua participação no mercado brasileiro de produção de energia ainda pode crescer de forma significativa.
+Portanto, é fundamental que sejam estabelecidas tarifas adequadas e que o mercado pratique taxas de juros realistas de modo a incentivar a cogeração. Desta forma, esta tecnologia tornar-se-á uma forma mais racional das empresas participarem do mercado de energia pois é eficiente, competitiva e dotada de forte apelo ecológico, na medida em que desloca o consumo de novas fontes primárias de energia.
+ 
+Em uma primeira análise, a característica de polivalência dos gás natural deveria implicar, de imediato, numa rápida difusão do energético. Afinal, inexiste combustível fóssil que possa substituir efetivamente fontes primárias de energia como o carvão, a lenha, o GLP e a eletricidade. Porém, o mercado de energia não funciona de uma forma tão simples assim. Este mercado é extremamente complexo e sofre pressões de poderosos grupos financeiros que possuem interesses divergentes dos interesses da sociedade.
+
+Assim, depreende-se que o Poder Público, no papel de indutor do processo de desenvolvimento sustentável, deve possuir visão sistêmica para dirimir os conflitos naturais existentes no setor energético e optar pelas decisões de menor custo de oportunidade.
+
+Isto implica que deve haver uma estratégia conjunta e coordenada, liderada pelo Poder Público, que terá a incumbência de promover a mudança cultural, seja disponibilizando recursos para financiar equipamentos, redes de distribuição de gás natural e infra-estrutura de apoio ou através de campanhas e programas de incentivo ao uso do combustível.
+
+É imperativo que estas ações sejam respaldadas pelas universidades e centros de pesquisa espalhados pelo país. As tecnologias alternativas para distribuição do gás natural representam desafios importantes, cuja transposição exige soluções práticas e criativas que demandam formação de mão-de-obra capacitada e comprometimento com o desenvolvimento tecnológico do setor.
+
+No Capítulo 3, foi discutido o problema de localização de facilidades. Inicialmente foram abordados alguns aspectos logísticos relativos à problemática da distribuição física de produtos, enfocando, em particular, o caso do gás natural. Diante das características dos clientes, percebe-se que o sistema de distribuição deve ser flexível de modo a satisfazer efetivamente grandes e pequenos consumidores.
+
+Para o êxito desta alternativa, diversas decisões importantes devem ser tomadas. Dentre elas, a definição da localização de CDSGN constitui-se numa das questões fundamentais da estratégia de aumentar a acessibilidade ao gás natural, além de contribuir para uma maior competitividade.
+ 
+Esta observação é importante porque os estudos de localização São fundamentais tanto para Empresas quanto para o Estado. No caso das Empresas, estes estudos possibilitam um melhor uso dos recursos em novos investimentos. Já os Órgãos Públicos podem utilizar estudos de localização para alocar facilidades, garantindo um menor custo de oportunidade e uma maior transparência ao processo.
+No caso do CDSGN, a existência de estudos de localização é fundamental pois, como estas instalações serão implantadas, muitas vezes no ambiente urbano, os fatores estudados na definição da localização devem ser observados. Caso contrário, o produto pode ter sua competitividade prejudicada, reduzindo seu potencial de penetração.
+
+No entanto, é evidente que o nível de rigor destes estudos depende da complexidade e da importância do empreendimento. A análise dos modelos de localização apresentados permite concluir que a evolução histórica destes modelos foi resultado da necessidade de responder a questões cada vez mais complicadas do mundo real, refletindo na pesquisa e no aprimoramento de novas rotinas que possibilitem a resolução dos problemas do cotidiano.
+No Capítulo 4, ressalta-se que o problema da distribuição do gás natural pode ser dividido em três casos particulares, dependendo das infra-estruturas existentes. O primeiro problema trata do estudo de implantação de CDSGN isolados. Outro problema é a implantação apenas das redes de distribuição. Em um estágio mais avançado, visualiza-se a consideração conjunta de CDSGN e redes de distribuição de gás natural.
+Para os dois últimos tipos de problemas (implantação apenas de redes de distribuição e implantação conjunta de CDSGN e redes de distribuição) é necessário um grande conhecimento das variáveis de expansão da rede de distribuição citadas no trabalho.
+
+A resolução do problema para um exemplo aplicado na cidade de Fortaleza proporcionou resultados bastantes satisfatórios, visto que a solução ótima foi encontrada. Além disso, foram elaborados três cenários que representavam a implantação de um CDSGN em um dos locais não indicados na solução inicial, a redução da capacidade dos CDSGN e a externalização dos custos de impacto no sistema de tráfego. A solução ótima foi fornecida em todos os cenários desenvolvidos e demais
+ 
+variações do problema, com um tempo de processamento de, aproximadamente, 5 segundos.
+
+5.3	LIMITAÇÕES NA APLICAÇÃO DO MODELO
+
+É válido destacar que este trabalho tem uma característica inovadora, pois o desenvolvimento das novas alternativas de transporte e distribuição do gás natural ainda são emergentes. Desta forma, para conceber a modelagem do problema foi necessário recorrer a uma série considerações iniciais e hipóteses simplificadoras.
+
+Embora seja discutível que as considerações efetuadas possam ser muito fortes, estas questões adquirem importância secundária, pois o propósito principal deste trabalho não é resolver definitivamente o problema da distribuição de gás natural, mas desenvolver e validar o modelo proposto.
+
+Deste modo, a utilização das distâncias euclidianas em lugar das distâncias reais pelas vias urbanas e a consideração de proporcionalidade entre os cus tos de distribuição e estas distâncias não trazem qualquer prejuízo em termos de confiabilidade, eficiência e eficácia do modelo.
+
+Outro aspecto que merece destaque é que a implantação de CDSGN adquire uma importância extrema para cidades que não dispões de redes de distribuição de gás natural. Este não é o caso de Fortaleza, local escolhido para a aplicação do modelo. Porém, tal escolha decorre do fato de que a base digital de Fortaleza está disponível, permitindo um tratamento espacial mais refinado dos dados referentes a CDSGN e clientes do que em outras localidades.
+
+No exemplo apresentado, foram considerados 10 pontos de oferta (CDSGN) e 25 pontos de consumo (clientes), totalizando 260 variáveis, sendo 250 variáveis de custos e 10 variáveis de localização. Este número que pode até ser considerado reduzido, tendo em vista as dimensões da cidade de Fortaleza, justifica-se pois a versão do software LINGO 7.0 disponibilizada apresenta um limite máximo de 300 variáveis. No entanto, são encontradas versões que podem resolver problemas bem maiores (16.000 variáveis), de modo que o modelo pode ser aplicado para problemas de maior porte.
+ 
+5.4	RECOMENDAÇÕES PARA APROFUNDAMENTO DA PESQUISA
+
+Para o aprofundamento do assunto abordado e melhoria do desempenho do modelo são recomendadas as seguintes ações:
+a)	Estudo detalhado dos custos de distribuição de gás natural considerando parâmetros relacionados às novas tecnologias de transporte e armazenagem, tais como veículos transportadores, vasilhames utilizados, mão-de-obra necessária, instalações de armazenagem e equipamentos de manuseio;
+b)	Como conseqüência do item anterior, é possível otimizar mais ainda os custos de distribuição de gás natural para clientes dispersos no ambiente urbano através de estudos de roteamento dos veículos de entrega a partir dos CDSGN;
+
+c)	Pesquisa e desenvolvimento de novos materiais, acondicionantes, veículos transportadores e equipamentos adaptados especificamente para possibilitar a utilização do gás natural nos setores comercial, público e residencial sem utilizar redes de distribuição de gás natural;
+
+d)	Realização de estudos integrados e aprofundados no sentido de conhecer, mapear, analisar e escolher as alternativas mais viáveis para a expansão da rede de distribuição de gás natural;
+
+e)	Em paralelo ao item anterior, recomenda-se o desenvolvimento de modelos e algoritmos de otimização combinatória que sejam capazes de minimizar os custos de implantação de redes de distribuição de gás natural, conforme o Problema de Steiner;
+
+f)	Desenvolvimento de um modelo de minimização de custos que englobe conjuntamente a expansão das redes de distribuição e a implantação de Centros de Distribuição Secundária de Gás Natural.
+ 
+5.5	CONSIDERAÇÕES FINAIS
+
+Este trabalho é um passo inicial na implantação dos gasodutos virtuais. Por ser pioneiro, percebe-se ainda a carência de muitas informações complementares para a abordagem completa dos diversos aspectos da distribuição do gás natural. Porém, o propósito neste momento não é esgotar o problema, mas abrir perspectivas e possibilitar a concepção de novos modelos mais específicos, considerando a aplicação de dados reais obtidos a partir de um maior intercâmbio com as distribuidoras.
+
+Para que isto possa ser efetivado, as distribuidoras de gás natural devem estar preparadas para a nova realidade, organizando-se através da construção e manutenção de bancos de dados e mapas digitais atualizados sobre clientes e infra-estruturas de distribuição existentes. Além disso, é fundamental a elaboração de uma estrutura de custos integrada para dar suporte a novos estudos como rastreamento de mercado e análise de viabilidade técnica econômica de empreendimentos.
+Ao final do trabalho, foi possível concluir que a questão da minimização dos custos de implantação de infra-estruturas de distribuição de gás natural é uma preocupação recente, porém bastante importante e que merece uma maior atenção do setor técnico das distribuidoras de gás natural que podem, através de um maior intercâmbio com as universidades e centros de pesquisa, encontrar soluções para este desafio.
+
+Além disso, os estudos de otimização no setor de gás natural podem alavancar melhorias significativas ao longo de toda cadeia produtiva. Neste caso, foi apresentado um modelo para otimizar custos, mas é possível otimizar outros aspectos também importantes para a competitividade do gás natural, como por exemplo acessibilidade, retorno financeiro e impactos aos usuários e não usuários.
+
+Por fim, espera-se que este trabalho seja apenas o ponto de partida para motivar pesquisadores e demais atores do processo de massificação do uso do gás natural a empreender esforços no sentido de complementar este estudo, colaborando com o aumento da competitividade do gás natural e a melhoria da eficiência energética do país.
+ 
+

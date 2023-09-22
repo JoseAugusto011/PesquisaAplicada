@@ -1,0 +1,97 @@
+Este trabalho de conclusão de curso visa apresentar uma ferramenta para detectar as notícias falsas tão amplamente disseminadas na atualidade, principalmente com o estabelecimento das redes sociais. A quantidade alarmante de notícias enganosas, juntamente com o crescente número de usuários com o poder de compartilhá-las sem o devido conhecimento para verificar suas fontes e veracidade, levaram a população mundial à uma série de tomadas de decisões errôneas e que não refletem suas reais intenções, seja no âmbito político, social ou até mesmo da saúde. Órgãos jornalísticos foram criados com o intuito de conter esta epidemia, porém com pouco pessoal e investimento é quase impossível circunvir a quantidade de notícias falsas que surgem a cada momento. Por outro lado, nas últimas décadas foi possível acompanhar o surgimento e desenvolvimento de tecnologias baseadas em Inteligência Artificial, que ampliam o alcance das tarefas realizadas por entidades computacionais, como é o caso de algo tão abrangente e disforme como a detecção automática de notícias falsas. A aplicação Aleteia traz uma nova abordagem para a tratativa deste problema e uma possível solução para levar o conhecimento às mãos do usuário final. Por intermédio de uma extensão para o navegador Google Chrome e desenvolvida na linguagem de programação Python sob o conceito de Aprendizado de Máquina, a aplicação aprende os vícios mais comumente utilizados nos dois tipos de informação por meio de processamento de linguagem natural, podendo então classificar uma notícia fornecida por este usuário, intuindo-o com relação à autenticidade do texto.
+Palavras-chave: Fake News. Notícias falsas. Extensão. Google Chrome. Aleteia.
+Inteligência Artificial. Aprendizado de Máquina. Imprensa. Bag-ofWords.
+
+ABSTRACT
+
+This undergraduate thesis aims to present a tool with the objective of detecting the fake news widely spread in the later years, especially after the establishment of social networks. The alarming amount of misleading news, coupled with the exponentially increasing number of users with the power to share them without the proper knowledge to verify their sources and truthfulness, have led the world population to a series of erroneous decision-making that do not reflect their real intentions, whether in the political, social or even health sphere. Organizations were created with the intention of containing this epidemic, but with little personnel and investment it is almost impossible to circumvent the amount of fake news that keep appearing at any given moment. On the other hand, in the last decades it was possible to follow the development of Artificial Intelligence concept, extending the reach of tasks performed by computational entities, now ready to face much more complex situations such something as comprehensive and misshapen as the automatic detection of false news. Aleteia brings a new approach to the treatment of this problem and a possible solution to bring knowledge into the hands of the end user. Through a Google Chrome extension and developed under the Python programming language and the Machine
+Learning concept, the application learns the most common language vices of the two types of information through Natural Language Processing, being able to classify a news text provided by this user, intuiting them about the authenticity of this text.
+Keywords: Fake News. False news. Extension. Google Chrome. Aleteia. Artificial intelligence. Machine Learning. Press.
+
+É epidêmico o advento do compartilhamento das notícias falsas, especialmente nos últimos anos. Com a crescente popularização do acesso à internet no Brasil e no Mundo, cresce também a circulação de informações falsas, as chamadas “fake news”, mergulhando as pessoas em um mar turvo de desinformação, onde não é mais possível separar facilmente o real do produzido.
+Tardárguila , redatora do portal verificador de fatos Lupa. As campanhas dos principais candidatos Donald Trump e Hillary Clinton foram permeadas por notícias falsas e teorias da conspiração, como por exemplo o “Pizzagate”, uma teoria fantasiosa que colocava a candidata Hillary no centro de uma suposta rede de pedofilia e tráfico infantil que nunca existiu. Ou então a notícia mais compartilhada das eleições, sobre a preferência do Papa Francisco pelo candidato Trump , uma matéria proveniente de um site satírico, mas que provocou tantos compartilhamentos, que precisou ser desmentida por outra organização verificadora de fatos, a Snopes . Ainda sobre estas eleições, um estudo realizado pelo site
+Buzzfeed selecionou as 20 notícias mais importantes provenientes de jornais de confiança, e confrontou o seu desempenho com relação às 20 notícias falsas mais lidas pelos usuários do Facebook ao longo dos meses de fevereiro até o dia da eleição, em agosto. Esta análise mostrou que, próximo à data da eleição, as notícias falsas chegaram a superar o alcance de público em praticamente um milhão e meio de compartilhamentos em relação às notícias genuínas, ilustrando a preocupante situação em que se encontram as informações consumidas pelo público geral.
+A área da saúde também é afetada por esse fenômeno, gerando desassossego entre os profissionais do setor. A epidemiologista e chefe de estratégia de combate à doença da Organização Mundial da Saúde , culpa o compartilhamento de notícias falsas, tais como a falta de eficácia da vacina fracionada e a sua possível substituição pelo própolis, pela baixa porcentagem de brasileiros vacinados contra a febre amarela, que consta em 55% da população, quando o ideal deveria estar em 80% .
+Imprensa resolveram criar seus próprios setores de checagem de fatos, com o objetivo de encontrar informações falsas que estejam sendo compartilhadas em larga escala, e desmascará-las por meio de dados reais, verificações e fontes.
+Police Center foi uma das pioneiras, com a criação do “Factcheck.
+Tampa Bay Times.
+
+Preocupados com o efeito desta “epidemia”, muitos grandes nomes da
+
+Unidos, e “Chequeado”, baseado na Argentina. Muitas destas organizações foram criadas à luz de grandes eleições com o objetivo de verificar as informações proferidas pelos candidatos nos debates, principalmente presidenciais, provendo à população com um comparativo e uma verificação de fatos do que estaria sendo afirmado pelo candidato.
+Algumas organizações deixaram de existir ao fim destas eleições, e outras deram continuidade a este trabalho de verificação, ampliando suas áreas de atuação para além da política e abrangendo também as áreas sociais e da saúde. Porém todas essas organizações compartilham das mesmas dificuldades: falta de pessoal e de incentivo monetário, e excesso de material a ser analisado. Conforme dados levantados durante o 5 Seminário Global de Checagem de Fatos , 64,3% das organizações existentes com esse propósito são
+Organizações Não Governamentais, sem fonte fixa de lucro . Outro dado observado consiste na quantidade de funcionários trabalhando nestas organizações, onde a maioria funciona com menos de 5 pessoas dedicadas em tempo integral, isto é, uma média de 6 funcionários por organização. Com um elevado e ascendente número de notícias falsas sendo produzidos a cada instante, é de se esperar que tais organizações, levando em conta sua estrutura financeira e pessoal, enfrentem um grande desafio em verificar todos os fatos. Um estudo sobre a rede social Twitter apresentado pela Universidade de Warwick mostrou que, rumores falsos criados pelos pesquisadores em prol desta análise levavam de 15 a 20 horas para serem desbancados, tempo mais do que suficiente para alcançar uma larga escala de leitores até que seja identificado como falso .
+Chequeabot, da agência argentina de verificação de fatos “Chequeado”, ainda em fase de testes, e utilizado apenas pelos próprios funcionários da agência.
+Fatos também desenvolveu uma ferramenta com o nome de “Fátima”, utilizada através do aplicativo de conversação do Facebook, o Messenger, onde é possível informar uma notícia, ou o link para esta, e a ferramenta informa se a notícia em questão já foi analisada pelo portal e qual foi o resultado da análise.
+Português do Programa Institucional de Bolsas de Iniciação Científica, também foi disponibilizado para o público na forma de uma interface em uma página da web onde o usuário insere o corpo da notícia, e o sistema por sua vez analisa as informações, e retorna ao usuário se a notícia é verdadeira ou não .
+O crescimento exponencial do chamado “conteúdo criado por usuários”, que se apoia no vasto número de cidadãos com acesso a um dispositivo que grave vídeos ou capture fotos , fez com que a análise de imagens e textos de caráter explícito, violento ou perturbador façam parte do dia a dia de profissionais da área do jornalismo, incluindo os que fazem parte das organizações verificadoras de fatos acima mencionadas, Direitos Humanos e entre outras, responsáveis pela filtragem e veiculação de conteúdo informativo. Por este motivo, sintomas comumente associados ao Transtorno de estresse pós-traumático agora são amplamente observados neste tipo de ambiente de trabalho. Uma pesquisa realizada pela organização First Draft concluiu que mais da metade destes profissionais está em contato com este tipo de conteúdo diariamente, e 40% afirmam que a visualização destes conteúdos tem um impacto direto e negativo em sua vida pessoal, levando-os inclusive a desenvolver mecanismos para lidar com estes sentimentos, tais como o abuso de drogas e álcool, compulsões alimentares, entre outros .
+
+OBJETIVOS ESPECÍFICOS
+
+Criar um módulo de treinamento que, utilizando ferramentas de coleta de informação, arquive em um banco de dados notícias que já foram previamente investigadas por órgãos verificadores de fatos, e que serão utilizadas para a comparação com os textos enviados pelo usuário, com o objetivo de treinar o módulo de classificação.
+
+O gigante Facebook atualmente conta com 127 milhões de usuários ativos no
+
+Estes números somados à quantidade não suficiente de organizações focadas em filtrar e verificar essas informações, e a sua dificuldade em acompanhar o volume de notícias geradas a cada instante, conforme apresentado nos capítulos anteriores, dá forma à necessidade de colocar o poder e o conhecimento nas mãos do usuário, capacitando-o para que ele mesmo possa verificar as fontes e fatos contidos em uma certa notícia antes de publicá-la ou compartilhá-la. Com esta solução em mente, foi criada a Aleteia, que por meio de uma extensão para o navegador da Internet Google Chrome, classifica a notícia selecionada pelo usuário em níveis de confiabilidade, retornando para o usuário esta informação de forma instantânea.
+
+O Capítulo 4 traz os resultados obtidos ao aplicar as metodologias do Capítulo
+
+Como a utilização de todas as ferramentas e bibliotecas culminou nos módulos funcionais, que são o centro do sistema, e de que maneira isto é apresentado ao usuário em suas diversas formas.
+
+Visualizada pelo usuário como uma extensão do navegador de internet
+
+Google Chrome, a aplicação Aleteia utiliza o conceito de Aprendizado de Máquina, desenvolvida na linguagem de programação Python e previamente treinada com as informações necessárias por meio de uma máquina de vetor de suporte para processar os dados enviados, comunicando-os tanto no recebimento quanto no envio através de uma API.
+
+APRENDIZADO DE MÁQUINA
+
+Máquina é gerar um modelo através de dados classificados que permita “prever o futuro”, ou fazer predições sobre dados ainda não analisados.
+
+EXEMPLO DE APRENDIZADO DE MÁQUINA
+
+No caso dos aprendizados supervisionados e semi-supervisionados, são fornecidos ao algoritmo os dados de entrada juntamente com os dados esperados de saída, para que, através de iteração optimizada, o algoritmo desenvolva a função para a classificação de novos dados. Já o aprendizado não-supervisionado utiliza apenas dados de entrada, localizando características similares entre eles, e agrupando-os conforme, sendo comumente utilizado para estimativas e no campo da estatística. Aprendizado por Reforço, onde o algoritmo não assume nenhum tipo de modelo matemático, desta maneira sendo adequado para a utilização sobre dados inexatos, que não podem ser mensurados e consequentemente agrupados em vetores para posterior análise. O Aprendizado de Máquina Supervisionado consiste em possuir previamente os resultados desejados para um conjunto de dados de entrada, também chamada de tabela de atributos e valores.
+
+Segundo Bowles , a extração eficiente de dados está mudando o perfil de negócios atual e demandando novas habilidades de programação.
+
+SUPPORT VECTOR MACHINE
+
+Associados a algoritmos de aprendizagem, as SVM podem analisar dados para classificação e análise de regressão destes. A análise de regressão é um conjunto de processos estatísticos que estima o relacionamento entre variáveis dependentes e variáveis independentes, através da expectativa condicional da primeira sobre a segunda, isto é, um valor médio da variável dependente tratando as variáveis independentes não-fixas.
+
+EXEMPLO DE SVM
+
+Há também casos em que os dados não são passíveis de serem separados linearmente, onde aplica-se o “Truque Kernel”. Através de funções e cálculos avançados, a SVM analisa o grupo de dados através de uma perspectiva com uma dimensão adicional, encontrando outra maneira de ordenar os dados.
+
+TREINAMENTO DOS MODELOS DE CLASSIFICAÇÃO
+
+Overfitting consiste em um modelo que foi treinado com uma especificidade muito grande sobre apenas um grupo de dados. Isto significa que este modelo terá uma acurácia muito grande sobre este grupo de dados específico, porém terá um desempenho baixo em dados que não foram utilizados no treinamento ou novos dados de entrada.
+
+WEB CRAWLER E WEB SCRAPING
+
+O Web Scraping, por sua vez, consiste em de coletar dados através destes web crawlers, que executam a requisição de dados ao servidor da página em questão, e então compilam estes dados em um formato para que esta informação seja extraída .
+
+No início dos anos 90, o projeto começou a ser executado por David
+
+Naval, por conta da falta de segurança existente sobre a Internet na época, além da possibilidade de utilização dos dados trafegados para vigilância e rastreamento sem o consentimento dos usuários. O projeto figurou como uma ferramenta crucial em acontecimentos históricos pró-liberdade de expressão, como a Primavera Árabe em.
+
+PRIVOXY E HAPROXY
+
+Os proxies Privoxy e Haproxy são ambas soluções de servidores de requisição servidor-cliente para aprimorar o acesso feito pelo web crawler através de proteção de alto tráfico e dados e ferramentas de filtragem de informação. Já o Haproxy funciona como balanceador de dados e requisições com o objetivo de não sobrecarregar servidores pequenos ou frágeis, agilizando o consumo e tratamento de dados pelo servidor em aplicações baseadas em HTTP e TCP.
+
+DOCKER
+
+Stack Overflow deste ano , atrás apenas dos sistemas operacionais Linux e Windows, sendo essa a primeira vez que tecnologias de conteinerização foram inseridas nesta categoria da pesquisa. A plataforma promete números significativos a nível de negócio, como aumento de mais de 300% na velocidade de disponibilização do software para o mercado, 60%de aumento na velocidade de implantação do software, 40% de redução na infraestrutura de Tecnologia da Comunicação nas empresas, assim como um aumento de 72% na velocidade da resolução de problemas.
+
+PYTHON
+
+Apesar de linguagens de alto nível apresentarem um desempenho inferior às de nível mais baixo ao executar tarefas com grande quantidade de dados, Python continua sendo uma das linguagens mais populares na área de ciência de dados, por seu extenso número de bibliotecas disponíveis e vasta comunidade de desenvolvedores com este mesmo propósito. Anualmente, o Stack Overflow, a maior comunidade de compartilhamento de conhecimento em desenvolvimento e programação, promove uma pesquisa juntamente aos desenvolvedores que utilizam a sua base de dados, sobre suas preferências com relação às tecnologias de desenvolvimento, bancos de dados, entre outras áreas relacionadas. No questionamento sobre a preferência de linguagens de programação e script, a linguagem Python superou a linguagem Java neste ano, assim como superou as linguagens C# e PHP nos anos anteriores, fazendo dela a linguagem que cresce mais e mais rápido nos últimos anos STACK OVERFLOW, Segundo Kopf , o aumento exponencial na popularidade do Python se dá pela sua facilidade de aprendizado e flexibilidade, sendo utilizada na automação de tarefas simples até importantes análises de grandes quantidades de dados.
+
+SCIKIT-LEARN
+
+Scikit-Learn é uma biblioteca Python que, segundo Beysolow , todos os cientistas de dados e engenheiros de aprendizado de máquina devem se familiar. Esta biblioteca oferece implementações para algoritmos de aprendizado de máquina e préprocessamento de dados, como o Support Vector Machine, utilizado no desenvolvimento da Aleteia. A biblioteca é acessada através de uma API e pode ser usada para uma vasta gama de aplicações em tratamento de dados, entre elas Classificação, Regressão, Agrupamento, Redução de Dimensionalidade, Seleção de Modelo e PréProcessamento. Utilizando suas funções de pré-processamento de dados em conjunto com o modelo Bag-of-Words, é possível ajustar os resultados coletados para atender aos objetivos requeridos.
+
+SCRAPY FRAMEWORK
+
+Scrapy é uma biblioteca Python que lida com boa parte da complexidade de encontrar e avaliar links em um site, e de rastreamento de domínios com facilidade . Apresenta grande flexibilidade na sua utilização, podendo ser aplicada em arquivamento de históricos, mineração de dados, processamento de informações diversas, entre outros.
+
+5 CONSIDERAÇÕES FINAIS
+
+Aprendizado de Máquina e que seria capaz de classificar notícias entre falsas ou verdadeiras por meio de um treinamento prévio apoiado em processamento de linguagem natural, o usuário teria acesso a uma ferramenta que o muniria de informação para que seja quebrado o ciclo do compartilhamento das chamadas fake news. Neste documento foram explicitadas todas as tecnologias, conceitos e ferramentas utilizados para o desenvolvimento desta solução, bem como as metodologias usadas na aplicação destas ferramentas para a execução e desenvolvimento.

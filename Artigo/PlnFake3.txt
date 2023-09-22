@@ -1,0 +1,26 @@
+
+Fakenews​ com Textos de Notícias em língua Portuguesa
+
+Sendo assim, o objetivo deste trabalho é usar métodos de aprendizado de máquina para descobrir, classificar e armazenar textos de notícias falsas, para posterior aplicação a etapa ETL de um Data Warehouse e um ambiente de consulta que contribuirá com pesquisas futuras. Regressão Logística, Naive Bayes e SVM foram avaliados. Finalizando o trabalho com a seleção do melhor método que foi inserido em um sistema de avaliação online de notícias falsas.
+
+Introdução
+
+Diante da facilidade com que hoje em dia qualquer pessoa pode ter acesso a informação, e com a facilidade do seu uso, vivenciamos uma era de grandes avanços e soluções, seguido porém, por problemas ainda maiores, como é o caso das notícias falsas. , ​devido à sua natureza atraente, as notícias falsas se espalham rapidamente, influenciando o comportamento das pessoas em diversos assuntos, desde questões saudáveis até política e economia .
+
+Trabalhos Correlatos
+
+No que se refere à notícias falsas e a aplicação de ​Machine Learning,​ GRUPPI et al. Construíram um dataset com notícias, em português e inglês, tendo por objetivo construir um classificador para predizer se a fonte da notícia é ou não confiável. Em uma contribuição para a área de classificação de notícias, MONTEIRO ​et al. MARUMO ​ ​coletou notícias de sites com notícias verídicas e sites com notícias falsa e/ou de cunho satírico, com o objetivo de encontrar o melhor método para detecção de fakenews.
+
+Metodologia - Proposta de Aplicação
+
+A proposta apresentada, tem como objetivo proporcionar um ambiente com dados consistentes e limpos na forma de um corpus multidimensional para consumo por aplicações externas e usuários.
+
+NOGUEIRA, na qual o classificador gerado será acoplado a etapa de ETL de um
+
+Foi construído um dataset composto por 2714 títulos de notícias falsas coletadas do site ​boatos.org e 3185 títulos de notícias verdadeiras coletadas do site ​brasil.elpais.com. ​ Inicialmente será utilizado apenas os títulos das notícias. Também foi construído uma interface ​Web​, onde o usuário será capaz de submeter um link e verificar se este é ou não uma notícia verdadeira, servindo este como protótipo antes de ser submetido a etapa de ETL. Após a avaliação o melhor método será acoplado à etapa de ETL do sistema proposto, bem como a interface Web de classificação de notícias.
+
+Resultados Parciais
+
+Os dados obtidos receberam tratamento de valores nulos, ruídos e transformação para letras minúsculas. Cada dataset recebeu uma nova coluna, chamada label, onde foi atribuído o valor ​booleano ​0 para notícias verdadeiras, e 1 para as notícias falsas. Com isso, os dados foram combinados em um único dataset. Os rótulos das colunas foram convertidos em valores numéricos utilizando o Label Encoder do pacote scikit-learn.
+
+O dataset foi então dividido entre treino e teste, na proporção de 75% e 25%respectivamente. Os resultados parciais obtidos após a construção, treino e produção do modelo foram satisfatórios. Como técnica de = 10. O estudo mostrou-se relevante para o aperfeiçoamento e entendimento dos envolvidos, bem como a corroboração da necessidade do combate às fake news.
